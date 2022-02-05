@@ -1,0 +1,145 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*
+#E0E0E0
+*/
+
+
+:root {
+	 --opacity80: rgba(0, 0, 0, 0.8);
+	 --opacity56: rgba(0, 0, 0, 0.56);
+	 --opacity40: rgba(0, 0, 0, 0.4);
+	 --opacity24: rgba(0, 0, 0, 0.24);
+}
+
+body {background: #fff;}
+
+img.dark_logo {display:none;}
+img.light_logo {display:inline-block;}
+
+.header {border-bottom: 1px solid #E0E0E0;}
+
+.social a.daynight {background-image: url(../img/dark_mode.svg);}
+
+a.butt,
+.search input,
+.social a {border: 1px solid #E0E0E0;}
+
+a.butt:hover,
+.social a:hover {
+    background-color: #212121;
+    border: 1px solid #212121;
+}
+
+.content {background: linear-gradient(180deg, #fff 0%, #f5f5f5 150px, #f5f5f5 100%);}
+
+.header {background: #fff;}
+
+.stats {background: #fff;}
+
+.stat {border-left: 1px solid #E0E0E0;}
+
+.featured_item {background: #ffff;}
+.item_stat {border-left: 1px solid #E0E0E0;}
+
+.all_coll_row,
+.all_coll_row:first-child {background-color: #fff;}
+
+.all_coll_row:first-child {border-top:none;}
+
+.all_coll_row {border-top: 1px solid #E0E0E0;}
+
+.all_coll_row:hover {background-color: #fbfbfb;}
+
+.all_coll_col a:hover,
+.all_coll_row:first-child .all_coll_col a:hover {color:rgba(0, 0, 0, 1); }
+
+.footer {border-top: 1px solid #E0E0E0;}
+
+.footer_links a {border-left: 1px solid #E0E0E0;}
+
+a.back {background-color: #fff; border: 1px solid #E0E0E0;}
+
+a.back:hover {background-color: #212121; border: 1px solid #212121;}
+
+.nfts_top,
+.nfts_sidebar {background: #fff;}
+
+.sale {border: 1px solid #E0E0E0;}
+
+.nfts_sidebar input,
+.nfts_sidebar select,
+.nfts_top select,
+select {background-color: #fff; border: 1px solid #E0E0E0;}
+
+.select-selected {background-color: #fff; border: 1px solid #E0E0E0;}
+
+.select-items {background-color: #f8f8f8;}
+
+hr {background:#E0E0E0;}
+
+.nfts_sidebar input[type=submit] {color:#fff; }
+
+.nfts_sidebar span {border-bottom: 1px solid #E0E0E0;}
+
+.checkbox_holder {border: 1px solid #E0E0E0;}
+
+.attribute {background: #D3E6F2; border: 2px solid #87C7E8; }
+
+.attribute:hover {background: #b3ccdb;}
+
+a.view {background: transparent; border: 1px solid #E0E0E0;}
+
+a.view:hover {background: #212121; }
+
+span.view {background: #fff; color: var(--opacity56);}
+
+span.duplicate {background: #fff;}
+
+.autocomplete-items div {
+	background-color: #fbfbfb;
+	border-bottom: 1px solid #E0E0E0;
+}
+
+.autocomplete-items div:hover {
+  	background-color: #E0E0E0;
+}
+
+.autocomplete-active {
+  	background-color: #E0E0E0 !important;
+  	color: #212121;
+}
+
+.holder {border-top: 1px solid #E0E0E0;}
+
+.pager a:hover, .pager a.active {
+    background: #fff; border: 1px solid #E0E0E0;
+}
+
+.goto input {
+    background-color: #fff; border: 1px solid #E0E0E0;
+}
+
+.goto input[type=submit] {color:var(--opacity80); }
+
+.goto input[type=submit]:hover,
+.button,
+.button:hover {color: #fff;}
+
+.pager {border-top: 1px solid #E0E0E0;}
+
+.accordion button {background: #E0E0E0; }
+
+[data-accordion] [data-content] {background: #fbfbfb;}
+
+.accordion button:hover {color:#000;}
+
+.autocomplete-suggestions { background: #f7f7f7; }
+.autocomplete-selected { background: #e7e7e7; }
+.autocomplete-suggestions strong { color: #000; }
+
+.featured_icons {color:#dadada}
+
+
+/**/
