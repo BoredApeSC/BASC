@@ -31,8 +31,135 @@
          fetch("data/BASC_Final.json")
          .then(Response => Response.json())
          .then(data => meta = data)
-                  .then(() => console.log(meta))
-          
+      </script>
+      <script>
+function populateFilterData (var1,var2,var3) {
+    var opt = document.createElement("option");
+    opt.value = var1;
+    opt.textContent = var2;
+    
+    let look2 = document.getElementById(var3);
+    look2.appendChild(opt);
+    }
+
+//UNIQUE BACKGROUND TRAITS FOR FILTER
+const trait0= [];
+const map = new Map();
+for (const item of meta) {
+    if(!map.has(item.BACKGROUND)){
+        map.set(item.BACKGROUND, true);
+        trait0.push({
+            VALUE: item.BACKGROUND
+        });
+    }
+}
+
+var trait0arrayLength = trait0.length;
+for (var i = 0; i < arrayLength; i++) {
+populateFilterData (trait0[i].VALUE,trait0[i].VALUE,"BACKGROUND");
+}
+
+//UNIQUE FUR TRAITS FOR FILTER
+const trait1= [];
+const map1 = new Map();
+for (const item of meta) {
+    if(!map1.has(item.FUR)){
+        map1.set(item.FUR, true);
+        trait1.push({
+            VALUE: item.FUR
+        });
+    }
+}
+
+var trait1arrayLength = trait1.length;
+for (var i = 0; i < arrayLength; i++) {
+populateFilterData (trait1[i].VALUE,trait1[i].VALUE,"FUR");
+}
+
+//UNIQUE HATS TRAITS FOR FILTER
+const trait2= [];
+const map2 = new Map();
+for (const item of meta) {
+    if(!map2.has(item.HATS)){
+        map2.set(item.HATS, true);
+        trait2.push({
+            VALUE: item.HATS
+        });
+    }
+};
+
+var trait2arrayLength = trait2.length;
+for (var i = 0; i < arrayLength; i++) {
+populateFilterData (trait2[i].VALUE,trait2[i].VALUE,"HATS");
+}
+
+//UNIQUE CLOTHES TRAITS
+const trait3= [];
+const map3 = new Map();
+for (const item of meta) {
+    if(!map3.has(item.CLOTHES)){
+        map3.set(item.CLOTHES, true);
+        trait3.push({
+            VALUE: item.CLOTHES
+        });
+    }
+};
+
+var trait3arrayLength = trait3.length;
+for (var i = 0; i < arrayLength; i++) {
+populateFilterData (trait3[i].VALUE,trait3[i].VALUE,"CLOTHES");
+}
+
+//UNIQUE EYES TRAITS
+const trait4= [];
+const map4 = new Map();
+for (const item of meta) {
+    if(!map4.has(item.EYES)){
+        map4.set(item.EYES, true);
+        trait4.push({
+            VALUE: item.EYES
+        });
+    }
+};
+
+var trait4arrayLength = trait4.length;
+for (var i = 0; i < arrayLength; i++) {
+populateFilterData (trait4[i].VALUE,trait4[i].VALUE,"EYES");
+}
+
+//UNIQUE MOUTH TRAITS
+const trait5= [];
+const map5 = new Map();
+for (const item of meta) {
+    if(!map5.has(item.MOUTH)){
+        map5.set(item.MOUTH, true);
+        trait5.push({
+            VALUE: item.MOUTH
+        });
+    }
+};
+
+var trait5arrayLength = trait5.length;
+for (var i = 0; i < arrayLength; i++) {
+populateFilterData (trait5[i].VALUE,trait5[i].VALUE,"MOUTH");
+}
+
+//UNIQUE EARRING TRAITS
+const trait6= [];
+const map6 = new Map();
+for (const item of meta) {
+    if(!map6.has(item.EARRING)){
+        map6.set(item.EARRING, true);
+        trait6.push({
+            VALUE: item.EARRING
+        });
+    }
+};
+
+var trait6arrayLength = trait6.length;
+for (var i = 0; i < arrayLength; i++) {
+populateFilterData (trait6[i].VALUE,trait6[i].VALUE,"EARRING");
+}	      
       </script>
    </head>
    <body>
@@ -115,10 +242,6 @@
                      <div class="custom-selectx">
                         <select name="background" id="background" onchange="reloadForm()">
                            <option value="">Please select</option>
-                           <option value="Solana"
-                              >
-                              Solana
-                           </option>
                         </select>
                      </div>
                      <label for="FUR">Fur</label>
@@ -129,25 +252,25 @@
                      </div>
                      <label for="CLOTHES">Clothes</label>
                      <div class="custom-selectx">
-                        <select name="eyes" id="eyes" onchange="reloadForm()">
+                        <select name="EYES" id="EYES" onchange="reloadForm()">
                            <option value="">Please select</option>
                         </select>
                      </div>
                      <label for="EYES">Eyes</label>
                      <div class="custom-selectx">
-                        <select name="eyes_items" id="eyes_items" onchange="reloadForm()">
+                        <select name="MOUTH" id="MOUTH" onchange="reloadForm()">
                            <option value="">Please select</option>
                         </select>
                      </div>
                      <label for="MOUTH">Mouth</label>
                      <div class="custom-selectx">
-                        <select name="form" id="form" onchange="reloadForm()">
+                        <select name="HATS id="HATS" onchange="reloadForm()">
                            <option value="">Please select</option>
                         </select>
                      </div>
                      <label for="HATS">Hats</label>
                      <div class="custom-selectx">
-                        <select name="hats" id="hats" onchange="reloadForm()">
+                        <select name="EARRING" id="EARRING" onchange="reloadForm()">
                            <option value="">Please select</option>
                         </select>
                      </div>
