@@ -1211,15 +1211,15 @@ function populateCard(mint,rank,pic) {
     look.appendChild(vDiv);
 }
 
-let loadcounter = 0
+let loadcounter1 = 0
 
-while (loadcounter <= 30) {
-    let v1 = getNestedValue(meta, loadcounter + ".edition");
-    let v2 = getNestedValue(meta, loadcounter + ".rank");
-    let v3 = getNestedValue(meta, loadcounter + ".image");
+while (loadcounter1 <= 30) {
+    let v1 = getNestedValue(meta, loadcounter1 + ".edition");
+    let v2 = getNestedValue(meta, loadcounter1 + ".rank");
+    let v3 = getNestedValue(meta, loadcounter1 + ".image");
     populateCard(v1,v2,v3)
-    loadcounter = loadcounter + 1;
-}
+    loadcounter1 = loadcounter1 + 1;
+};
 </script>	
 <script>
     $('#autocomplete_search').autocomplete({
