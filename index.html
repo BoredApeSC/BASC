@@ -1,1248 +1,966 @@
 <!doctype html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <title> Bored Ape Solana Club</title>
-    <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="favicons/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="favicons/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
-    <meta name="msapplication-TileImage" content="favicons/ms-icon-144x144.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Bored Ape Solana Club - A whole new existence of 6000 Bored Apes on the Solana Blockchain. All trait combinations are new &amp; BASC is not affiliated with Yuga Labs.">
-        <meta name="keywords" content="NFT, Rarity,  Bored Ape Solana Club">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="css/styles_3421.css" rel="stylesheet" type="text/css">
-    <link href="css/responsive_3421.css" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" href="css/light_mode_3422.css"  disabled  class="daynight" />
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RSXEMJDEZW"></script>
-
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-RSXEMJDEZW');
-    </script>
-    <script>
-			var meta;
-			fetch("data/BASC_Final.json")
-			.then(Response => Response.json())
-			.then(data => meta = data)
-            .then(() => console.log(meta))
-    </script>
-</head>
-
-<body>
-    <div class="wrap content nft_list">
-        <div class="nft_title_holder" style="margin-bottom: 4px;">
+   <head>
+      <meta charset="utf-8">
+      <title> Bored Ape Solana Club</title>
+      <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png">
+      <link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-icon-60x60.png">
+      <link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-icon-72x72.png">
+      <link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-icon-76x76.png">
+      <link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-icon-114x114.png">
+      <link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-icon-120x120.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-icon-144x144.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-icon-152x152.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-icon-180x180.png">
+      <link rel="icon" type="image/png" sizes="192x192"  href="favicons/android-icon-192x192.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="96x96" href="favicons/favicon-96x96.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+      <meta name="msapplication-TileImage" content="favicons/ms-icon-144x144.png">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Bored Ape Solana Club - A whole new existence of 6000 Bored Apes on the Solana Blockchain. All trait combinations are new &amp; BASC is not affiliated with Yuga Labs.">
+      <meta name="keywords" content="NFT, Rarity,  Bored Ape Solana Club">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+      <link href="css/styles_3421.css" rel="stylesheet" type="text/css">
+      <link href="css/responsive_3421.css" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" href="css/light_mode_3422.css"  disabled  class="daynight" />
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-RSXEMJDEZW"></script>
+      <script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag(){dataLayer.push(arguments);}
+         gtag('js', new Date());
+         gtag('config', 'G-RSXEMJDEZW');
+      </script>
+      <script>
+         var meta;
+         fetch("data/BASC_Final.json")
+         .then(Response => Response.json())
+         .then(data => meta = data)
+                  .then(() => console.log(meta))
+          
+      </script>
+   </head>
+   <body>
+      <div class="wrap content nft_list">
+         <div class="nft_title_holder" style="margin-bottom: 4px;">
             <div class="nft_title">
-                <a href="/stonedapecrew" class="nft_img"><img src="https://testlaunchmynft.mypinata.cloud/ipfs/QmR4KDfrwvUyVcpxASCrNReEZmqXq4VpzwhJ1Tzy2K17b9/1.png" alt="img" width="128"></a>
-                <div>
-                    <a href="/stonedapecrew"><h1>Bored Ape Solana Club</h1></a>
-                    <div class="title_links">
-                                                    <a href="https://www.stonedapecrew.com/" target="_blank"><img src="img/link.svg" alt="img"></a>
-                                                                            <a href="https://twitter.com/StonedApeCrew" target="_blank"><img src="img/twitter.svg" alt="img"></a>
-                                                                            <a href="https://discord.gg/stonedapecrew" target="_blank"><img src="img/discord.svg" alt="img"></a>
-                                                    <span class="info_toggle">Info</span>
-                    </div>
-                    <div id="nft_desc">
-                    <p>A whole new existence of 10000 Bored Apes on the Solana Blockchain. All trait combinations are new &amp; BASC is not affiliated with Yuga Labs.</p>
-                    </div>
-                </div>
+               <a href="/stonedapecrew" class="nft_img"><img src="https://testlaunchmynft.mypinata.cloud/ipfs/QmR4KDfrwvUyVcpxASCrNReEZmqXq4VpzwhJ1Tzy2K17b9/1.png" alt="img" width="128"></a>
+               <div>
+                  <a href="/stonedapecrew">
+                     <h1>Bored Ape Solana Club</h1>
+                  </a>
+                  <div class="title_links">
+                     <a href="https://www.stonedapecrew.com/" target="_blank"><img src="img/link.svg" alt="img"></a>
+                     <a href="https://twitter.com/StonedApeCrew" target="_blank"><img src="img/twitter.svg" alt="img"></a>
+                     <a href="https://discord.gg/stonedapecrew" target="_blank"><img src="img/discord.svg" alt="img"></a>
+                     <span class="info_toggle">Info</span>
+                  </div>
+                  <div id="nft_desc">
+                     <p>A whole new existence of 10000 Bored Apes on the Solana Blockchain. All trait combinations are new &amp; BASC is not affiliated with Yuga Labs.</p>
+                  </div>
+               </div>
             </div>
             <div class="stats">
-                <div class="stat">
-                    <span>6000</span>items
-                </div>
-                <div class="stat">
-                    <a href="/stonedapecrew/owners"><span>◎3.20</span>Floor</a>
-                </div>
-                <div class="stat">
-                    <a href="/stonedapecrew/sales"><span>◎62.20K</span>volume</a>
-                </div>
+               <div class="stat">
+                  <span>6000</span>items
+               </div>
+               <div class="stat">
+                  <a href="/stonedapecrew/owners"><span>◎3.20</span>Floor</a>
+               </div>
+               <div class="stat">
+                  <a href="/stonedapecrew/sales"><span>◎62.20K</span>volume</a>
+               </div>
             </div>
-        </div>
-        <div class="sel " id="toggle_stats" style="margin-bottom: 0;">
+         </div>
+         <div class="sel " id="toggle_stats" style="margin-bottom: 0;">
             <img src="img/properties.svg" alt="properties"/> <span>Sales</span>
-        </div>
-        <div class="stats_full_holder" style="margin-top: 3px;">
-    <div class="stats stats_full" style="padding-top: 10px; padding-bottom: 10px;">
-        <div class="stat">
-            <span>◎62.20K</span>volume
-        </div>
-        <div class="stat">
-            <span>7379</span>sales
-        </div>
-        <div class="stat">
-                    <span>◎<a href="/stonedapecrew/2402">
-                             420  </a></span>max. sale
-        </div>
-        <div class="stat">
-            <span>◎ 8.43 </span>avg. sale
-        </div>
-        <div class="stat">
-            <span>◎358.20</span>24h volume
-        </div>
-        <div class="stat">
-            <span>7</span>24h sales
-        </div>
-        <div class="stat">
-                    <span>◎
-                                                <a href="/stonedapecrew/2680">
-                             65  </a>
-                                            </span>
-            24h max. sale
-        </div>
-        <div class="stat">
-            <span>◎51.17</span>24h avg. sale
-        </div>
-    </div>
-</div>
-        <div class="nfts_holder" style="margin-top: 14px;">
+         </div>
+         <div class="stats_full_holder" style="margin-top: 3px;">
+            <div class="stats stats_full" style="padding-top: 10px; padding-bottom: 10px;">
+               <div class="stat">
+                  <span>◎62.20K</span>volume
+               </div>
+               <div class="stat">
+                  <span>7379</span>sales
+               </div>
+               <div class="stat">
+                  <span>◎<a href="/stonedapecrew/2402">
+                  420  </a></span>max. sale
+               </div>
+               <div class="stat">
+                  <span>◎ 8.43 </span>avg. sale
+               </div>
+               <div class="stat">
+                  <span>◎358.20</span>24h volume
+               </div>
+               <div class="stat">
+                  <span>7</span>24h sales
+               </div>
+               <div class="stat">
+                  <span>◎
+                  <a href="/stonedapecrew/2680">
+                  65  </a>
+                  </span>
+                  24h max. sale
+               </div>
+               <div class="stat">
+                  <span>◎51.17</span>24h avg. sale
+               </div>
+            </div>
+         </div>
+         <div class="nfts_holder" style="margin-top: 14px;">
             <div class="nfts_sidebar">
-                <span><img src="img/attribute.svg" alt="att"/> Item filters</span>
-
-<form id="filters_form">
-    <label>IDs (syntax: 1,2,5-10)</label>
-    <input type="text" name="ids" id="ids" value=""  placeholder="IDs" onblur="reloadForm()">
-    <div id="form_filters">
-    <label for="BACKGROUND">Background</label>
-    <div class="custom-selectx">
-        <select name="background" id="background" onchange="reloadForm()">
-            <option value="">Please select</option>
-            
-                <option value="Solana"
-                                        >
-                    Solana
-                </option>
-
-
-                    </select>
-    </div>
-    <label for="FUR">Fur</label>
-    <div class="custom-selectx">
-        <select name="FUR" id="FUR" onchange="reloadForm()">
-            <option value="">Please select</option>
-            
-                <option value="None"
-                                        >
-                    None (3457)
-                </option>
-
-            
-                <option value="Always Stoned"
-                                        >
-                    Always Stoned (274)
-                </option>
-
-            
-                <option value="Iron Mike Facetat"
-                                        >
-                    Iron Mike Facetat (1)
-                </option>
-
-            
-                <option value="Solana"
-                                        >
-                    Solana (131)
-                </option>
-
-            
-                <option value="Tiny Sac"
-                                        >
-                    Tiny Sac (337)
-                </option>
-
-                    </select>
-    </div>
-    <label for="CLOTHES">Clothes</label>
-    <div class="custom-selectx">
-        <select name="eyes" id="eyes" onchange="reloadForm()">
-            <option value="">Please select</option>
-            
-                <option value="None"
-                                        >
-                    None (19)
-                </option>
-
-            
-                <option value="Angry"
-                                        >
-                    Angry (534)
-                </option>
-
-            
-                <option value="Angry Eyes"
-                                        >
-                    Angry Eyes (1)
-                </option>
-
-            
-                <option value="Awake Black"
-                                        >
-                    Awake Black (346)
-                </option>
-
-            
-                <option value="Awake Green"
-                                        >
-                    Awake Green (483)
-                </option>
-
-            
-                <option value="Black"
-                                        >
-                    Black (667)
-                </option>
-
-            
-                <option value="Blue"
-                                        >
-                    Blue (636)
-                </option>
-
-            
-                <option value="Bob Red Eyes"
-                                        >
-                    Bob Red Eyes (1)
-                </option>
-
-            
-                <option value="Cheech Red Eyes"
-                                        >
-                    Cheech Red Eyes (1)
-                </option>
-
-            
-                <option value="Chong Red Eyes"
-                                        >
-                    Chong Red Eyes (1)
-                </option>
-
-            
-                <option value="Halloweed Red Eyes"
-                                        >
-                    Halloweed Red Eyes (1)
-                </option>
-
-            
-                <option value="Iron Mike Red Eyes"
-                                        >
-                    Iron Mike Red Eyes (1)
-                </option>
-
-            
-                <option value="Og Red Eyes"
-                                        >
-                    Og Red Eyes (1)
-                </option>
-
-            
-                <option value="Pablo Red Eyes"
-                                        >
-                    Pablo Red Eyes (1)
-                </option>
-
-            
-                <option value="Red"
-                                        >
-                    Red (1226)
-                </option>
-
-            
-                <option value="Red Golden Eyes"
-                                        >
-                    Red Golden Eyes (1)
-                </option>
-
-            
-                <option value="Sad"
-                                        >
-                    Sad (280)
-                </option>
-
-                    </select>
-    </div>
-    <label for="EYES">Eyes</label>
-    <div class="custom-selectx">
-        <select name="eyes_items" id="eyes_items" onchange="reloadForm()">
-            <option value="">Please select</option>
-            
-                <option value="None"
-                                        >
-                    None (2516)
-                </option>
-
-            
-                <option value="420 Googles"
-                                        >
-                    420 Googles (128)
-                </option>
-
-            
-                <option value="Big Solana Glasses"
-                                        >
-                    Big Solana Glasses (122)
-                </option>
-
-            
-                <option value="Blue Flash Eye"
-                                        >
-                    Blue Flash Eye (63)
-                </option>
-
-            
-                <option value="Bright Bue Eyes"
-                                        >
-                    Bright Bue Eyes (43)
-                </option>
-
-            
-                <option value="Bright Green Eyes"
-                                        >
-                    Bright Green Eyes (36)
-                </option>
-
-            
-                <option value="Chong Glasses"
-                                        >
-                    Chong Glasses (1)
-                </option>
-
-            
-                <option value="Flashing Eyes"
-                                        >
-                    Flashing Eyes (81)
-                </option>
-
-            
-                <option value="Gold Monocle"
-                                        >
-                    Gold Monocle (82)
-                </option>
-
-            
-                <option value="Golden Glasses"
-                                        >
-                    Golden Glasses (19)
-                </option>
-
-            
-                <option value="Green Glasses"
-                                        >
-                    Green Glasses (96)
-                </option>
-
-            
-                <option value="Green Hipster Glasses"
-                                        >
-                    Green Hipster Glasses (53)
-                </option>
-
-            
-                <option value="Green John Lennon Glasses"
-                                        >
-                    Green John Lennon Glasses (74)
-                </option>
-
-            
-                <option value="Green Laser"
-                                        >
-                    Green Laser (80)
-                </option>
-
-            
-                <option value="Green Monocle"
-                                        >
-                    Green Monocle (31)
-                </option>
-
-            
-                <option value="Green-orange Glasses"
-                                        >
-                    Green-orange Glasses (120)
-                </option>
-
-            
-                <option value="Laser Eyes"
-                                        >
-                    Laser Eyes (128)
-                </option>
-
-            
-                <option value="Og Scar &amp; Glasses"
-                                        >
-                    Og Scar &amp; Glasses (1)
-                </option>
-
-            
-                <option value="Pablo Black Glasses"
-                                        >
-                    Pablo Black Glasses (1)
-                </option>
-
-            
-                <option value="Red John Lennon Glasses"
-                                        >
-                    Red John Lennon Glasses (125)
-                </option>
-
-            
-                <option value="Red Weed Glasses"
-                                        >
-                    Red Weed Glasses (72)
-                </option>
-
-            
-                <option value="Robo Eyes"
-                                        >
-                    Robo Eyes (58)
-                </option>
-
-            
-                <option value="Solana Monocle"
-                                        >
-                    Solana Monocle (33)
-                </option>
-
-            
-                <option value="Solana Weed Glasses"
-                                        >
-                    Solana Weed Glasses (30)
-                </option>
-
-            
-                <option value="Tear"
-                                        >
-                    Tear (183)
-                </option>
-
-            
-                <option value="Thug Glasses"
-                                        >
-                    Thug Glasses (24)
-                </option>
-
-                    </select>
-    </div>
-    <label for="MOUTH">Mouth</label>
-    <div class="custom-selectx">
-        <select name="form" id="form" onchange="reloadForm()">
-            <option value="">Please select</option>
-            
-                <option value="Bob Marley Blackfur"
-                                        >
-                    Bob Marley Blackfur (1)
-                </option>
-
-            
-                <option value="Caesare Goldenfur"
-                                        >
-                    Caesare Goldenfur (1)
-                </option>
-
-            
-                <option value="Cheech Brownfur"
-                                        >
-                    Cheech Brownfur (1)
-                </option>
-
-            
-                <option value="Choc Brown"
-                                        >
-                    Choc Brown (500)
-                </option>
-
-            
-                <option value="Chong Brownfur"
-                                        >
-                    Chong Brownfur (1)
-                </option>
-
-            
-                <option value="Cyborg"
-                                        >
-                    Cyborg (1)
-                </option>
-
-            
-                <option value="Dark Blonde"
-                                        >
-                    Dark Blonde (573)
-                </option>
-
-            
-                <option value="Form Bones Blondfur"
-                                        >
-                    Form Bones Blondfur (2)
-                </option>
-
-            
-                <option value="Form Bones Brownfur"
-                                        >
-                    Form Bones Brownfur (5)
-                </option>
-
-            
-                <option value="Form Bones Leofur"
-                                        >
-                    Form Bones Leofur (1)
-                </option>
-
-            
-                <option value="Form Bones Rainbowfur"
-                                        >
-                    Form Bones Rainbowfur (2)
-                </option>
-
-            
-                <option value="Form Bones Redfur"
-                                        >
-                    Form Bones Redfur (2)
-                </option>
-
-            
-                <option value="Iron Mike Brownfur"
-                                        >
-                    Iron Mike Brownfur (1)
-                </option>
-
-            
-                <option value="Leopard"
-                                        >
-                    Leopard (153)
-                </option>
-
-            
-                <option value="Light Blonde"
-                                        >
-                    Light Blonde (544)
-                </option>
-
-            
-                <option value="Light Brown"
-                                        >
-                    Light Brown (675)
-                </option>
-
-            
-                <option value="Og Grey"
-                                        >
-                    Og Grey (1)
-                </option>
-
-            
-                <option value="Pablo Blackfur"
-                                        >
-                    Pablo Blackfur (1)
-                </option>
-
-            
-                <option value="Rainbow"
-                                        >
-                    Rainbow (610)
-                </option>
-
-            
-                <option value="Red Gradient"
-                                        >
-                    Red Gradient (420)
-                </option>
-
-            
-                <option value="White"
-                                        >
-                    White (704)
-                </option>
-
-            
-                <option value="Zombie Ape"
-                                        >
-                    Zombie Ape (1)
-                </option>
-
-                    </select>
-    </div>
-    <label for="HATS">Hats</label>
-    <div class="custom-selectx">
-        <select name="hats" id="hats" onchange="reloadForm()">
-            <option value="">Please select</option>
-            
-                <option value="None"
-                                        >
-                    None (2095)
-                </option>
-
-            
-                <option value="Banana Hairband"
-                                        >
-                    Banana Hairband (37)
-                </option>
-
-            
-                <option value="Batik Hippie Hairband"
-                                        >
-                    Batik Hippie Hairband (23)
-                </option>
-
-            
-                <option value="Batiklila Hippie Hairband"
-                                        >
-                    Batiklila Hippie Hairband (49)
-                </option>
-
-            
-                <option value="Beige Flat Cap"
-                                        >
-                    Beige Flat Cap (57)
-                </option>
-
-            
-                <option value="Blue Astro Helmet"
-                                        >
-                    Blue Astro Helmet (33)
-                </option>
-
-            
-                <option value="Blue Beret"
-                                        >
-                    Blue Beret (292)
-                </option>
-
-            
-                <option value="Bong Hat Sol"
-                                        >
-                    Bong Hat Sol (1)
-                </option>
-
-            
-                <option value="Brown Flat Cap"
-                                        >
-                    Brown Flat Cap (74)
-                </option>
-
-            
-                <option value="Caesaare Crown"
-                                        >
-                    Caesaare Crown (1)
-                </option>
-
-            
-                <option value="Cheech Red Beanie"
-                                        >
-                    Cheech Red Beanie (1)
-                </option>
-
-            
-                <option value="Chong Blue Bandana"
-                                        >
-                    Chong Blue Bandana (1)
-                </option>
-
-            
-                <option value="Dark Grey Headphones"
-                                        >
-                    Dark Grey Headphones (139)
-                </option>
-
-            
-                <option value="Gold Astro Helmet"
-                                        >
-                    Gold Astro Helmet (14)
-                </option>
-
-            
-                <option value="Green Astro Helmet"
-                                        >
-                    Green Astro Helmet (6)
-                </option>
-
-            
-                <option value="Green Beret"
-                                        >
-                    Green Beret (185)
-                </option>
-
-            
-                <option value="Green Flat Cap"
-                                        >
-                    Green Flat Cap (46)
-                </option>
-
-            
-                <option value="Green Hippie Hairband"
-                                        >
-                    Green Hippie Hairband (16)
-                </option>
-
-            
-                <option value="Green-pink Astro Helmet"
-                                        >
-                    Green-pink Astro Helmet (8)
-                </option>
-
-            
-                <option value="Grey Headphones"
-                                        >
-                    Grey Headphones (97)
-                </option>
-
-            
-                <option value="Kings Crown"
-                                        >
-                    Kings Crown (8)
-                </option>
-
-            
-                <option value="Leaves In Hair"
-                                        >
-                    Leaves In Hair (48)
-                </option>
-
-            
-                <option value="Og Hairband"
-                                        >
-                    Og Hairband (1)
-                </option>
-
-            
-                <option value="Orange Pothat"
-                                        >
-                    Orange Pothat (167)
-                </option>
-
-            
-                <option value="Pink Hippie Hairband"
-                                        >
-                    Pink Hippie Hairband (22)
-                </option>
-
-            
-                <option value="Pothat"
-                                        >
-                    Pothat (183)
-                </option>
-
-            
-                <option value="Rasta Hat"
-                                        >
-                    Rasta Hat (1)
-                </option>
-
-            
-                <option value="Red Beret"
-                                        >
-                    Red Beret (154)
-                </option>
-
-            
-                <option value="Red Hairband"
-                                        >
-                    Red Hairband (34)
-                </option>
-
-            
-                <option value="Samo Hairband"
-                                        >
-                    Samo Hairband (85)
-                </option>
-
-            
-                <option value="Solana Astro Helmet"
-                                        >
-                    Solana Astro Helmet (49)
-                </option>
-
-            
-                <option value="Solana Headphones"
-                                        >
-                    Solana Headphones (129)
-                </option>
-
-            
-                <option value="Solana Pothat"
-                                        >
-                    Solana Pothat (76)
-                </option>
-
-            
-                <option value="Sunhat"
-                                        >
-                    Sunhat (2)
-                </option>
-
-            
-                <option value="Weed Hairband"
-                                        >
-                    Weed Hairband (61)
-                </option>
-
-            
-                <option value="Wide Sunhat"
-                                        >
-                    Wide Sunhat (4)
-                </option>
-
-            
-                <option value="Zombie Beanie"
-                                        >
-                    Zombie Beanie (1)
-                </option>
-
-                    </select>
-    </div>
-    <label for="EARRING">Earring</label>
-    <div class="custom-selectx">
-        <select name="mouth" id="mouth" onchange="reloadForm()">
-            <option value="">Please select</option>
-            
-                <option value="None"
-                                        >
-                    None (30)
-                </option>
-
-            
-                <option value="Angry Mouth"
-                                        >
-                    Angry Mouth (87)
-                </option>
-
-            
-                <option value="Banana Joint"
-                                        >
-                    Banana Joint (252)
-                </option>
-
-            
-                <option value="Biting"
-                                        >
-                    Biting (240)
-                </option>
-
-            
-                <option value="Bob Mouth"
-                                        >
-                    Bob Mouth (1)
-                </option>
-
-            
-                <option value="Bones Open Mouth Dollar J"
-                                        >
-                    Bones Open Mouth Dollar J (1)
-                </option>
-
-            
-                <option value="Bones Open Mouth J"
-                                        
-                    Bones Open Mouth J (2)
-                </option>
-
-            
-                <option value="Cheech Laughing Mouth"
-                                        >
-                    Cheech Laughing Mouth (1)
-                </option>
-
-            
-                <option value="Closed Mouth Bong"
-                                        >
-                    Closed Mouth Bong (1)
-                </option>
-
-            
-                <option value="Eating Fries"
-                                        >
-                    Eating Fries (122)
-                </option>
-
-            
-                <option value="Eating Pizza"
-                                        >
-                    Eating Pizza (197)
-                </option>
-
-            
-                <option value="Gentle Smile"
-                                        >
-                    Gentle Smile (276)
-                </option>
-
-            
-                <option value="Gold Teeth"
-                                        >
-                    Gold Teeth (98)
-                </option>
-
-            
-                <option value="Grinding"
-                                        >
-                    Grinding (408)
-                </option>
-
-            
-                <option value="Iron Mike J"
-                                        >
-                    Iron Mike J (1)
-                </option>
-
-            
-                <option value="Laughing"
-                                        >
-                    Laughing (311)
-                </option>
-
-            
-                <option value="Mask Brown"
-                                        >
-                    Mask Brown (51)
-                </option>
-
-            
-                <option value="Money Joint"
-                                        >
-                    Money Joint (283)
-                </option>
-
-            
-                <option value="Mouth Golden Ring"
-                                        >
-                    Mouth Golden Ring (1)
-                </option>
-
-            
-                <option value="Og Joint"
-                                        >
-                    Og Joint (1)
-                </option>
-
-            
-                <option value="Open"
-                                        >
-                    Open (370)
-                </option>
-
-            
-                <option value="Pablo Serious Mouth"
-                                        >
-                    Pablo Serious Mouth (1)
-                </option>
-
-            
-                <option value="Puffin"
-                                        >
-                    Puffin (444)
-                </option>
-
-            
-                <option value="Rainbow Teeth"
-                                        >
-                    Rainbow Teeth (406)
-                </option>
-
-            
-                <option value="Rolled Joint"
-                                        >
-                    Rolled Joint (233)
-                </option>
-
-            
-                <option value="Sad"
-                                        >
-                    Sad (161)
-                </option>
-
-            
-                <option value="Smoking Joint"
-                                        >
-                    Smoking Joint (178)
-                </option>
-
-            
-                <option value="Trifecta Joint"
-                                        >
-                    Trifecta Joint (43)
-                </option>
-
-                    </select>
-    </div>
-   
-    </div>
-
-    <hr>
-    <input type="submit" value="SUBMIT">
-
-</form>
-<script>
-    function getKvpairs() {
-        var kvpairs = [];
-                var ids = document.getElementById("ids");
-        if (ids.value !== '') {
-            kvpairs.push(encodeURIComponent(ids.name) + "=" + encodeURIComponent(ids.value));
-        }
-                        var wallet = document.getElementById("wallet");
-        if (wallet.value !== '') {
-            kvpairs.push(encodeURIComponent(wallet.name) + "=" + encodeURIComponent(wallet.value));
-        }
-                                var pf = document.getElementById("price_from");
-        if (pf.value !== '') {
-            kvpairs.push(encodeURIComponent(pf.name) + "=" + encodeURIComponent(pf.value));
-        }
-        var pt = document.getElementById("price_to");
-        if (pt.value !== '') {
-            kvpairs.push(encodeURIComponent(pt.name) + "=" + encodeURIComponent(pt.value));
-        }
-        var fs = document.getElementById("for_sale");
-        if (fs.checked) {
-            kvpairs.push(encodeURIComponent(fs.name) + "=" + encodeURIComponent('on'));
-        }
-                var rf = document.getElementById("rank_from");
-        if (rf.value !== '') {
-            kvpairs.push(encodeURIComponent(rf.name) + "=" + encodeURIComponent(rf.value));
-        }
-        var rt = document.getElementById("rank_to");
-        if (rt.value !== '') {
-            kvpairs.push(encodeURIComponent(rt.name) + "=" + encodeURIComponent(rt.value));
-        }
-        document.querySelectorAll("#filters_form select").forEach(function(e){
-            if (e.value !== '') {
-                kvpairs.push(encodeURIComponent(e.name) + "=" + encodeURIComponent(e.value));
-            }
-        });
-        return kvpairs;
-    }
-    async function soc() {
-        let kvpairs = getKvpairs();
-        let sb = document.getElementById("sort_by");
-        kvpairs.push(encodeURIComponent(sb.name) + "=" + encodeURIComponent(sb.value));
-        kvpairs.push(encodeURIComponent('soc') + "=" + encodeURIComponent('yes'));
-        var queryString = kvpairs.join("&");
-        fetch('/stonedapecrew?'+queryString).
-        then(response => response.text()).
-        then(function(t) {
-            document.getElementById("nfts_content").innerHTML = t;
-        });
-    }
-    function reloadForm() {
-        let kvpairs = getKvpairs();
-        var queryString = kvpairs.join("&");
-                soc();
-                fetch('/stonedapecrew/reload_form/?'+queryString).
-        then(response => response.text()).
-        then(function(t) {
-            document.getElementById("form_filters").innerHTML = t;
-        });
-
-    }
-</script>
+               <span><img src="img/attribute.svg" alt="att"/> Item filters</span>
+               <form id="filters_form">
+                  <label>IDs (syntax: 1,2,5-10)</label>
+                  <input type="text" name="ids" id="ids" value=""  placeholder="IDs" onblur="reloadForm()">
+                  <div id="form_filters">
+                     <label for="BACKGROUND">Background</label>
+                     <div class="custom-selectx">
+                        <select name="background" id="background" onchange="reloadForm()">
+                           <option value="">Please select</option>
+                           <option value="Solana"
+                              >
+                              Solana
+                           </option>
+                        </select>
+                     </div>
+                     <label for="FUR">Fur</label>
+                     <div class="custom-selectx">
+                        <select name="FUR" id="FUR" onchange="reloadForm()">
+                           <option value="">Please select</option>
+                           <option value="None"
+                              >
+                              None (3457)
+                           </option>
+                           <option value="Always Stoned"
+                              >
+                              Always Stoned (274)
+                           </option>
+                           <option value="Iron Mike Facetat"
+                              >
+                              Iron Mike Facetat (1)
+                           </option>
+                           <option value="Solana"
+                              >
+                              Solana (131)
+                           </option>
+                           <option value="Tiny Sac"
+                              >
+                              Tiny Sac (337)
+                           </option>
+                        </select>
+                     </div>
+                     <label for="CLOTHES">Clothes</label>
+                     <div class="custom-selectx">
+                        <select name="eyes" id="eyes" onchange="reloadForm()">
+                           <option value="">Please select</option>
+                           <option value="None"
+                              >
+                              None (19)
+                           </option>
+                           <option value="Angry"
+                              >
+                              Angry (534)
+                           </option>
+                           <option value="Angry Eyes"
+                              >
+                              Angry Eyes (1)
+                           </option>
+                           <option value="Awake Black"
+                              >
+                              Awake Black (346)
+                           </option>
+                           <option value="Awake Green"
+                              >
+                              Awake Green (483)
+                           </option>
+                           <option value="Black"
+                              >
+                              Black (667)
+                           </option>
+                           <option value="Blue"
+                              >
+                              Blue (636)
+                           </option>
+                           <option value="Bob Red Eyes"
+                              >
+                              Bob Red Eyes (1)
+                           </option>
+                           <option value="Cheech Red Eyes"
+                              >
+                              Cheech Red Eyes (1)
+                           </option>
+                           <option value="Chong Red Eyes"
+                              >
+                              Chong Red Eyes (1)
+                           </option>
+                           <option value="Halloweed Red Eyes"
+                              >
+                              Halloweed Red Eyes (1)
+                           </option>
+                           <option value="Iron Mike Red Eyes"
+                              >
+                              Iron Mike Red Eyes (1)
+                           </option>
+                           <option value="Og Red Eyes"
+                              >
+                              Og Red Eyes (1)
+                           </option>
+                           <option value="Pablo Red Eyes"
+                              >
+                              Pablo Red Eyes (1)
+                           </option>
+                           <option value="Red"
+                              >
+                              Red (1226)
+                           </option>
+                           <option value="Red Golden Eyes"
+                              >
+                              Red Golden Eyes (1)
+                           </option>
+                           <option value="Sad"
+                              >
+                              Sad (280)
+                           </option>
+                        </select>
+                     </div>
+                     <label for="EYES">Eyes</label>
+                     <div class="custom-selectx">
+                        <select name="eyes_items" id="eyes_items" onchange="reloadForm()">
+                           <option value="">Please select</option>
+                           <option value="None"
+                              >
+                              None (2516)
+                           </option>
+                           <option value="420 Googles"
+                              >
+                              420 Googles (128)
+                           </option>
+                           <option value="Big Solana Glasses"
+                              >
+                              Big Solana Glasses (122)
+                           </option>
+                           <option value="Blue Flash Eye"
+                              >
+                              Blue Flash Eye (63)
+                           </option>
+                           <option value="Bright Bue Eyes"
+                              >
+                              Bright Bue Eyes (43)
+                           </option>
+                           <option value="Bright Green Eyes"
+                              >
+                              Bright Green Eyes (36)
+                           </option>
+                           <option value="Chong Glasses"
+                              >
+                              Chong Glasses (1)
+                           </option>
+                           <option value="Flashing Eyes"
+                              >
+                              Flashing Eyes (81)
+                           </option>
+                           <option value="Gold Monocle"
+                              >
+                              Gold Monocle (82)
+                           </option>
+                           <option value="Golden Glasses"
+                              >
+                              Golden Glasses (19)
+                           </option>
+                           <option value="Green Glasses"
+                              >
+                              Green Glasses (96)
+                           </option>
+                           <option value="Green Hipster Glasses"
+                              >
+                              Green Hipster Glasses (53)
+                           </option>
+                           <option value="Green John Lennon Glasses"
+                              >
+                              Green John Lennon Glasses (74)
+                           </option>
+                           <option value="Green Laser"
+                              >
+                              Green Laser (80)
+                           </option>
+                           <option value="Green Monocle"
+                              >
+                              Green Monocle (31)
+                           </option>
+                           <option value="Green-orange Glasses"
+                              >
+                              Green-orange Glasses (120)
+                           </option>
+                           <option value="Laser Eyes"
+                              >
+                              Laser Eyes (128)
+                           </option>
+                           <option value="Og Scar &amp; Glasses"
+                              >
+                              Og Scar &amp; Glasses (1)
+                           </option>
+                           <option value="Pablo Black Glasses"
+                              >
+                              Pablo Black Glasses (1)
+                           </option>
+                           <option value="Red John Lennon Glasses"
+                              >
+                              Red John Lennon Glasses (125)
+                           </option>
+                           <option value="Red Weed Glasses"
+                              >
+                              Red Weed Glasses (72)
+                           </option>
+                           <option value="Robo Eyes"
+                              >
+                              Robo Eyes (58)
+                           </option>
+                           <option value="Solana Monocle"
+                              >
+                              Solana Monocle (33)
+                           </option>
+                           <option value="Solana Weed Glasses"
+                              >
+                              Solana Weed Glasses (30)
+                           </option>
+                           <option value="Tear"
+                              >
+                              Tear (183)
+                           </option>
+                           <option value="Thug Glasses"
+                              >
+                              Thug Glasses (24)
+                           </option>
+                        </select>
+                     </div>
+                     <label for="MOUTH">Mouth</label>
+                     <div class="custom-selectx">
+                        <select name="form" id="form" onchange="reloadForm()">
+                           <option value="">Please select</option>
+                           <option value="Bob Marley Blackfur"
+                              >
+                              Bob Marley Blackfur (1)
+                           </option>
+                           <option value="Caesare Goldenfur"
+                              >
+                              Caesare Goldenfur (1)
+                           </option>
+                           <option value="Cheech Brownfur"
+                              >
+                              Cheech Brownfur (1)
+                           </option>
+                           <option value="Choc Brown"
+                              >
+                              Choc Brown (500)
+                           </option>
+                           <option value="Chong Brownfur"
+                              >
+                              Chong Brownfur (1)
+                           </option>
+                           <option value="Cyborg"
+                              >
+                              Cyborg (1)
+                           </option>
+                           <option value="Dark Blonde"
+                              >
+                              Dark Blonde (573)
+                           </option>
+                           <option value="Form Bones Blondfur"
+                              >
+                              Form Bones Blondfur (2)
+                           </option>
+                           <option value="Form Bones Brownfur"
+                              >
+                              Form Bones Brownfur (5)
+                           </option>
+                           <option value="Form Bones Leofur"
+                              >
+                              Form Bones Leofur (1)
+                           </option>
+                           <option value="Form Bones Rainbowfur"
+                              >
+                              Form Bones Rainbowfur (2)
+                           </option>
+                           <option value="Form Bones Redfur"
+                              >
+                              Form Bones Redfur (2)
+                           </option>
+                           <option value="Iron Mike Brownfur"
+                              >
+                              Iron Mike Brownfur (1)
+                           </option>
+                           <option value="Leopard"
+                              >
+                              Leopard (153)
+                           </option>
+                           <option value="Light Blonde"
+                              >
+                              Light Blonde (544)
+                           </option>
+                           <option value="Light Brown"
+                              >
+                              Light Brown (675)
+                           </option>
+                           <option value="Og Grey"
+                              >
+                              Og Grey (1)
+                           </option>
+                           <option value="Pablo Blackfur"
+                              >
+                              Pablo Blackfur (1)
+                           </option>
+                           <option value="Rainbow"
+                              >
+                              Rainbow (610)
+                           </option>
+                           <option value="Red Gradient"
+                              >
+                              Red Gradient (420)
+                           </option>
+                           <option value="White"
+                              >
+                              White (704)
+                           </option>
+                           <option value="Zombie Ape"
+                              >
+                              Zombie Ape (1)
+                           </option>
+                        </select>
+                     </div>
+                     <label for="HATS">Hats</label>
+                     <div class="custom-selectx">
+                        <select name="hats" id="hats" onchange="reloadForm()">
+                           <option value="">Please select</option>
+                           <option value="None"
+                              >
+                              None (2095)
+                           </option>
+                           <option value="Banana Hairband"
+                              >
+                              Banana Hairband (37)
+                           </option>
+                           <option value="Batik Hippie Hairband"
+                              >
+                              Batik Hippie Hairband (23)
+                           </option>
+                           <option value="Batiklila Hippie Hairband"
+                              >
+                              Batiklila Hippie Hairband (49)
+                           </option>
+                           <option value="Beige Flat Cap"
+                              >
+                              Beige Flat Cap (57)
+                           </option>
+                           <option value="Blue Astro Helmet"
+                              >
+                              Blue Astro Helmet (33)
+                           </option>
+                           <option value="Blue Beret"
+                              >
+                              Blue Beret (292)
+                           </option>
+                           <option value="Bong Hat Sol"
+                              >
+                              Bong Hat Sol (1)
+                           </option>
+                           <option value="Brown Flat Cap"
+                              >
+                              Brown Flat Cap (74)
+                           </option>
+                           <option value="Caesaare Crown"
+                              >
+                              Caesaare Crown (1)
+                           </option>
+                           <option value="Cheech Red Beanie"
+                              >
+                              Cheech Red Beanie (1)
+                           </option>
+                           <option value="Chong Blue Bandana"
+                              >
+                              Chong Blue Bandana (1)
+                           </option>
+                           <option value="Dark Grey Headphones"
+                              >
+                              Dark Grey Headphones (139)
+                           </option>
+                           <option value="Gold Astro Helmet"
+                              >
+                              Gold Astro Helmet (14)
+                           </option>
+                           <option value="Green Astro Helmet"
+                              >
+                              Green Astro Helmet (6)
+                           </option>
+                           <option value="Green Beret"
+                              >
+                              Green Beret (185)
+                           </option>
+                           <option value="Green Flat Cap"
+                              >
+                              Green Flat Cap (46)
+                           </option>
+                           <option value="Green Hippie Hairband"
+                              >
+                              Green Hippie Hairband (16)
+                           </option>
+                           <option value="Green-pink Astro Helmet"
+                              >
+                              Green-pink Astro Helmet (8)
+                           </option>
+                           <option value="Grey Headphones"
+                              >
+                              Grey Headphones (97)
+                           </option>
+                           <option value="Kings Crown"
+                              >
+                              Kings Crown (8)
+                           </option>
+                           <option value="Leaves In Hair"
+                              >
+                              Leaves In Hair (48)
+                           </option>
+                           <option value="Og Hairband"
+                              >
+                              Og Hairband (1)
+                           </option>
+                           <option value="Orange Pothat"
+                              >
+                              Orange Pothat (167)
+                           </option>
+                           <option value="Pink Hippie Hairband"
+                              >
+                              Pink Hippie Hairband (22)
+                           </option>
+                           <option value="Pothat"
+                              >
+                              Pothat (183)
+                           </option>
+                           <option value="Rasta Hat"
+                              >
+                              Rasta Hat (1)
+                           </option>
+                           <option value="Red Beret"
+                              >
+                              Red Beret (154)
+                           </option>
+                           <option value="Red Hairband"
+                              >
+                              Red Hairband (34)
+                           </option>
+                           <option value="Samo Hairband"
+                              >
+                              Samo Hairband (85)
+                           </option>
+                           <option value="Solana Astro Helmet"
+                              >
+                              Solana Astro Helmet (49)
+                           </option>
+                           <option value="Solana Headphones"
+                              >
+                              Solana Headphones (129)
+                           </option>
+                           <option value="Solana Pothat"
+                              >
+                              Solana Pothat (76)
+                           </option>
+                           <option value="Sunhat"
+                              >
+                              Sunhat (2)
+                           </option>
+                           <option value="Weed Hairband"
+                              >
+                              Weed Hairband (61)
+                           </option>
+                           <option value="Wide Sunhat"
+                              >
+                              Wide Sunhat (4)
+                           </option>
+                           <option value="Zombie Beanie"
+                              >
+                              Zombie Beanie (1)
+                           </option>
+                        </select>
+                     </div>
+                     <label for="EARRING">Earring</label>
+                     <div class="custom-selectx">
+                        <select name="mouth" id="mouth" onchange="reloadForm()">
+                           <option value="">Please select</option>
+                           <option value="None"
+                              >
+                              None (30)
+                           </option>
+                           <option value="Angry Mouth"
+                              >
+                              Angry Mouth (87)
+                           </option>
+                           <option value="Banana Joint"
+                              >
+                              Banana Joint (252)
+                           </option>
+                           <option value="Biting"
+                              >
+                              Biting (240)
+                           </option>
+                           <option value="Bob Mouth"
+                              >
+                              Bob Mouth (1)
+                           </option>
+                           <option value="Bones Open Mouth Dollar J"
+                              >
+                              Bones Open Mouth Dollar J (1)
+                           </option>
+                           <option value="Bones Open Mouth J"
+                           Bones Open Mouth J (2)
+                           </option>
+                           <option value="Cheech Laughing Mouth"
+                              >
+                              Cheech Laughing Mouth (1)
+                           </option>
+                           <option value="Closed Mouth Bong"
+                              >
+                              Closed Mouth Bong (1)
+                           </option>
+                           <option value="Eating Fries"
+                              >
+                              Eating Fries (122)
+                           </option>
+                           <option value="Eating Pizza"
+                              >
+                              Eating Pizza (197)
+                           </option>
+                           <option value="Gentle Smile"
+                              >
+                              Gentle Smile (276)
+                           </option>
+                           <option value="Gold Teeth"
+                              >
+                              Gold Teeth (98)
+                           </option>
+                           <option value="Grinding"
+                              >
+                              Grinding (408)
+                           </option>
+                           <option value="Iron Mike J"
+                              >
+                              Iron Mike J (1)
+                           </option>
+                           <option value="Laughing"
+                              >
+                              Laughing (311)
+                           </option>
+                           <option value="Mask Brown"
+                              >
+                              Mask Brown (51)
+                           </option>
+                           <option value="Money Joint"
+                              >
+                              Money Joint (283)
+                           </option>
+                           <option value="Mouth Golden Ring"
+                              >
+                              Mouth Golden Ring (1)
+                           </option>
+                           <option value="Og Joint"
+                              >
+                              Og Joint (1)
+                           </option>
+                           <option value="Open"
+                              >
+                              Open (370)
+                           </option>
+                           <option value="Pablo Serious Mouth"
+                              >
+                              Pablo Serious Mouth (1)
+                           </option>
+                           <option value="Puffin"
+                              >
+                              Puffin (444)
+                           </option>
+                           <option value="Rainbow Teeth"
+                              >
+                              Rainbow Teeth (406)
+                           </option>
+                           <option value="Rolled Joint"
+                              >
+                              Rolled Joint (233)
+                           </option>
+                           <option value="Sad"
+                              >
+                              Sad (161)
+                           </option>
+                           <option value="Smoking Joint"
+                              >
+                              Smoking Joint (178)
+                           </option>
+                           <option value="Trifecta Joint"
+                              >
+                              Trifecta Joint (43)
+                           </option>
+                        </select>
+                     </div>
+                  </div>
+                  <hr>
+                  <input type="submit" value="SUBMIT">
+               </form>
+               <script>
+                  function getKvpairs() {
+                      var kvpairs = [];
+                              var ids = document.getElementById("ids");
+                      if (ids.value !== '') {
+                          kvpairs.push(encodeURIComponent(ids.name) + "=" + encodeURIComponent(ids.value));
+                      }
+                                      var wallet = document.getElementById("wallet");
+                      if (wallet.value !== '') {
+                          kvpairs.push(encodeURIComponent(wallet.name) + "=" + encodeURIComponent(wallet.value));
+                      }
+                                              var pf = document.getElementById("price_from");
+                      if (pf.value !== '') {
+                          kvpairs.push(encodeURIComponent(pf.name) + "=" + encodeURIComponent(pf.value));
+                      }
+                      var pt = document.getElementById("price_to");
+                      if (pt.value !== '') {
+                          kvpairs.push(encodeURIComponent(pt.name) + "=" + encodeURIComponent(pt.value));
+                      }
+                      var fs = document.getElementById("for_sale");
+                      if (fs.checked) {
+                          kvpairs.push(encodeURIComponent(fs.name) + "=" + encodeURIComponent('on'));
+                      }
+                              var rf = document.getElementById("rank_from");
+                      if (rf.value !== '') {
+                          kvpairs.push(encodeURIComponent(rf.name) + "=" + encodeURIComponent(rf.value));
+                      }
+                      var rt = document.getElementById("rank_to");
+                      if (rt.value !== '') {
+                          kvpairs.push(encodeURIComponent(rt.name) + "=" + encodeURIComponent(rt.value));
+                      }
+                      document.querySelectorAll("#filters_form select").forEach(function(e){
+                          if (e.value !== '') {
+                              kvpairs.push(encodeURIComponent(e.name) + "=" + encodeURIComponent(e.value));
+                          }
+                      });
+                      return kvpairs;
+                  }
+                  async function soc() {
+                      let kvpairs = getKvpairs();
+                      let sb = document.getElementById("sort_by");
+                      kvpairs.push(encodeURIComponent(sb.name) + "=" + encodeURIComponent(sb.value));
+                      kvpairs.push(encodeURIComponent('soc') + "=" + encodeURIComponent('yes'));
+                      var queryString = kvpairs.join("&");
+                      fetch('/stonedapecrew?'+queryString).
+                      then(response => response.text()).
+                      then(function(t) {
+                          document.getElementById("nfts_content").innerHTML = t;
+                      });
+                  }
+                  function reloadForm() {
+                      let kvpairs = getKvpairs();
+                      var queryString = kvpairs.join("&");
+                              soc();
+                              fetch('/stonedapecrew/reload_form/?'+queryString).
+                      then(response => response.text()).
+                      then(function(t) {
+                          document.getElementById("form_filters").innerHTML = t;
+                      });
+                  
+                  }
+               </script>
             </div>
             <div class="nfts_content" id="nfts_content">
-            <div class="nfts_top pager-only">
-        <!-- <div class="nfts_top_right"> -->
-            <!-- </div> -->
-        <div class="pager" style="border: none; margin: 0;">
-    <span class="results_count">4200 results</span>
-                        <a href="/stonedapecrew/?page=0&amp;ids=&amp;sort_by=rank"  class="active" >
-            1
-            </a>
-                                <a href="/stonedapecrew/?page=1&amp;ids=&amp;sort_by=rank" >
-            2
-            </a>
-                                <a href="/stonedapecrew/?page=2&amp;ids=&amp;sort_by=rank" >
-            3
-            </a>
-                                <a href="/stonedapecrew/?page=3&amp;ids=&amp;sort_by=rank" >
-            4
-            </a>
-                                <a href="/stonedapecrew/?page=4&amp;ids=&amp;sort_by=rank" >
-            5
-            </a>
-                                <span>...</span>
-                                <a href="/stonedapecrew/?page=16&amp;ids=&amp;sort_by=rank" >
-            17
-            </a>
-                <div class="goto" style="top: 3px; right: 55px; width: 220px; height: 72px;">
-
-
-                    <div class="sorting custom-selectx">
-                <select name="sort_by" id="sort_by" onchange="changeSort()">
-                    <option value="rank">Sort by Rank</option>
-                    <option value="id" >Sort by ID</option>
-                                            <option value="price" >Sort by Price</option>
-                                    </select>
-            </div>
-                    </div>
-</div>
-
-    </div>
-    <div class="nfts">
-                    <div class="featured_item">
-                <div class="featured_item_img">
+               <div class="nfts_top pager-only">
+                  <!-- <div class="nfts_top_right"> -->
+                  <!-- </div> -->
+                  <div class="pager" style="border: none; margin: 0;">
+                     <span class="results_count">4200 results</span>
+                     <a href="/stonedapecrew/?page=0&amp;ids=&amp;sort_by=rank"  class="active" >
+                     1
+                     </a>
+                     <a href="/stonedapecrew/?page=1&amp;ids=&amp;sort_by=rank" >
+                     2
+                     </a>
+                     <a href="/stonedapecrew/?page=2&amp;ids=&amp;sort_by=rank" >
+                     3
+                     </a>
+                     <a href="/stonedapecrew/?page=3&amp;ids=&amp;sort_by=rank" >
+                     4
+                     </a>
+                     <a href="/stonedapecrew/?page=4&amp;ids=&amp;sort_by=rank" >
+                     5
+                     </a>
+                     <span>...</span>
+                     <a href="/stonedapecrew/?page=16&amp;ids=&amp;sort_by=rank" >
+                     17
+                     </a>
+                     <div class="goto" style="top: 3px; right: 55px; width: 220px; height: 72px;">
+                        <div class="sorting custom-selectx">
+                           <select name="sort_by" id="sort_by" onchange="changeSort()">
+                              <option value="rank">Sort by Rank</option>
+                              <option value="id" >Sort by ID</option>
+                              <option value="price" >Sort by Price</option>
+                           </select>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="nfts">
+                  <div class="featured_item">
+                     <div class="featured_item_img">
                         <img src="https://testlaunchmynft.mypinata.cloud/ipfs/QmR4KDfrwvUyVcpxASCrNReEZmqXq4VpzwhJ1Tzy2K17b9/1.png" />
-                </div>
-                <div class="featured_image_desc" style="padding-bottom: 5px;">
-                    <div class="item_stats">
-                        <div class="item_stat">
-                            rank<span>1</span>
+                     </div>
+                     <div class="featured_image_desc" style="padding-bottom: 5px;">
+                        <div class="item_stats">
+                           <div class="item_stat">
+                              rank<span>1</span>
+                           </div>
+                           <div class="item_stat">
+                              mint no.<span>123
+                              </span>
+                           </div>
                         </div>
-                        <div class="item_stat">
-                            mint no.<span>123
-				</span>
-                        </div>
-                    </div>
-                                    </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="nfts_top mt pager-only" style="margin-top: 0;">
+                  <div class="pager">
+                     <span class="results_count">6000 results</span>
+                     <a href="/stonedapecrew/?page=0&amp;ids=&amp;sort_by=rank"  class="active" >
+                     1
+                     </a>
+                     <a href="/stonedapecrew/?page=1&amp;ids=&amp;sort_by=rank" >
+                     2
+                     </a>
+                     <a href="/stonedapecrew/?page=2&amp;ids=&amp;sort_by=rank" >
+                     3
+                     </a>
+                     <a href="/stonedapecrew/?page=3&amp;ids=&amp;sort_by=rank" >
+                     4
+                     </a>
+                     <a href="/stonedapecrew/?page=4&amp;ids=&amp;sort_by=rank" >
+                     5
+                     </a>
+                     <span>...</span>
+                     <a href="/stonedapecrew/?page=16&amp;ids=&amp;sort_by=rank" >
+                     17
+                     </a>
+                  </div>
+               </div>
             </div>
-
-    </div>
-    <div class="nfts_top mt pager-only" style="margin-top: 0;">
-        <div class="pager">
-    <span class="results_count">6000 results</span>
-                        <a href="/stonedapecrew/?page=0&amp;ids=&amp;sort_by=rank"  class="active" >
-            1
-            </a>
-                                <a href="/stonedapecrew/?page=1&amp;ids=&amp;sort_by=rank" >
-            2
-            </a>
-                                <a href="/stonedapecrew/?page=2&amp;ids=&amp;sort_by=rank" >
-            3
-            </a>
-                                <a href="/stonedapecrew/?page=3&amp;ids=&amp;sort_by=rank" >
-            4
-            </a>
-                                <a href="/stonedapecrew/?page=4&amp;ids=&amp;sort_by=rank" >
-            5
-            </a>
-                                <span>...</span>
-                                <a href="/stonedapecrew/?page=16&amp;ids=&amp;sort_by=rank" >
-            17
-            </a>
-            </div>
-
-    </div>
-            </div>
-        </div>
-    </div>
-    <script>
-        function changeSort() {
-            let kvpairs = getKvpairs();
-            let selected_sort = document.getElementById("sort_by").value;
-            var queryString = kvpairs.join("&");
-            queryString += '&sort_by=' + selected_sort;
-            if (selected_sort == 'price') {
-                queryString += '&for_sale=on';
-            }
-            let link = '/stonedapecrew/?' + queryString;
-            window.location.href = link;
-        }
-    </script>
-<div class="wrap footer">
-    <div class="footer_links">
-        <a href="/" class="f_logo"><img class="dark_logo" src="img/logo_dark.svg" alt="img"><img class="light_logo" src="img/logo_light.svg" alt="img"></a>
-        <a href="/faq" class="reg"><img src="img/FAQ.svg" alt="img"> FAQ</a>
-        <a href="https://twitter.com/howrareis" class="reg" target="_blank"><img src="img/twitter.svg" alt="img"> Twitter</a>
-        <a href="https://discord.gg/VmhsCdjyEx" class="reg" target="_blank"><img src="img/discord.svg" alt="img"> Discord</a>
-        <a href="/api" class="reg">API</a>
-    </div>
-    <div class="copyright">
-        &copy; 2022 HowRare.is All rights reserved
-    </div>
-</div>
-<script src="js/jquery-3.6.0.min.js"></script>
-<script src="js/jquery.autocompletem.js"></script>
-<script src="js/scripts.js"></script>
-<script>
-var meta;
-fetch("data/BASC_Final.json")
-.then(Response => Response.json())
-.then(data => meta = data)
-.then(() => console.log(meta))	
-	
-function getNestedValue(obj, key) {
-    return key.split(".").reduce(function(result, key) {
-       return result[key] 
-    }, obj);
-}
-
-function populateCard(mint,rank,pic) {
-
-    let vDiv = document.createElement('div');
-    vDiv.className = "featured_item";
-    
-    let img = document.createElement('div');
-    img.className = "featured_item_img";
-    vDiv.append(img);
-    
-    var elem = document.createElement("img");
-    elem.src = pic;
-    img.append(elem);
-    
-    let k= document.createElement('div');
-    k.className = "featured_image_desc";
-    k.style = "padding-bottom: 5px;";
-    vDiv.append(k);
-    
-    let lll= document.createElement('div');
-    lll.className = "item_stats";
-    k.append(lll);
-    
-    let m= document.createElement('div');
-    m.className = "item_stat";
-    m.textContent = 'rank';
-    lll.append(m);
-    
-    let m1 = document.createElement("span");
-    m1.textContent = rank;
-    m.append(m1);
-    
-    let n= document.createElement('div');
-    n.className = "item_stat";
-    n.textContent = 'mint no.';
-    lll.append(n);
-    
-    let n1 = document.createElement("span");
-    n1.textContent = mint;
-    n.append(n1);
-
-    let look = document.querySelector(".nfts");
-    look.appendChild(vDiv);
-}
-
-let loadcounter1 = 0
-
-while (loadcounter1 <= 30 - 1) {
-    let v1 = getNestedValue(meta, loadcounter1 + ".edition");
-    let v2 = getNestedValue(meta, loadcounter1 + ".FUR");
-    let v3 = getNestedValue(meta, loadcounter1 + ".image");
-    populateCard(v1,v2,v3)
-    loadcounter1 = loadcounter1 + 1;
-};
-</script>	
-<script>
-    $('#autocomplete_search').autocomplete({
-        serviceUrl: '/lookup_collections/',
-        onSelect: function (suggestion) {
-            window.location = suggestion.data;
-        }
-    });
-    $('.nfts_sidebar > span').on('click', function(){
-        $(this).toggleClass('open');
-        $('.nfts_sidebar').each(heightopenclose);
-    });
-
-    $('.info_toggle').on('click', function(){
-        $('#nft_desc').each(heightopenclose);
-    });
-</script>
-</body>
+         </div>
+      </div>
+      <script>
+         function changeSort() {
+             let kvpairs = getKvpairs();
+             let selected_sort = document.getElementById("sort_by").value;
+             var queryString = kvpairs.join("&");
+             queryString += '&sort_by=' + selected_sort;
+             if (selected_sort == 'price') {
+                 queryString += '&for_sale=on';
+             }
+             let link = '/stonedapecrew/?' + queryString;
+             window.location.href = link;
+         }
+      </script>
+      <div class="wrap footer">
+         <div class="footer_links">
+            <a href="/" class="f_logo"><img class="dark_logo" src="img/logo_dark.svg" alt="img"><img class="light_logo" src="img/logo_light.svg" alt="img"></a>
+            <a href="/faq" class="reg"><img src="img/FAQ.svg" alt="img"> FAQ</a>
+            <a href="https://twitter.com/howrareis" class="reg" target="_blank"><img src="img/twitter.svg" alt="img"> Twitter</a>
+            <a href="https://discord.gg/VmhsCdjyEx" class="reg" target="_blank"><img src="img/discord.svg" alt="img"> Discord</a>
+            <a href="/api" class="reg">API</a>
+         </div>
+         <div class="copyright">
+            &copy; 2022 HowRare.is All rights reserved
+         </div>
+      </div>
+      <script src="js/jquery-3.6.0.min.js"></script>
+      <script src="js/jquery.autocompletem.js"></script>
+      <script src="js/scripts.js"></script>
+      <script>
+         var meta;
+         fetch("data/BASC_Final.json")
+         .then(Response => Response.json())
+         .then(data => meta = data)
+         .then(() => console.log(meta))	
+         	
+         function getNestedValue(obj, key) {
+             return key.split(".").reduce(function(result, key) {
+                return result[key] 
+             }, obj);
+         }
+         
+         function populateCard(mint,rank,pic) {
+         
+             let vDiv = document.createElement('div');
+             vDiv.className = "featured_item";
+             
+             let img = document.createElement('div');
+             img.className = "featured_item_img";
+             vDiv.append(img);
+             
+             var elem = document.createElement("img");
+             elem.src = pic;
+             img.append(elem);
+             
+             let k= document.createElement('div');
+             k.className = "featured_image_desc";
+             k.style = "padding-bottom: 5px;";
+             vDiv.append(k);
+             
+             let lll= document.createElement('div');
+             lll.className = "item_stats";
+             k.append(lll);
+             
+             let m= document.createElement('div');
+             m.className = "item_stat";
+             m.textContent = 'rank';
+             lll.append(m);
+             
+             let m1 = document.createElement("span");
+             m1.textContent = rank;
+             m.append(m1);
+             
+             let n= document.createElement('div');
+             n.className = "item_stat";
+             n.textContent = 'mint no.';
+             lll.append(n);
+             
+             let n1 = document.createElement("span");
+             n1.textContent = mint;
+             n.append(n1);
+         
+             let look = document.querySelector(".nfts");
+             look.appendChild(vDiv);
+         }
+         
+         let loadcounter1 = 0
+         
+         while (loadcounter1 <= 30 - 1) {
+             let v1 = getNestedValue(meta, loadcounter1 + ".edition");
+             let v2 = getNestedValue(meta, loadcounter1 + ".FUR");
+             let v3 = getNestedValue(meta, loadcounter1 + ".image");
+             populateCard(v1,v2,v3)
+             loadcounter1 = loadcounter1 + 1;
+         };
+      </script>	
+      <script>
+         $('#autocomplete_search').autocomplete({
+             serviceUrl: '/lookup_collections/',
+             onSelect: function (suggestion) {
+                 window.location = suggestion.data;
+             }
+         });
+         $('.nfts_sidebar > span').on('click', function(){
+             $(this).toggleClass('open');
+             $('.nfts_sidebar').each(heightopenclose);
+         });
+         
+         $('.info_toggle').on('click', function(){
+             $('#nft_desc').each(heightopenclose);
+         });
+      </script>
+   </body>
 </html>
