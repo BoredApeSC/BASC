@@ -1161,6 +1161,67 @@
 <script src="js/jquery.autocompletem.js"></script>
 <script src="js/scripts.js"></script>
 <script>
+function getNestedValue(obj, key) {
+    return key.split(".").reduce(function(result, key) {
+       return result[key] 
+    }, obj);
+}
+
+function populateCard(mint,rank,pic) {
+
+    let vDiv = document.createElement('div');
+    vDiv.className = "featured_item";
+    
+    let img = document.createElement('div');
+    img.className = "featured_item_img";
+    vDiv.append(img);
+    
+    var elem = document.createElement("img");
+    elem.src = pic;
+    img.append(elem);
+    
+    let k= document.createElement('div');
+    k.className = "featured_image_desc";
+    k.style = "padding-bottom: 5px;";
+    vDiv.append(k);
+    
+    let lll= document.createElement('div');
+    lll.className = "item_stats";
+    k.append(lll);
+    
+    let m= document.createElement('div');
+    m.className = "item_stat";
+    m.textContent = 'rank';
+    lll.append(m);
+    
+    let m1 = document.createElement("span");
+    m1.textContent = rank;
+    m.append(m1);
+    
+    let n= document.createElement('div');
+    n.className = "item_stat";
+    n.textContent = 'mint no.';
+    lll.append(n);
+    
+    let n1 = document.createElement("span");
+    n1.textContent = mint;
+    n.append(n1);
+
+    let look = document.querySelector(".nfts");
+    look.appendChild(vDiv);
+}
+
+let loadcounter = 0
+
+while (loadcounter <= 30) {
+    let v1 = getNestedValue(meta, loadcounter + ".edition");
+    let v2 = getNestedValue(meta, loadcounter + ".rank");
+    let v3 = getNestedValue(meta, loadcounter + ".image");
+    populateCard(v1,v2,v3)
+    loadcounter = loadcounter + 1;
+}
+</script>	
+<script>
     $('#autocomplete_search').autocomplete({
         serviceUrl: '/lookup_collections/',
         onSelect: function (suggestion) {
