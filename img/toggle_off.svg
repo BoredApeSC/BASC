@@ -1,0 +1,3 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="24" viewBox="0 0 36 24">
+  <path id="toggle_off" d="M24-24H12A12,12,0,0,0,0-12,12,12,0,0,0,12,0H24A12,12,0,0,0,36-12,12,12,0,0,0,24-24ZM12-4a8,8,0,0,1-8-8,8,8,0,0,1,8-8,8,8,0,0,1,8,8v0a8,8,0,0,1-8,8Z" transform="translate(0 24)" fill="gray"/>
+</svg>
