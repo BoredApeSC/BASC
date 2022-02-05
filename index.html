@@ -1221,8 +1221,7 @@ function populateCard(mint,rank,pic) {
 let loadcounter1 = 0
 
 while (loadcounter1 <= 30 - 1) {
-    let v1 = "123";
-    //let v1 = getNestedValue(meta, loadcounter1 + ".edition");
+    let v1 = getNestedValue(meta, loadcounter1 + ".edition");
     let v2 = getNestedValue(meta, loadcounter1 + ".FUR");
     let v3 = getNestedValue(meta, loadcounter1 + ".image");
     populateCard(v1,v2,v3)
