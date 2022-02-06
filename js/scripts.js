@@ -249,6 +249,115 @@ Array.prototype.uniqueFUR = function() {
              let look = document.querySelector(".nfts");
              look.appendChild(vDiv);
          }
+
+function filterChange() {
+
+    var metafiltered = meta
+    var e = document.getElementById("BACKGROUND");
+    if (e.options[e.selectedIndex].text != 'Please select') {
+        let countEntries = 0
+
+        function filterByBG(obj) {
+            if (obj.BACKGROUND === e.options[e.selectedIndex].text) {
+                return true;
+            }
+            return false;
+        }
+
+        metafiltered = metafiltered.filter(filterByBG);
+    }
+    var e = document.getElementById("FUR");
+    if (e.options[e.selectedIndex].text != 'Please select') {
+        function filterByFUR(obj) {
+            if (obj.FUR === e.options[e.selectedIndex].text) {
+                return true;
+            }
+            return false;
+        }
+
+        metafiltered = metafiltered.filter(filterByFUR);
+    }
+    var e = document.getElementById("CLOTHES");
+    if (e.options[e.selectedIndex].text != 'Please select') {
+        function filterByCLOTHES(obj) {
+            if (obj.CLOTHES === e.options[e.selectedIndex].text) {
+                return true;
+            }
+            return false;
+        }
+
+        metafiltered = metafiltered.filter(filterByCLOTHES);
+    }
+    var e = document.getElementById("EYES");
+    if (e.options[e.selectedIndex].text != 'Please select') {
+        function filterByEYES(obj) {
+            if (obj.EYES === e.options[e.selectedIndex].text) {
+                return true;
+            }
+            return false;
+        }
+
+        metafiltered = metafiltered.filter(filterByEYES);
+    }
+    var e = document.getElementById("MOUTH");
+    if (e.options[e.selectedIndex].text != 'Please select') {
+        function filterByMOUTH(obj) {
+            if (obj.MOUTH === e.options[e.selectedIndex].text) {
+                return true;
+            }
+            return false;
+        }
+
+        metafiltered = metafiltered.filter(filterByMOUTH);
+    }
+    var e = document.getElementById("HATS");
+    if (e.options[e.selectedIndex].text != 'Please select') {
+        function filterByHATS(obj) {
+            if (obj.HATS === e.options[e.selectedIndex].text) {
+                return true;
+            }
+            return false;
+        }
+
+        metafiltered = metafiltered.filter(filterByHATS);
+    }
+    var e = document.getElementById("EARRING");
+    if (e.options[e.selectedIndex].text != 'Please select') {
+        function filterByEARRING(obj) {
+            if (obj.EARRING === e.options[e.selectedIndex].text) {
+                return true;
+            }
+            return false;
+        }
+
+        metafiltered = metafiltered.filter(filterByEARRING);
+    }
+
+    console.log(metafiltered);
+    console.log(metafiltered.length);
+
+    function clearCards() {
+        const myNode = document.querySelector(".nfts");
+        myNode.innerHTML = '';
+    }
+    clearCards();
+
+    var s = document.getElementsByClassName("results_count")[0]
+    s.innerText = metafiltered.length + " RESULTS"
+    var s = document.getElementsByClassName("results_count")[1]
+    s.innerText = metafiltered.length + " RESULTS"
+
+    let loadcounter1 = 0
+
+    while (loadcounter1 <= metafiltered.length - 1) {
+        let v1 = getNestedValue(metafiltered, loadcounter1 + ".edition");
+        let v2 = getNestedValue(metafiltered, loadcounter1 + ".FUR");
+        let v3 = getNestedValue(metafiltered, loadcounter1 + ".image");
+        populateCard(v1, v2, v3)
+        loadcounter1 = loadcounter1 + 1;
+    };
+
+}
   
   window.onload = function () {
     alert("CHANGE 6!");
