@@ -252,6 +252,50 @@ Array.prototype.uniqueFUR = function() {
     }
     //return arr; 
     }
+
+         function populateCard(mint,rank,pic) {
+         
+             let vDiv = document.createElement('div');
+             vDiv.className = "featured_item";
+             
+             let img = document.createElement('div');
+             img.className = "featured_item_img";
+             vDiv.append(img);
+             
+             var elem = document.createElement("img");
+             elem.src = pic;
+             img.append(elem);
+             
+             let k= document.createElement('div');
+             k.className = "featured_image_desc";
+             k.style = "padding-bottom: 5px;";
+             vDiv.append(k);
+             
+             let lll= document.createElement('div');
+             lll.className = "item_stats";
+             k.append(lll);
+             
+             let m= document.createElement('div');
+             m.className = "item_stat";
+             m.textContent = 'rank';
+             lll.append(m);
+             
+             let m1 = document.createElement("span");
+             m1.textContent = rank;
+             m.append(m1);
+             
+             let n= document.createElement('div');
+             n.className = "item_stat";
+             n.textContent = 'mint no.';
+             lll.append(n);
+             
+             let n1 = document.createElement("span");
+             n1.textContent = mint;
+             n.append(n1);
+         
+             let look = document.querySelector(".nfts");
+             look.appendChild(vDiv);
+         }
   
   window.onload = function () {
     alert("CHANGE 2!");
@@ -262,4 +306,14 @@ Array.prototype.uniqueFUR = function() {
     meta.uniqueMOUTH();
     meta.uniqueHATS();
     meta.uniqueEARRING();
+	  
+         let loadcounter1 = 0
+         
+         while (loadcounter1 <= 30 - 1) {
+             let v1 = getNestedValue(meta, loadcounter1 + ".edition");
+             let v2 = getNestedValue(meta, loadcounter1 + ".FUR");
+             let v3 = getNestedValue(meta, loadcounter1 + ".image");
+             populateCard(v1,v2,v3)
+             loadcounter1 = loadcounter1 + 1;
+         };	  
   }
