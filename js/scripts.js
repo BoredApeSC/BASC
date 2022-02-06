@@ -176,14 +176,17 @@ function getNestedValue(obj, key) {
     look2.appendChild(opt);
     }
   
-
-  Array.prototype.unique99 = function() {
-    let arr = [];
-    for(let i = 0; i < this.length; i++) {
-        if(!arr.includes(this[i].FUR)) {
-            arr.push(this[i].FUR);
-            populateFilterData(this[i].FUR,this[i].FUR,"FUR")
+  window.onload = function () {
+      alert("This is an alert!");
+      Array.prototype.unique99 = function() {
+        let arr = [];
+        for(let i = 0; i < this.length; i++) {
+            if(!arr.includes(this[i].FUR)) {
+                arr.push(this[i].FUR);
+                populateFilterData(this[i].FUR,this[i].FUR,"FUR")
+            }
         }
-    }
-    return arr; 
+        return arr; 
+      }
+      meta.unique99();
   }
