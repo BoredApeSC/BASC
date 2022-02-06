@@ -346,6 +346,9 @@ function filterChange() {
     s.innerText = metafiltered.length + " RESULTS"
     var s = document.getElementsByClassName("results_count")[1]
     s.innerText = metafiltered.length + " RESULTS"
+	
+	//Sort by MINT
+	metafiltered = metafiltered.sort(function(a,b){return a.edition - b.edition});
 
     let loadcounter1 = 0
 
