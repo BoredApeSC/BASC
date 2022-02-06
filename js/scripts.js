@@ -354,7 +354,7 @@ function filterChange() {
 
     while (loadcounter1 <= metafiltered.length - 1) {
         let v1 = getNestedValue(metafiltered, loadcounter1 + ".edition");
-        let v2 = getNestedValue(metafiltered, loadcounter1 + ".FUR");
+        let v2 = getNestedValue(metafiltered, loadcounter1 + ".rank");
         let v3 = getNestedValue(metafiltered, loadcounter1 + ".image");
         populateCard(v1, v2, v3)
         loadcounter1 = loadcounter1 + 1;
@@ -395,7 +395,7 @@ let loadcounter1 = 0
          
 while (loadcounter1 <= metafiltered.length - 1) {
     let v1 = getNestedValue(metafiltered, loadcounter1 + ".edition");
-    let v2 = getNestedValue(metafiltered, loadcounter1 + ".FUR");
+    let v2 = getNestedValue(metafiltered, loadcounter1 + ".rank");
     let v3 = getNestedValue(metafiltered, loadcounter1 + ".image");
     populateCard(v1,v2,v3)
     loadcounter1 = loadcounter1 + 1;
@@ -416,7 +416,7 @@ while (loadcounter1 <= metafiltered.length - 1) {
          
          while (loadcounter1 <= 30 - 1) {
              let v1 = getNestedValue(meta, loadcounter1 + ".edition");
-             let v2 = getNestedValue(meta, loadcounter1 + ".FUR");
+             let v2 = getNestedValue(meta, loadcounter1 + ".rank");
              let v3 = getNestedValue(meta, loadcounter1 + ".image");
              populateCard(v1,v2,v3)
              loadcounter1 = loadcounter1 + 1;
