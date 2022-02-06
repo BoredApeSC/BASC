@@ -359,8 +359,48 @@ function filterChange() {
 
 }
   
+function filterByID() {
+
+var metafiltered = meta
+var g = document.getElementById('ids').value;
+
+
+if (g  != '') {
+	function filterByID(obj) {
+		if (obj.edition == g) 
+		{
+		return true;
+		} 
+		return false;
+		}
+		if (metafiltered === metafiltered.filter(filterByID)) {metafiltered = null}
+		metafiltered = metafiltered.filter(filterByID);
+}
+
+function clearCards() {
+	const myNode = document.querySelector(".nfts");
+	myNode.innerHTML = '';
+      }
+clearCards();
+
+var s = document.getElementsByClassName("results_count")[0]
+s.innerText = metafiltered.length + " RESULTS"
+var s = document.getElementsByClassName("results_count")[1]
+s.innerText = metafiltered.length + " RESULTS"
+
+let loadcounter1 = 0
+         
+while (loadcounter1 <= metafiltered.length - 1) {
+    let v1 = getNestedValue(metafiltered, loadcounter1 + ".edition");
+    let v2 = getNestedValue(metafiltered, loadcounter1 + ".FUR");
+    let v3 = getNestedValue(metafiltered, loadcounter1 + ".image");
+    populateCard(v1,v2,v3)
+    loadcounter1 = loadcounter1 + 1;
+};
+}
+
   window.onload = function () {
-    alert("CHANGE 7!");
+    alert("CHANGE 8!");
     meta.uniqueBG();
     meta.uniqueFUR();
     meta.uniqueCLOTHES();
