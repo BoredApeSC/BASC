@@ -160,3 +160,30 @@ $('.trigger').on('click', function(){
 $('.sort_table').on('click', function(){
 	$(this).toggleClass('up');
 });*/
+
+function getNestedValue(obj, key) {
+    return key.split(".").reduce(function(result, key) {
+       return result[key] 
+    }, obj);
+}
+
+  function populateFilterData (var1,var2,var3) {
+    var opt = document.createElement("option");
+    opt.value = var1;
+    opt.textContent = var2;
+    
+    let look2 = document.getElementById(var3);
+    look2.appendChild(opt);
+    }
+  
+
+  Array.prototype.unique99 = function() {
+    let arr = [];
+    for(let i = 0; i < this.length; i++) {
+        if(!arr.includes(this[i].FUR)) {
+            arr.push(this[i].FUR);
+            populateFilterData(this[i].FUR,this[i].FUR,"FUR")
+        }
+    }
+    return arr; 
+  }
