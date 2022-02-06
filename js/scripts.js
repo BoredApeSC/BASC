@@ -403,7 +403,7 @@ while (loadcounter1 <= metafiltered.length - 1) {
 }
 
   window.onload = function () {
-    alert("CHANGE 8!");
+    alert("Created by: Exxempt with no affiliation with BASC leadership.");
     meta.uniqueBG();
     meta.uniqueFUR();
     meta.uniqueCLOTHES();
