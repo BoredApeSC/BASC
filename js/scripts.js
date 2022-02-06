@@ -1,7 +1,5 @@
 /*css toggler
 $(function () {
-    /*css toggler*/
-
 	function enableLightMode() {
 		$('link.daynight').prop('disabled', false);
 	}
@@ -298,7 +296,7 @@ Array.prototype.uniqueFUR = function() {
          }
   
   window.onload = function () {
-    alert("CHANGE 3!");
+    alert("CHANGE 4!");
     meta.uniqueBG();
     meta.uniqueFUR();
     meta.uniqueCLOTHES();
