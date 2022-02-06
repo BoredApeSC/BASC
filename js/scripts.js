@@ -360,7 +360,7 @@ function filterChange() {
 }
   
   window.onload = function () {
-    alert("CHANGE 6!");
+    alert("CHANGE 7!");
     meta.uniqueBG();
     meta.uniqueFUR();
     meta.uniqueCLOTHES();
