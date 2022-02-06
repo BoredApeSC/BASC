@@ -175,18 +175,91 @@ function getNestedValue(obj, key) {
     let look2 = document.getElementById(var3);
     look2.appendChild(opt);
     }
+
+Array.prototype.uniqueBG = function() {
+    let arr = [];
+    for(let i = 0; i < this.length; i++) {
+        if(!arr.includes(this[i].BACKGROUND)) {
+            arr.push(this[i].BACKGROUND);
+            populateFilterData(this[i].BACKGROUND,this[i].BACKGROUND,"BACKGROUND")
+        }
+    }
+    //return arr; 
+  }
+
+Array.prototype.uniqueFUR = function() {
+    let arr = [];
+    for(let i = 0; i < this.length; i++) {
+        if(!arr.includes(this[i].FUR)) {
+            arr.push(this[i].FUR);
+            populateFilterData(this[i].FUR,this[i].FUR,"FUR")
+        }
+    }
+    //return arr; 
+}
+
+    Array.prototype.uniqueCLOTHES = function() {
+    let arr = [];
+    for(let i = 0; i < this.length; i++) {
+        if(!arr.includes(this[i].CLOTHES)) {
+            arr.push(this[i].CLOTHES);
+            populateFilterData(this[i].CLOTHES,this[i].CLOTHES,"CLOTHES")
+        }
+    }
+    //return arr; 
+    }
+
+    Array.prototype.uniqueEYES = function() {
+    let arr = [];
+    for(let i = 0; i < this.length; i++) {
+        if(!arr.includes(this[i].EYES)) {
+            arr.push(this[i].EYES);
+            populateFilterData(this[i].EYES,this[i].EYES,"EYES")
+        }
+    }
+    //return arr; 
+    }
+
+    Array.prototype.uniqueMOUTH = function() {
+    let arr = [];
+    for(let i = 0; i < this.length; i++) {
+        if(!arr.includes(this[i].MOUTH)) {
+            arr.push(this[i].MOUTH);
+            populateFilterData(this[i].MOUTH,this[i].MOUTH,"MOUTH")
+        }
+    }
+    //return arr; 
+    }
+
+    Array.prototype.uniqueHATS = function() {
+    let arr = [];
+    for(let i = 0; i < this.length; i++) {
+        if(!arr.includes(this[i].HATS)) {
+            arr.push(this[i].HATS);
+            populateFilterData(this[i].HATS,this[i].HATS,"HATS")
+        }
+    }
+    //return arr; 
+    }
+
+    Array.prototype.uniqueEARRING = function() {
+    let arr = [];
+    for(let i = 0; i < this.length; i++) {
+        if(!arr.includes(this[i].EARRING)) {
+            arr.push(this[i].EARRING);
+            populateFilterData(this[i].EARRING,this[i].EARRING,"EARRING")
+        }
+    }
+    //return arr; 
+    }
   
   window.onload = function () {
-      alert("This is an alert!");
-      Array.prototype.unique99 = function() {
-        let arr = [];
-        for(let i = 0; i < this.length; i++) {
-            if(!arr.includes(this[i].FUR)) {
-                arr.push(this[i].FUR);
-                populateFilterData(this[i].FUR,this[i].FUR,"FUR")
-            }
-        }
-        return arr; 
-      }
-      meta.unique99();
+    alert("CHANGE 2!");
+    meta.uniqueBG();
+    meta.uniqueFUR();
+    meta.uniqueCLOTHES();
+    meta.uniqueEYES();
+    meta.uniqueMOUTH();
+    meta.uniqueHATS();
+    meta.uniqueEARRING();
   }
