@@ -412,6 +412,9 @@ while (loadcounter1 <= metafiltered.length - 1) {
     meta.uniqueHATS();
     meta.uniqueEARRING();
 	  
+//Sort by MINT
+meta = meta.sort(function(a,b){return a.edition - b.edition});	  
+	  
          let loadcounter1 = 0
          
          while (loadcounter1 <= 30 - 1) {
