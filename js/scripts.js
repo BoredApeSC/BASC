@@ -1,4 +1,4 @@
-/*css toggler*/
+/*css toggler
 $(function () {
     /*css toggler*/
 
@@ -26,7 +26,7 @@ $(function () {
 	});
 
 });
-
+*/
 
 // custom select
 var x, i, j, l, ll, selElmnt, a, b, c;
@@ -298,7 +298,7 @@ Array.prototype.uniqueFUR = function() {
          }
   
   window.onload = function () {
-    alert("CHANGE 2!");
+    alert("CHANGE 3!");
     meta.uniqueBG();
     meta.uniqueFUR();
     meta.uniqueCLOTHES();
