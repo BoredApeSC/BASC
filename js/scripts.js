@@ -1,30 +1,4 @@
-/*css toggler
-$(function () {
-	function enableLightMode() {
-		$('link.daynight').prop('disabled', false);
-	}
 
-	function disableLightMode() {
-		$('link.daynight').prop('disabled', true);
-	}
-
-	$('a.daynight').on('click', function(){
-		var enabled = ! $('link.daynight').prop('disabled');
-		// call JS to set cookie
-        $.get( "/toggle_daynight", {state: enabled}, function( data ) {
-            console.log(data);
-        });
-		if(enabled) {
-			disableLightMode();
-		}
-		else {
-			enableLightMode();
-		}
-		return false;
-	});
-
-});
-*/
 
 // custom select
 var x, i, j, l, ll, selElmnt, a, b, c;
@@ -135,25 +109,6 @@ function heightopenclose(){
 }
 
 
-$('#toggle_stats').on('click', function(){
-    $(this).toggleClass('close');
-    $('.stats_full_holder').each(heightopenclose);
-});
-
-$('#toggle_sales').on('click', function(){
-    $(this).toggleClass('close');
-    $('.sales_history').each(heightopenclose);
-});
-
-$('.checkbox_holder div').on('click', function(){
-    $(this).toggleClass('close');
-    $('.checkbox_holder').each(heightopenclose);
-});
-
-$('.trigger').on('click', function(){
-	$(this).toggleClass('open');
-    $('.header').each(heightopenclose);
-});
 /*
 $('.sort_table').on('click', function(){
 	$(this).toggleClass('up');
