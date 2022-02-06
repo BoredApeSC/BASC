@@ -39,7 +39,18 @@ function populateFilterData (var1,var2,var3) {
     
     let look2 = document.getElementById(var3);
     look2.appendChild(opt);
+    };
+  Array.prototype.unique99 = function() {
+    let arr = [];
+    for(let i = 0; i < this.length; i++) {
+        if(!arr.includes(this[i].FUR)) {
+            arr.push(this[i].FUR);
+            populateFilterData(this[i].FUR,this[i].FUR,"FUR")
+        }
     }
+    return arr; 
+  }	      
+	      
 /*
 //UNIQUE BACKGROUND TRAITS FOR FILTER
 const trait0= [];
@@ -57,7 +68,7 @@ var trait0arrayLength = trait0.length;
 for (var i = 0; i < arrayLength; i++) {
 populateFilterData (trait0[i].VALUE,trait0[i].VALUE,"BACKGROUND");
 }
-*/
+
 
 //UNIQUE FUR TRAITS FOR FILTER
 const trait1= [];
@@ -159,7 +170,9 @@ for (const item of meta) {
 var trait6arrayLength = trait6.length;
 for (var i = 0; i < arrayLength; i++) {
 populateFilterData (trait6[i].VALUE,trait6[i].VALUE,"EARRING");
-}	      
+}
+
+*/
       </script>
    </head>
    <body>
