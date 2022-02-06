@@ -32,24 +32,7 @@
          .then(Response => Response.json())
          .then(data => meta = data)
 	      
-function populateFilterData (var1,var2,var3) {
-    var opt = document.createElement("option");
-    opt.value = var1;
-    opt.textContent = var2;
-    
-    let look2 = document.getElementById(var3);
-    look2.appendChild(opt);
-    };
-  Array.prototype.unique99 = function() {
-    let arr = [];
-    for(let i = 0; i < this.length; i++) {
-        if(!arr.includes(this[i].FUR)) {
-            arr.push(this[i].FUR);
-            populateFilterData(this[i].FUR,this[i].FUR,"FUR")
-        }
-    }
-    return arr; 
-  }	      
+   
 	      
 /*
 //UNIQUE BACKGROUND TRAITS FOR FILTER
@@ -535,6 +518,28 @@ populateFilterData (trait6[i].VALUE,trait6[i].VALUE,"EARRING");
              populateCard(v1,v2,v3)
              loadcounter1 = loadcounter1 + 1;
          };
+								  
+								  
+								  
+	function populateFilterData (var1,var2,var3) {
+    var opt = document.createElement("option");
+    opt.value = var1;
+    opt.textContent = var2;
+    
+    let look2 = document.getElementById(var3);
+    look2.appendChild(opt);
+    };
+  Array.prototype.unique99 = function() {
+    let arr = [];
+    for(let i = 0; i < this.length; i++) {
+        if(!arr.includes(this[i].FUR)) {
+            arr.push(this[i].FUR);
+            populateFilterData(this[i].FUR,this[i].FUR,"FUR")
+        }
+    }
+    return arr; 
+  }	   							  
+								  
       </script>	
       <script>
          $('#autocomplete_search').autocomplete({
