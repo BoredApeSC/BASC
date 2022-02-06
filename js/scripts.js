@@ -251,8 +251,8 @@ Array.prototype.uniqueFUR = function() {
          }
   
   window.onload = function () {
-    alert("CHANGE 5!");
-    //meta.uniqueBG();
+    alert("CHANGE 6!");
+    meta.uniqueBG();
     meta.uniqueFUR();
     meta.uniqueCLOTHES();
     meta.uniqueEYES();
