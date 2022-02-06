@@ -173,6 +173,9 @@ while (loadcounter1 <= metafiltered.length - 1) {
     var s = document.getElementsByClassName("results_count")[1]
     s.innerText = metafiltered.length + " RESULTS"
 
+	//Sort by MINT
+	metafiltered = metafiltered.sort(function(a,b){return a.edition - b.edition});		
+		
     let loadcounter1 = 0
 
     while (loadcounter1 <= metafiltered.length - 1) {
