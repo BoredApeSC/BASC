@@ -365,7 +365,7 @@ function loadInitialCards(){
 }
 
 window.onload = function () {
-	
+sessionStorage.clear();	
 //LOAD TRAIT FILTERS	
 //alert("Created by: Exxempt out of love and care for the BASC.");
 function populateFilterData (var1,var2,var3) {
