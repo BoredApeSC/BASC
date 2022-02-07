@@ -461,5 +461,5 @@ meta = meta.sort(function(a,b){return a.edition - b.edition});
              populateCard(v1,v2,v3)
              loadcounter1 = loadcounter1 + 1;
          };
-    alert("Created by: Exxempt out of love and care for the BASC.");	  
+    //alert("Created by: Exxempt out of love and care for the BASC.");	  
   }
