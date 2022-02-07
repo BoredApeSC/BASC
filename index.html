@@ -204,7 +204,7 @@ $(function () {
       alert('Scrolled to Page Bottom v2');
  if (loadcounter === loadcountertotal - 1) {metafiltered = null;loadcounter = 0; loadcountertotal = 0}	
  if (loadcounter !== loadcountertotal - 1) {
-	if ( metafiltered === null){ var tempmet = metafiltered} else {var tempmet = meta}
+	if ( metafiltered === null){var tempmet = meta} else {var tempmet = metafiltered}
  	var tempcount = loadcounter + 17
     while (loadcounter <= tempcount) {
       let v1 = getNestedValue(tempmet, loadcounter + ".edition");
