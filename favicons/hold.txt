@@ -18,3 +18,43 @@
 <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
 <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
 <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+
+
+STATS BAR
+<div class="sel close" id="toggle_stats" style="margin-bottom: 0;">
+            <img src="/n/img/properties.svg" alt="properties"> <span>Sales</span>
+        </div>
+        
+<div class="stats_full_holder open" style="margin-top: 3px;">
+    <div class="stats stats_full" style="padding-top: 10px; padding-bottom: 10px;">
+        <div class="stat">
+            <span>◎268.80K</span>volume
+        </div>
+        <div class="stat">
+            <span>6303</span>sales
+        </div>
+        <div class="stat">
+                    <span>◎<a href="/shadowysupercoder/4763">
+                             228  </a></span>max. sale
+        </div>
+        <div class="stat">
+            <span>◎ 42.65 </span>avg. sale
+        </div>
+        <div class="stat">
+            <span>◎115.00</span>24h volume
+        </div>
+        <div class="stat">
+            <span>1</span>24h sales
+        </div>
+        <div class="stat">
+                    <span>◎
+                                                <a href="/shadowysupercoder/5304">
+                             115  </a>
+                                            </span>
+            24h max. sale
+        </div>
+        <div class="stat">
+            <span>◎115.00</span>24h avg. sale
+        </div>
+    </div>
+</div>
