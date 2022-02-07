@@ -196,7 +196,8 @@ function populateFilterData (var1,var2,var3) {
 function filterChange() {
 
     metafiltered = meta
-    var e = document.getElementById("BACKGROUND");
+    /*
+	var e = document.getElementById("BACKGROUND");
     if (e.options[e.selectedIndex].text != 'Please select') {
         let countEntries = 0
 
@@ -209,6 +210,7 @@ function filterChange() {
 
         metafiltered = metafiltered.filter(filterByBG);
     }
+    */
     var e = document.getElementById("FUR");
     if (e.options[e.selectedIndex].text != 'Please select') {
         function filterByFUR(obj) {
@@ -460,7 +462,7 @@ Array.prototype.uniqueEARRING = function() {
   //return arr; 
 }
     
-meta.uniqueBG();
+//meta.uniqueBG();
 meta.uniqueFUR();
 meta.uniqueCLOTHES();
 meta.uniqueEYES();
