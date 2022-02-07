@@ -72,3 +72,31 @@ STATS BAR
                  }
              });
          });
+         
+         
+         
+         
+         
+$(function () {
+  var $win = $(window);
+
+  $win.scroll(function () {
+    if ($win.scrollTop() == 0)
+      console.log("");
+    else if ($win.height() + $win.scrollTop()
+             == $(document).height()) {
+      alert('Scrolled to Page Bottom');
+  meta = meta.sort(function(a,b){return a.edition - b.edition});	
+  let loadcounter1 = 0
+  while (loadcounter1 <= 18 - 1) {
+    let v1 = getNestedValue(meta, loadcounter1 + ".edition");
+    let v2 = getNestedValue(meta, loadcounter1 + ".rank");
+    let v3 = getNestedValue(meta, loadcounter1 + ".image");
+    populateCard(v1,v2,v3);
+    loadcounter1 = loadcounter1 + 1;
+  }  	      
+      
+    }
+  });
+});
+
