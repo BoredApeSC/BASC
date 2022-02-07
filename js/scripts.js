@@ -1,6 +1,6 @@
 var loadcounter = 0
 var loadcountertotal = 0
-
+var metafiltered = null
 // custom select
 var x, i, j, l, ll, selElmnt, a, b, c;
 /* Look for any elements with the class "custom-select": */
@@ -195,7 +195,7 @@ function populateFilterData (var1,var2,var3) {
 
 function filterChange() {
 
-    var metafiltered = meta
+    metafiltered = meta
     var e = document.getElementById("BACKGROUND");
     if (e.options[e.selectedIndex].text != 'Please select') {
         let countEntries = 0
@@ -307,7 +307,7 @@ function filterChange() {
   
 function filterByID() {
 
-var metafiltered = meta
+metafiltered = meta
 var g = document.getElementById('ids').value;
 
 
@@ -334,15 +334,18 @@ s.innerText = metafiltered.length + " RESULTS"
 var s = document.getElementsByClassName("results_count")[1]
 s.innerText = metafiltered.length + " RESULTS"
 
-loadcounter1 = 0
+loadcounter = 0
 loadcountertotal = metafiltered.length        
-while (loadcounter1 <= loadcountertotal - 1) {
-    let v1 = getNestedValue(metafiltered, loadcounter1 + ".edition");
-    let v2 = getNestedValue(metafiltered, loadcounter1 + ".rank");
-    let v3 = getNestedValue(metafiltered, loadcounter1 + ".image");
+while (loadcounter <= loadcountertotal - 1) {
+    let v1 = getNestedValue(metafiltered, loadcounter + ".edition");
+    let v2 = getNestedValue(metafiltered, loadcounter + ".rank");
+    let v3 = getNestedValue(metafiltered, loadcounter + ".image");
     populateCard(v1,v2,v3)
-    loadcounter1 = loadcounter1 + 1;
+    loadcounter = loadcounter + 1;
 }
+loadcounter1 = 0
+metafiltered = null
+loadcountertotal = 0
 }
 
 function loadStatData(){
