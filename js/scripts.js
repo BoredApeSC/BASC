@@ -1,3 +1,6 @@
+var loadcounter1 = 0
+var loadcountertotal = 0
+
 // custom select
 var x, i, j, l, ll, selElmnt, a, b, c;
 /* Look for any elements with the class "custom-select": */
@@ -290,9 +293,9 @@ function filterChange() {
 	//Sort by MINT
 	metafiltered = metafiltered.sort(function(a,b){return a.edition - b.edition});
 
-    let loadcounter1 = 0
-
-    while (loadcounter1 <= metafiltered.length - 1) {
+    loadcounter1 = 0
+	loadcountertotal = metafiltered.length
+    while (loadcounter1 <= loadcountertotal - 1) {
         let v1 = getNestedValue(metafiltered, loadcounter1 + ".edition");
         let v2 = getNestedValue(metafiltered, loadcounter1 + ".rank");
         let v3 = getNestedValue(metafiltered, loadcounter1 + ".image");
@@ -331,9 +334,9 @@ s.innerText = metafiltered.length + " RESULTS"
 var s = document.getElementsByClassName("results_count")[1]
 s.innerText = metafiltered.length + " RESULTS"
 
-let loadcounter1 = 0
-         
-while (loadcounter1 <= metafiltered.length - 1) {
+loadcounter1 = 0
+loadcountertotal = metafiltered.length        
+while (loadcounter1 <= loadcountertotal - 1) {
     let v1 = getNestedValue(metafiltered, loadcounter1 + ".edition");
     let v2 = getNestedValue(metafiltered, loadcounter1 + ".rank");
     let v3 = getNestedValue(metafiltered, loadcounter1 + ".image");
@@ -468,53 +471,9 @@ function getNestedValue(obj, key) {
        return result[key] 
     }, obj);
 }
-
- function populateCard(mint,rank,pic) {
-         
-             let vDiv = document.createElement('div');
-             vDiv.className = "featured_item";
-             
-             let img = document.createElement('div');
-             img.className = "featured_item_img";
-             vDiv.append(img);
-             
-             let elem = document.createElement("img");
-             elem.src = pic;
-             img.append(elem);
-             
-             let k= document.createElement('div');
-             k.className = "featured_image_desc";
-             k.style = "padding-bottom: 5px;";
-             vDiv.append(k);
-             
-             let lll= document.createElement('div');
-             lll.className = "item_stats";
-             k.append(lll);
-             
-             let m= document.createElement('div');
-             m.className = "item_stat";
-             m.textContent = 'rank';
-             lll.append(m);
-             
-             let m1 = document.createElement("span");
-             m1.textContent = rank;
-             m.append(m1);
-             
-             let n= document.createElement('div');
-             n.className = "item_stat";
-             n.textContent = 'mint no.';
-             lll.append(n);
-             
-             let n1 = document.createElement("span");
-             n1.textContent = mint;
-             n.append(n1);
-         
-             let look = document.querySelector(".nfts");
-             look.appendChild(vDiv);
- }
   //Sort by MINT
   meta = meta.sort(function(a,b){return a.edition - b.edition});	
-  let loadcounter1 = 0
+ loadcountertotal = meta.length
   while (loadcounter1 <= 18 - 1) {
     let v1 = getNestedValue(meta, loadcounter1 + ".edition");
     let v2 = getNestedValue(meta, loadcounter1 + ".rank");
