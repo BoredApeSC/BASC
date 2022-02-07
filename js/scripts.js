@@ -461,12 +461,12 @@ Array.prototype.uniqueEARRING = function() {
 }
     
 //meta.uniqueBG();
-meta.uniqueFUR();
-meta.uniqueCLOTHES();
-meta.uniqueEYES();
-meta.uniqueMOUTH();
-meta.uniqueHATS();
-meta.uniqueEARRING();
+//meta.uniqueFUR();
+//meta.uniqueCLOTHES();
+//meta.uniqueEYES();
+//meta.uniqueMOUTH();
+//meta.uniqueHATS();
+//meta.uniqueEARRING();
 	
 //LOAD INITIAL CARDS
 function getNestedValue(obj, key) {
