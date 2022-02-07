@@ -195,7 +195,17 @@ function populateFilterData (var1,var2,var3) {
 
 function filterChange() {
 
-    metafiltered = meta
+metafiltered = meta	
+	
+let sortie = document.getElementById('sort_by');
+let sortieval = sortie.options[sortie.selectedIndex].value
+if (sortieval === 'rank'){
+	metafiltered = metafiltered.sort(function(a,b){return a.rank - b.rank}); 
+}
+if (sortieval === 'id'){
+	metafiltered = metafiltered.sort(function(a,b){return a.edition - b.edition});
+}	
+
     /*
 	var e = document.getElementById("BACKGROUND");
     if (e.options[e.selectedIndex].text != 'Please select') {
@@ -490,6 +500,16 @@ function getNestedValue(obj, key) {
 function changeSort() {
 let sortie = document.getElementById('sort_by');
 let sortieval = sortie.options[sortie.selectedIndex].value
-if (sortieval === 'rank'){meta = meta.sort(function(a,b){return a.rank - b.rank}); if ( metafiltered !== null){filterChange();}}
-if (sortieval === 'id'){meta = meta.sort(function(a,b){return a.edition - b.edition});if ( metafiltered !== null){filterChange();}}
+if (sortieval === 'rank'){
+	meta = meta.sort(function(a,b){return a.rank - b.rank}); 
+	if ( metafiltered !== null){
+		filterChange();
+	}
+}
+if (sortieval === 'id'){
+	meta = meta.sort(function(a,b){return a.edition - b.edition});
+	if ( metafiltered !== null){
+		filterChange();
+	}
+}
 }
