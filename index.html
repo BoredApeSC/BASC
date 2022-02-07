@@ -475,6 +475,20 @@ while (loadcounter1 <= metafiltered.length - 1) {
          .then(data => meta = data)
          .then(() => console.log(meta))	
 				     */
+	          $('#autocomplete_search').autocomplete({
+        serviceUrl: '/lookup_collections/',
+        onSelect: function (suggestion) {
+            window.location = suggestion.data;
+        }
+    });
+    $('.nfts_sidebar > span').on('click', function(){
+        $(this).toggleClass('open');
+        $('.nfts_sidebar').each(heightopenclose);
+    });
+
+    $('.info_toggle').on('click', function(){
+        $('#nft_desc').each(heightopenclose);
+    });
       </script>
    </body>
 </html>
