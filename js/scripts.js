@@ -422,7 +422,25 @@ while (loadcounter1 <= metafiltered.length - 1) {
 }
 
   window.onload = function () {
-    alert("Created by: Exxempt with no affiliation with BASC leadership.");
+	  
+const api_url = "https://api.solradar.io/dd/latestPrices?collectionId=bored_ape_solana_club";
+  
+async function getapi(url) {
+    
+    const response = await fetch(url);
+    var data = await response.json();
+    //console.log(data);
+    if (response) {
+    }
+    let apistats = document.getElementsByClassName('stat');
+    apistats[0].innerHTML = '\n                  <span>' + data[0].listedCount + '</span>listed\n               '
+    apistats[1].innerHTML = '\n                  <a href="https://magiceden.io/marketplace/bored_ape_solana_club"><span>◎' +   data[0].floorPrice + '</span>Floor</a>\n               '
+    apistats[2].innerHTML = '\n                  <a href="https://magiceden.io/marketplace/bored_ape_solana_club"><span>◎' + (data[0].volume24hr).toFixed(2) + '</span>volume(24h)</a>\n               '
+} 	
+
+getapi(api_url);
+	  
+    alert("Created by: Exxempt out of love and care for the BASC.");
     meta.uniqueBG();
     meta.uniqueFUR();
     meta.uniqueCLOTHES();
