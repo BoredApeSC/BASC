@@ -476,8 +476,7 @@ function getNestedValue(obj, key) {
        return result[key] 
     }, obj);
 }
-  //Sort by MINT
-  meta = meta.sort(function(a,b){return a.edition - b.edition});	
+	
  loadcountertotal = meta.length
   while (loadcounter <= 18 - 1) {
     let v1 = getNestedValue(meta, loadcounter + ".edition");
@@ -486,4 +485,11 @@ function getNestedValue(obj, key) {
     populateCard(v1,v2,v3);
     loadcounter = loadcounter + 1;
   }  	
+}
+
+function changeSort() {
+let sortie = document.getElementById('sort_by');
+let sortieval = sortie.options[sortie.selectedIndex].value
+if (sortieval === 'rank'){meta = meta.sort(function(a,b){return a.rank - b.rank}); if ( metafiltered !== null){filterChange();}}
+if (sortieval === 'id'){meta = meta.sort(function(a,b){return a.edition - b.edition});if ( metafiltered !== null){filterChange();}}
 }
