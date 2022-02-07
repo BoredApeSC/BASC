@@ -365,6 +365,13 @@ function loadInitialCards(){
 }
 
 window.onload = function () {
+//Get DATA
+ var meta;
+ fetch("data/BASC_Final.json")
+ .then(Response => Response.json())
+ .then(data => meta = data)
+	
+	
 //LOAD TRAIT FILTERS	
 //alert("Created by: Exxempt out of love and care for the BASC.");
 function populateFilterData (var1,var2,var3) {
