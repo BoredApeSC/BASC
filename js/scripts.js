@@ -1,4 +1,4 @@
-var loadcounter1 = 0
+var loadcounter = 0
 var loadcountertotal = 0
 
 // custom select
@@ -293,14 +293,14 @@ function filterChange() {
 	//Sort by MINT
 	metafiltered = metafiltered.sort(function(a,b){return a.edition - b.edition});
 
-    loadcounter1 = 0
+    loadcounter = 0
 	loadcountertotal = metafiltered.length
-    while (loadcounter1 <= loadcountertotal - 1) {
-        let v1 = getNestedValue(metafiltered, loadcounter1 + ".edition");
-        let v2 = getNestedValue(metafiltered, loadcounter1 + ".rank");
-        let v3 = getNestedValue(metafiltered, loadcounter1 + ".image");
+    while (loadcounter <= loadcountertotal - 1) {
+        let v1 = getNestedValue(metafiltered, loadcounter + ".edition");
+        let v2 = getNestedValue(metafiltered, loadcounter + ".rank");
+        let v3 = getNestedValue(metafiltered, loadcounter + ".image");
         populateCard(v1, v2, v3)
-        loadcounter1 = loadcounter1 + 1;
+        loadcounter = loadcounter + 1;
     }
 
 }
@@ -474,11 +474,11 @@ function getNestedValue(obj, key) {
   //Sort by MINT
   meta = meta.sort(function(a,b){return a.edition - b.edition});	
  loadcountertotal = meta.length
-  while (loadcounter1 <= 18 - 1) {
-    let v1 = getNestedValue(meta, loadcounter1 + ".edition");
-    let v2 = getNestedValue(meta, loadcounter1 + ".rank");
-    let v3 = getNestedValue(meta, loadcounter1 + ".image");
+  while (loadcounter <= 18 - 1) {
+    let v1 = getNestedValue(meta, loadcounter + ".edition");
+    let v2 = getNestedValue(meta, loadcounter + ".rank");
+    let v3 = getNestedValue(meta, loadcounter + ".image");
     populateCard(v1,v2,v3);
-    loadcounter1 = loadcounter1 + 1;
+    loadcounter = loadcounter + 1;
   }  	
 }
