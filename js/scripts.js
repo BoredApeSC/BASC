@@ -460,7 +460,7 @@ Array.prototype.uniqueEARRING = function() {
   //return arr; 
 }
     
-meta.uniqueBG();
+//meta.uniqueBG();
 meta.uniqueFUR();
 meta.uniqueCLOTHES();
 meta.uniqueEYES();
