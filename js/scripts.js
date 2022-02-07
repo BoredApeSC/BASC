@@ -137,93 +137,16 @@ function getNestedValue(obj, key) {
     }, obj);
 }
 
-  function populateFilterData (var1,var2,var3) {
+function populateFilterData (var1,var2,var3) {
     var opt = document.createElement("option");
     opt.value = var1;
     opt.textContent = var2;
     
     let look2 = document.getElementById(var3);
     look2.appendChild(opt);
-    }
-
-Array.prototype.uniqueBG = function() {
-    let arr = [];
-    for(let i = 0; i < this.length; i++) {
-        if(!arr.includes(this[i].BACKGROUND)) {
-            arr.push(this[i].BACKGROUND);
-            populateFilterData(this[i].BACKGROUND,this[i].BACKGROUND,"BACKGROUND")
-        }
-    }
-    //return arr; 
-  }
-
-Array.prototype.uniqueFUR = function() {
-    let arr = [];
-    for(let i = 0; i < this.length; i++) {
-        if(!arr.includes(this[i].FUR)) {
-            arr.push(this[i].FUR);
-            populateFilterData(this[i].FUR,this[i].FUR,"FUR")
-        }
-    }
-    //return arr; 
 }
 
-    Array.prototype.uniqueCLOTHES = function() {
-    let arr = [];
-    for(let i = 0; i < this.length; i++) {
-        if(!arr.includes(this[i].CLOTHES)) {
-            arr.push(this[i].CLOTHES);
-            populateFilterData(this[i].CLOTHES,this[i].CLOTHES,"CLOTHES")
-        }
-    }
-    //return arr; 
-    }
-
-    Array.prototype.uniqueEYES = function() {
-    let arr = [];
-    for(let i = 0; i < this.length; i++) {
-        if(!arr.includes(this[i].EYES)) {
-            arr.push(this[i].EYES);
-            populateFilterData(this[i].EYES,this[i].EYES,"EYES")
-        }
-    }
-    //return arr; 
-    }
-
-    Array.prototype.uniqueMOUTH = function() {
-    let arr = [];
-    for(let i = 0; i < this.length; i++) {
-        if(!arr.includes(this[i].MOUTH)) {
-            arr.push(this[i].MOUTH);
-            populateFilterData(this[i].MOUTH,this[i].MOUTH,"MOUTH")
-        }
-    }
-    //return arr; 
-    }
-
-    Array.prototype.uniqueHATS = function() {
-    let arr = [];
-    for(let i = 0; i < this.length; i++) {
-        if(!arr.includes(this[i].HATS)) {
-            arr.push(this[i].HATS);
-            populateFilterData(this[i].HATS,this[i].HATS,"HATS")
-        }
-    }
-    //return arr; 
-    }
-
-    Array.prototype.uniqueEARRING = function() {
-    let arr = [];
-    for(let i = 0; i < this.length; i++) {
-        if(!arr.includes(this[i].EARRING)) {
-            arr.push(this[i].EARRING);
-            populateFilterData(this[i].EARRING,this[i].EARRING,"EARRING")
-        }
-    }
-    //return arr; 
-    }
-
-         function populateCard(mint,rank,pic) {
+ function populateCard(mint,rank,pic) {
          
              let vDiv = document.createElement('div');
              vDiv.className = "featured_item";
@@ -232,7 +155,7 @@ Array.prototype.uniqueFUR = function() {
              img.className = "featured_item_img";
              vDiv.append(img);
              
-             var elem = document.createElement("img");
+             let elem = document.createElement("img");
              elem.src = pic;
              img.append(elem);
              
@@ -265,7 +188,7 @@ Array.prototype.uniqueFUR = function() {
          
              let look = document.querySelector(".nfts");
              look.appendChild(vDiv);
-         }
+ }
 
 function filterChange() {
 
@@ -437,17 +360,157 @@ function loadStatData(){
   getapi(api_url);
 }
 
-function loadTraitFilters(){
-	  meta.uniqueBG();
-    meta.uniqueFUR();
-    meta.uniqueCLOTHES();
-    meta.uniqueEYES();
-    meta.uniqueMOUTH();
-    meta.uniqueHATS();
-    meta.uniqueEARRING();
+function loadInitialCards(){
+
 }
 
-function loadInitialCards(){
+window.onload = function () {
+//LOAD TRAIT FILTERS	
+//alert("Created by: Exxempt out of love and care for the BASC.");
+function populateFilterData (var1,var2,var3) {
+    var opt = document.createElement("option");
+    opt.value = var1;
+    opt.textContent = var2;
+    
+    let look2 = document.getElementById(var3);
+    look2.appendChild(opt);
+}
+
+Array.prototype.uniqueBG = function() {
+    let arr = [];
+    for(let i = 0; i < this.length; i++) {
+        if(!arr.includes(this[i].BACKGROUND)) {
+            arr.push(this[i].BACKGROUND);
+            populateFilterData(this[i].BACKGROUND,this[i].BACKGROUND,"BACKGROUND")
+        }
+    }
+    //return arr; 
+  }
+
+Array.prototype.uniqueFUR = function() {
+    let arr = [];
+    for(let i = 0; i < this.length; i++) {
+        if(!arr.includes(this[i].FUR)) {
+            arr.push(this[i].FUR);
+            populateFilterData(this[i].FUR,this[i].FUR,"FUR")
+        }
+    }
+    //return arr; 
+}
+
+Array.prototype.uniqueCLOTHES = function() {
+  let arr = [];
+  for(let i = 0; i < this.length; i++) {
+    if(!arr.includes(this[i].CLOTHES)) {
+      arr.push(this[i].CLOTHES);
+      populateFilterData(this[i].CLOTHES,this[i].CLOTHES,"CLOTHES")
+    }
+  }
+  //return arr; 
+}
+
+Array.prototype.uniqueEYES = function() {
+  let arr = [];
+  for(let i = 0; i < this.length; i++) {
+    if(!arr.includes(this[i].EYES)) {
+      arr.push(this[i].EYES);
+      populateFilterData(this[i].EYES,this[i].EYES,"EYES")
+    }
+  }
+  //return arr; 
+}
+
+Array.prototype.uniqueMOUTH = function() {
+  let arr = [];
+  for(let i = 0; i < this.length; i++) {
+    if(!arr.includes(this[i].MOUTH)) {
+      arr.push(this[i].MOUTH);
+      populateFilterData(this[i].MOUTH,this[i].MOUTH,"MOUTH")
+    }
+  }
+  //return arr; 
+}
+
+Array.prototype.uniqueHATS = function() {
+  let arr = [];
+  for(let i = 0; i < this.length; i++) {
+    if(!arr.includes(this[i].HATS)) {
+      arr.push(this[i].HATS);
+      populateFilterData(this[i].HATS,this[i].HATS,"HATS")
+    }
+  }
+  //return arr; 
+}
+
+Array.prototype.uniqueEARRING = function() {
+  let arr = [];
+  for(let i = 0; i < this.length; i++) {
+    if(!arr.includes(this[i].EARRING)) {
+      arr.push(this[i].EARRING);
+      populateFilterData(this[i].EARRING,this[i].EARRING,"EARRING")
+    }
+  }
+  //return arr; 
+}
+    
+meta.uniqueBG();
+meta.uniqueFUR();
+meta.uniqueCLOTHES();
+meta.uniqueEYES();
+meta.uniqueMOUTH();
+meta.uniqueHATS();
+meta.uniqueEARRING();
+	
+//LOAD INITIAL CARDS
+function getNestedValue(obj, key) {
+    return key.split(".").reduce(function(result, key) {
+       return result[key] 
+    }, obj);
+}
+
+ function populateCard(mint,rank,pic) {
+         
+             let vDiv = document.createElement('div');
+             vDiv.className = "featured_item";
+             
+             let img = document.createElement('div');
+             img.className = "featured_item_img";
+             vDiv.append(img);
+             
+             let elem = document.createElement("img");
+             elem.src = pic;
+             img.append(elem);
+             
+             let k= document.createElement('div');
+             k.className = "featured_image_desc";
+             k.style = "padding-bottom: 5px;";
+             vDiv.append(k);
+             
+             let lll= document.createElement('div');
+             lll.className = "item_stats";
+             k.append(lll);
+             
+             let m= document.createElement('div');
+             m.className = "item_stat";
+             m.textContent = 'rank';
+             lll.append(m);
+             
+             let m1 = document.createElement("span");
+             m1.textContent = rank;
+             m.append(m1);
+             
+             let n= document.createElement('div');
+             n.className = "item_stat";
+             n.textContent = 'mint no.';
+             lll.append(n);
+             
+             let n1 = document.createElement("span");
+             n1.textContent = mint;
+             n.append(n1);
+         
+             let look = document.querySelector(".nfts");
+             look.appendChild(vDiv);
+ }
   //Sort by MINT
   meta = meta.sort(function(a,b){return a.edition - b.edition});	
   let loadcounter1 = 0
@@ -457,9 +520,5 @@ function loadInitialCards(){
     let v3 = getNestedValue(meta, loadcounter1 + ".image");
     populateCard(v1,v2,v3);
     loadcounter1 = loadcounter1 + 1;
-  }  
-}
-
-window.onload = function () {
-//alert("Created by: Exxempt out of love and care for the BASC.");	  
+  }  	
 }
