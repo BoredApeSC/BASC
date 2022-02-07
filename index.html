@@ -283,67 +283,6 @@
                   <input type="submit" value="SUBMIT">
                </form>
                <script>
-                  function getKvpairs() {
-                      var kvpairs = [];
-                              var ids = document.getElementById("ids");
-                      if (ids.value !== '') {
-                          kvpairs.push(encodeURIComponent(ids.name) + "=" + encodeURIComponent(ids.value));
-                      }
-                                      var wallet = document.getElementById("wallet");
-                      if (wallet.value !== '') {
-                          kvpairs.push(encodeURIComponent(wallet.name) + "=" + encodeURIComponent(wallet.value));
-                      }
-                                              var pf = document.getElementById("price_from");
-                      if (pf.value !== '') {
-                          kvpairs.push(encodeURIComponent(pf.name) + "=" + encodeURIComponent(pf.value));
-                      }
-                      var pt = document.getElementById("price_to");
-                      if (pt.value !== '') {
-                          kvpairs.push(encodeURIComponent(pt.name) + "=" + encodeURIComponent(pt.value));
-                      }
-                      var fs = document.getElementById("for_sale");
-                      if (fs.checked) {
-                          kvpairs.push(encodeURIComponent(fs.name) + "=" + encodeURIComponent('on'));
-                      }
-                              var rf = document.getElementById("rank_from");
-                      if (rf.value !== '') {
-                          kvpairs.push(encodeURIComponent(rf.name) + "=" + encodeURIComponent(rf.value));
-                      }
-                      var rt = document.getElementById("rank_to");
-                      if (rt.value !== '') {
-                          kvpairs.push(encodeURIComponent(rt.name) + "=" + encodeURIComponent(rt.value));
-                      }
-                      document.querySelectorAll("#filters_form select").forEach(function(e){
-                          if (e.value !== '') {
-                              kvpairs.push(encodeURIComponent(e.name) + "=" + encodeURIComponent(e.value));
-                          }
-                      });
-                      return kvpairs;
-                  }
-                  async function soc() {
-                      let kvpairs = getKvpairs();
-                      let sb = document.getElementById("sort_by");
-                      kvpairs.push(encodeURIComponent(sb.name) + "=" + encodeURIComponent(sb.value));
-                      kvpairs.push(encodeURIComponent('soc') + "=" + encodeURIComponent('yes'));
-                      var queryString = kvpairs.join("&");
-                      fetch('/stonedapecrew?'+queryString).
-                      then(response => response.text()).
-                      then(function(t) {
-                          document.getElementById("nfts_content").innerHTML = t;
-                      });
-                  }
-		       /*
-                  function reloadForm() {
-                      let kvpairs = getKvpairs();
-                      var queryString = kvpairs.join("&");
-                              soc();
-                              fetch('/stonedapecrew/reload_form/?'+queryString).
-                      then(response => response.text()).
-                      then(function(t) {
-                          document.getElementById("form_filters").innerHTML = t;
-                      });
-                  
-                  }*/
 		      function reloadForm() {
 
                   window.location.reload(true);
