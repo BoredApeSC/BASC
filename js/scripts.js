@@ -440,7 +440,7 @@ async function getapi(url) {
 
 getapi(api_url);
 	  
-    alert("Created by: Exxempt out of love and care for the BASC.");
+
     meta.uniqueBG();
     meta.uniqueFUR();
     meta.uniqueCLOTHES();
@@ -460,5 +460,6 @@ meta = meta.sort(function(a,b){return a.edition - b.edition});
              let v3 = getNestedValue(meta, loadcounter1 + ".image");
              populateCard(v1,v2,v3)
              loadcounter1 = loadcounter1 + 1;
-         };	  
+         };
+    alert("Created by: Exxempt out of love and care for the BASC.");	  
   }
