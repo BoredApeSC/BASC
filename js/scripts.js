@@ -120,12 +120,12 @@ $('.checkbox_holder div').on('click', function(){
     $(this).toggleClass('close');
     $('.checkbox_holder').each(heightopenclose);
 });
-*/
+
 $('.trigger').on('click', function(){
 	$(this).toggleClass('open');
     $('.header').each(heightopenclose);
 });
-
+*/
 /*
 $('.sort_table').on('click', function(){
 	$(this).toggleClass('up');
