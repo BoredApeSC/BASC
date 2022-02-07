@@ -108,6 +108,25 @@ function heightopenclose(){
     }
 }
 
+$('#toggle_stats').on('click', function(){
+    $(this).toggleClass('close');
+    $('.stats_full_holder').each(heightopenclose);
+});
+
+$('#toggle_sales').on('click', function(){
+    $(this).toggleClass('close');
+    $('.sales_history').each(heightopenclose);
+});
+
+$('.checkbox_holder div').on('click', function(){
+    $(this).toggleClass('close');
+    $('.checkbox_holder').each(heightopenclose);
+});
+
+$('.trigger').on('click', function(){
+	$(this).toggleClass('open');
+    $('.header').each(heightopenclose);
+});
 
 /*
 $('.sort_table').on('click', function(){
