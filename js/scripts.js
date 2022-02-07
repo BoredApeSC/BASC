@@ -462,7 +462,7 @@ meta.uniqueMOUTH();
 meta.uniqueHATS();
 meta.uniqueEARRING();
 	
-//LOAD INITIAL CARDS
+//LOAD INITIAL CARDS 
 function getNestedValue(obj, key) {
     return key.split(".").reduce(function(result, key) {
        return result[key] 
