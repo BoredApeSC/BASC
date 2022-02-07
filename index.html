@@ -35,13 +35,7 @@
          .then(Response => Response.json())
          .then(data => meta = data)
          
-         $(window).on('load', function() {
 
-alert("PAGE loaded.");
-            
-            
-            
-})
       </script>
       <script src="js/scripts.js"></script>
       <script type="text/javascript"> 
@@ -425,7 +419,14 @@ alert("PAGE loaded.");
             $('.info_toggle').on('click', function(){
                 $('#nft_desc').each(heightopenclose);
             });
-              
+         
+         $(window).on('load', function() {
+
+alert("PAGE load 2.");
+            
+            
+            
+})
       </script>
    </body>
 </html>
