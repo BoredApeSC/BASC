@@ -515,7 +515,7 @@ function getNestedValue(obj, key) {
   //Sort by MINT
   meta = meta.sort(function(a,b){return a.edition - b.edition});	
   let loadcounter1 = 0
-  while (loadcounter1 <= 30 - 1) {
+  while (loadcounter1 <= 18 - 1) {
     let v1 = getNestedValue(meta, loadcounter1 + ".edition");
     let v2 = getNestedValue(meta, loadcounter1 + ".rank");
     let v3 = getNestedValue(meta, loadcounter1 + ".image");
