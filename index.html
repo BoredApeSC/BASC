@@ -320,17 +320,7 @@
          </div>
       </div>
       <script>
-         function changeSort() {
-             let kvpairs = getKvpairs();
-             let selected_sort = document.getElementById("sort_by").value;
-             var queryString = kvpairs.join("&");
-             queryString += '&sort_by=' + selected_sort;
-             if (selected_sort == 'price') {
-                 queryString += '&for_sale=on';
-             }
-             let link = '' + queryString;
-             window.location.href = link;
-         }
+	      
       </script>
       <div class="wrap footer">
          <div class="footer_links">
