@@ -454,13 +454,13 @@ Array.prototype.uniqueEARRING = function() {
   //return arr; 
 }
     
-//meta.uniqueBG();
-//meta.uniqueFUR();
-//meta.uniqueCLOTHES();
-//meta.uniqueEYES();
-//meta.uniqueMOUTH();
-//meta.uniqueHATS();
-//meta.uniqueEARRING();
+meta.uniqueBG();
+meta.uniqueFUR();
+meta.uniqueCLOTHES();
+meta.uniqueEYES();
+meta.uniqueMOUTH();
+meta.uniqueHATS();
+meta.uniqueEARRING();
 	
 //LOAD INITIAL CARDS
 function getNestedValue(obj, key) {
