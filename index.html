@@ -205,12 +205,12 @@ $(function () {
   meta = meta.sort(function(a,b){return a.edition - b.edition});	
  if (loadcounter !== loadcountertotal - 1) {
  		let tempcount = loadcountertotal + 17
-    while (loadcounter1 <= tempcount) {
-      let v1 = getNestedValue(meta, loadcounter1 + ".edition");
-      let v2 = getNestedValue(meta, loadcounter1 + ".rank");
-      let v3 = getNestedValue(meta, loadcounter1 + ".image");
+    while (loadcounter <= tempcount) {
+      let v1 = getNestedValue(meta, loadcounter + ".edition");
+      let v2 = getNestedValue(meta, loadcounter + ".rank");
+      let v3 = getNestedValue(meta, loadcounter + ".image");
       populateCard(v1,v2,v3);
-      loadcounter1 = loadcounter1 + 1;
+      loadcounter = loadcounter + 1;
     }  	      
    }   
     }
