@@ -461,12 +461,5 @@ function loadInitialCards(){
 }
 
 window.onload = function () {
-  var reloading = sessionStorage.getItem("reloading");
-  if (reloading) {
-    sessionStorage.removeItem("reloading");
-    loadStatData();
-    loadTraitFilters();
-    loadInitialCards();
-  }
 //alert("Created by: Exxempt out of love and care for the BASC.");	  
 }
