@@ -1,5 +1,3 @@
-
-
 // custom select
 var x, i, j, l, ll, selElmnt, a, b, c;
 /* Look for any elements with the class "custom-select": */
@@ -377,7 +375,7 @@ function filterChange() {
         let v3 = getNestedValue(metafiltered, loadcounter1 + ".image");
         populateCard(v1, v2, v3)
         loadcounter1 = loadcounter1 + 1;
-    };
+    }
 
 }
   
@@ -418,48 +416,57 @@ while (loadcounter1 <= metafiltered.length - 1) {
     let v3 = getNestedValue(metafiltered, loadcounter1 + ".image");
     populateCard(v1,v2,v3)
     loadcounter1 = loadcounter1 + 1;
-};
+}
 }
 
-  window.onload = function () {
-	    meta.uniqueBG();
+function loadStatData(){
+  const api_url = "https://api.solradar.io/dd/latestPrices?collectionId=bored_ape_solana_club";
+
+  async function getapi(url) {
+      const response = await fetch(url);
+      var data = await response.json();
+      //console.log(data);
+      if (response) {
+      }
+      let apistats = document.getElementsByClassName('stat');
+      apistats[0].innerHTML = '\n                  <span>' + data[0].listedCount + '</span>listed\n               '
+      apistats[1].innerHTML = '\n                  <a href="https://magiceden.io/marketplace/bored_ape_solana_club"><span>◎' +   data[0].floorPrice + '</span>Floor</a>\n               '
+      apistats[2].innerHTML = '\n                  <a href="https://magiceden.io/marketplace/bored_ape_solana_club"><span>◎' + (data[0].volume24hr).toFixed(2) + '</span>volume(24h)</a>\n               '
+  } 	
+
+  getapi(api_url);
+}
+
+function loadTraitFilters(){
+	  meta.uniqueBG();
     meta.uniqueFUR();
     meta.uniqueCLOTHES();
     meta.uniqueEYES();
     meta.uniqueMOUTH();
     meta.uniqueHATS();
     meta.uniqueEARRING();
-	  
-//Sort by MINT
-meta = meta.sort(function(a,b){return a.edition - b.edition});	  
-	  
-         let loadcounter1 = 0
-         
-         while (loadcounter1 <= 30 - 1) {
-             let v1 = getNestedValue(meta, loadcounter1 + ".edition");
-             let v2 = getNestedValue(meta, loadcounter1 + ".rank");
-             let v3 = getNestedValue(meta, loadcounter1 + ".image");
-             populateCard(v1,v2,v3)
-             loadcounter1 = loadcounter1 + 1;
-         };  
-const api_url = "https://api.solradar.io/dd/latestPrices?collectionId=bored_ape_solana_club";
-  
-async function getapi(url) {
-    
-    const response = await fetch(url);
-    var data = await response.json();
-    //console.log(data);
-    if (response) {
-    }
-    let apistats = document.getElementsByClassName('stat');
-    apistats[0].innerHTML = '\n                  <span>' + data[0].listedCount + '</span>listed\n               '
-    apistats[1].innerHTML = '\n                  <a href="https://magiceden.io/marketplace/bored_ape_solana_club"><span>◎' +   data[0].floorPrice + '</span>Floor</a>\n               '
-    apistats[2].innerHTML = '\n                  <a href="https://magiceden.io/marketplace/bored_ape_solana_club"><span>◎' + (data[0].volume24hr).toFixed(2) + '</span>volume(24h)</a>\n               '
-} 	
+}
 
-getapi(api_url);
-	  
+function loadInitialCards(){
+  //Sort by MINT
+  meta = meta.sort(function(a,b){return a.edition - b.edition});	
+  let loadcounter1 = 0
+  while (loadcounter1 <= 30 - 1) {
+    let v1 = getNestedValue(meta, loadcounter1 + ".edition");
+    let v2 = getNestedValue(meta, loadcounter1 + ".rank");
+    let v3 = getNestedValue(meta, loadcounter1 + ".image");
+    populateCard(v1,v2,v3);
+    loadcounter1 = loadcounter1 + 1;
+  }  
+}
 
-
-    //alert("Created by: Exxempt out of love and care for the BASC.");	  
+window.onload = function () {
+  var reloading = sessionStorage.getItem("reloading");
+  if (reloading) {
+    sessionStorage.removeItem("reloading");
+    loadStatData();
+    loadTraitFilters();
+    loadInitialCards();
   }
+//alert("Created by: Exxempt out of love and care for the BASC.");	  
+}
