@@ -32,6 +32,10 @@
          fetch("data/BASC_Final.json")
          .then(Response => Response.json())
          .then(data => meta = data)
+         
+         $(window).on('load', function() {
+    console.log('All assets are loaded')
+})
       </script>
       <script src="js/scripts.js"></script>
       <script type="text/javascript"> 
