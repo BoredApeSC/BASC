@@ -193,6 +193,9 @@
       </script>
    </head>
    <body>
+ <button type="button">Click Me!</button>    
+	   
+	   
       <div class="wrap content nft_list">
          <div class="nft_title_holder" style="margin-bottom: 4px;">
             <div class="nft_title">
@@ -335,6 +338,9 @@
       <script src="js/jquery.autocompletem.js"></script>
       <script src="js/scripts.js"></script>
       <script>
+	const button1 = document.querySelector('button');
+	button1.addEventListener('click', function(){window.location.reload(true)});
+	      
          /*
                    $('#autocomplete_search').autocomplete({
                 serviceUrl: '/lookup_collections/',
