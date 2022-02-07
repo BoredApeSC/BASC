@@ -202,13 +202,14 @@ $(function () {
     else if ($win.height() + $win.scrollTop()
              == $(document).height()) {
       alert('Scrolled to Page Bottom');
-  meta = meta.sort(function(a,b){return a.edition - b.edition});	
+ if (loadcounter === loadcountertotal - 1) {metafiltered = null;loadcounter = 0; loadcountertotal = 0}	
  if (loadcounter !== loadcountertotal - 1) {
- 		let tempcount = loadcountertotal + 17
+	if ( metafiltered !== null){ let tempmet = metafiltered} else {let tempmet = meta}
+ 	let tempcount = loadcountertotal + 17
     while (loadcounter <= tempcount) {
-      let v1 = getNestedValue(meta, loadcounter + ".edition");
-      let v2 = getNestedValue(meta, loadcounter + ".rank");
-      let v3 = getNestedValue(meta, loadcounter + ".image");
+      let v1 = getNestedValue(tempmet, loadcounter + ".edition");
+      let v2 = getNestedValue(tempmet, loadcounter + ".rank");
+      let v3 = getNestedValue(tempmet, loadcounter + ".image");
       populateCard(v1,v2,v3);
       loadcounter = loadcounter + 1;
     }  	      
