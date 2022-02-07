@@ -34,7 +34,8 @@
          fetch("data/BASC_Final.json")
          .then(Response => Response.json())
          .then(data => meta = data)
-         
+           //Sort by MINT
+  	meta = meta.sort(function(a,b){return a.edition - b.edition});
 
       </script>
       <script src="js/scripts.js"></script>
