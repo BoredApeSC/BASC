@@ -204,7 +204,12 @@ function populateFilterData (var1,var2,var3) {
  }
 
 function filterChange() {
-
+	var hh = document.getElementById('ranks').value;
+	document.getElementById('ranks').value = '';
+	
+        var gg = document.getElementById('ids').value;
+  	document.getElementById('ids').value = '';
+	
 metafiltered = meta	
 	
 let sortie = document.getElementById('sort_by');
