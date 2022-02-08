@@ -471,9 +471,9 @@ function loadStatData() {
     //console.log(data);
     if (response) {}
     let apistats = document.getElementsByClassName('stat');
-    apistats[0].innerHTML = '\n                  <span>' + data[0].listedCount + '</span>listed\n               '
-    apistats[1].innerHTML = '\n                  <a href="https://magiceden.io/marketplace/bored_ape_solana_club"><span>◎' + data[0].floorPrice + '</span>Floor</a>\n               '
-    apistats[2].innerHTML = '\n                  <a href="https://magiceden.io/marketplace/bored_ape_solana_club"><span>◎' + (data[0].volume24hr).toFixed(2) + '</span>volume(24h)</a>\n               '
+    apistats[0].innerHTML = '\n                  <a href="https://magiceden.io/marketplace/bored_ape_solana_club"><span>' + data[0].listedCount + '</span>listed\n               '
+    apistats[1].innerHTML = '\n                  <span>◎' + data[0].floorPrice + '</span>Floor</a>\n               '
+    apistats[2].innerHTML = '\n                  <span>◎' + (data[0].volume24hr).toFixed(2) + '</span>volume(24h)</a>\n               '
   }
 
   getapi(api_url);
