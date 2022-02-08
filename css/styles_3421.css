@@ -167,7 +167,7 @@ a.butt img {margin: -2px 3px 2px 0; }
 .social a.daynight {background-image: url(../img/light_mode.svg);}
 .social a.faq {background-image: url(../img/FAQ.svg);}
 
-.content {/*padding-top: 0px;*/ padding-bottom: 120px; }
+.content {/*padding-top: 0px;*/ padding-bottom: 75px; }
 
 .content:after {content: ""; position:absolute; top: 0; left: 50%; width: 100vw; height: 100%; z-index: -1; transform: translateX(-50%); background: linear-gradient(180deg, rgba(49,49,49,1) 0%, rgba(33,33,33,1) 150px, rgba(33,33,33,1) 100%);}
 
