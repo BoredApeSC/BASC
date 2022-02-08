@@ -175,158 +175,161 @@
     <script src="js/jquery.autocompletem.js"></script>
     <script src="js/scripts.js"></script>
     <script>
-      $(function() {
-        var $win = $(window);
+     $(function() {
+       var $win = $(window);
 
-        $win.scroll(function() {
-          if ($win.scrollTop() == 0)
-            console.log("");
+       $win.scroll(function() {
+         if ($win.scrollTop() == 0)
+           console.log("");
 
-          var checktraits = document.getElementById("CLOTHES");
-          if (checktraits.length !== 45) {
-            function populateFilterData(var1, var2, var3) {
-              var opt = document.createElement("option");
-              opt.value = var1;
-              opt.textContent = var2;
-              let look2 = document.getElementById(var3);
-              look2.appendChild(opt);
-            }
+         var checktraits = document.getElementById("CLOTHES");
+         if (checktraits.length !== 45) {
+           function populateFilterData(var1, var2, var3) {
+             var opt = document.createElement("option");
+             opt.value = var1;
+             opt.textContent = var2;
+             let look2 = document.getElementById(var3);
+             look2.appendChild(opt);
+           }
 
-            Array.prototype.uniqueBG = function() {
-              let arr = [];
-              for (let i = 0; i < this.length; i++) {
-                if (!arr.includes(this[i].BACKGROUND)) {
-                  arr.push(this[i].BACKGROUND);
-                  populateFilterData(this[i].BACKGROUND, this[i].BACKGROUND, "BACKGROUND")
-                }
-              }
-            }
+           Array.prototype.uniqueBG = function() {
+             let arr = [];
+             for (let i = 0; i < this.length; i++) {
+               if (!arr.includes(this[i].BACKGROUND)) {
+                 arr.push(this[i].BACKGROUND);
+                 populateFilterData(this[i].BACKGROUND, this[i].BACKGROUND, "BACKGROUND")
+               }
+             }
+           }
 
-            Array.prototype.uniqueFUR = function() {
-              let arr = [];
-              for (let i = 0; i < this.length; i++) {
-                if (!arr.includes(this[i].FUR)) {
-                  arr.push(this[i].FUR);
-                  populateFilterData(this[i].FUR, this[i].FUR, "FUR")
-                }
-              }
-            }
+           Array.prototype.uniqueFUR = function() {
+             let arr = [];
+             for (let i = 0; i < this.length; i++) {
+               if (!arr.includes(this[i].FUR)) {
+                 arr.push(this[i].FUR);
+                 populateFilterData(this[i].FUR, this[i].FUR, "FUR")
+               }
+             }
+           }
 
-            Array.prototype.uniqueCLOTHES = function() {
-              let arr = [];
-              for (let i = 0; i < this.length; i++) {
-                if (!arr.includes(this[i].CLOTHES)) {
-                  arr.push(this[i].CLOTHES);
-                  populateFilterData(this[i].CLOTHES, this[i].CLOTHES, "CLOTHES")
-                }
-              }
-            }
+           Array.prototype.uniqueCLOTHES = function() {
+             let arr = [];
+             for (let i = 0; i < this.length; i++) {
+               if (!arr.includes(this[i].CLOTHES)) {
+                 arr.push(this[i].CLOTHES);
+                 populateFilterData(this[i].CLOTHES, this[i].CLOTHES, "CLOTHES")
+               }
+             }
+           }
 
-            Array.prototype.uniqueEYES = function() {
-              let arr = [];
-              for (let i = 0; i < this.length; i++) {
-                if (!arr.includes(this[i].EYES)) {
-                  arr.push(this[i].EYES);
-                  populateFilterData(this[i].EYES, this[i].EYES, "EYES")
-                }
-              }
-            }
+           Array.prototype.uniqueEYES = function() {
+             let arr = [];
+             for (let i = 0; i < this.length; i++) {
+               if (!arr.includes(this[i].EYES)) {
+                 arr.push(this[i].EYES);
+                 populateFilterData(this[i].EYES, this[i].EYES, "EYES")
+               }
+             }
+           }
 
-            Array.prototype.uniqueMOUTH = function() {
-              let arr = [];
-              for (let i = 0; i < this.length; i++) {
-                if (!arr.includes(this[i].MOUTH)) {
-                  arr.push(this[i].MOUTH);
-                  populateFilterData(this[i].MOUTH, this[i].MOUTH, "MOUTH")
-                }
-              }
-            }
+           Array.prototype.uniqueMOUTH = function() {
+             let arr = [];
+             for (let i = 0; i < this.length; i++) {
+               if (!arr.includes(this[i].MOUTH)) {
+                 arr.push(this[i].MOUTH);
+                 populateFilterData(this[i].MOUTH, this[i].MOUTH, "MOUTH")
+               }
+             }
+           }
 
-            Array.prototype.uniqueHATS = function() {
-              let arr = [];
-              for (let i = 0; i < this.length; i++) {
-                if (!arr.includes(this[i].HATS)) {
-                  arr.push(this[i].HATS);
-                  populateFilterData(this[i].HATS, this[i].HATS, "HATS")
-                }
-              }
-            }
+           Array.prototype.uniqueHATS = function() {
+             let arr = [];
+             for (let i = 0; i < this.length; i++) {
+               if (!arr.includes(this[i].HATS)) {
+                 arr.push(this[i].HATS);
+                 populateFilterData(this[i].HATS, this[i].HATS, "HATS")
+               }
+             }
+           }
 
-            Array.prototype.uniqueEARRING = function() {
-              let arr = [];
-              for (let i = 0; i < this.length; i++) {
-                if (!arr.includes(this[i].EARRING)) {
-                  arr.push(this[i].EARRING);
-                  populateFilterData(this[i].EARRING, this[i].EARRING, "EARRING")
-                }
-              }
-            }
-            //meta.uniqueBG();
-            meta.uniqueFUR();
-            meta.uniqueCLOTHES();
-            meta.uniqueEYES();
-            meta.uniqueMOUTH();
-            meta.uniqueHATS();
-            meta.uniqueEARRING();
-          } else if ($win.height() + $win.scrollTop() ==
-            $(document).height()) {
-            if (loadcounter === loadcountertotal - 1) {
-              metafiltered = null;
-              loadcounter = 0;
-              loadcountertotal = 0
-            }
-            if (loadcounter !== loadcountertotal - 1) {
-              if (metafiltered === null) {
-                var tempmet = meta
-              } else {
-                var tempmet = metafiltered
-              }
-              var tempcount = loadcounter + 17
-              while (loadcounter <= tempcount) {
-                let v1 = getNestedValue(tempmet, loadcounter + ".edition");
-                let v2 = getNestedValue(tempmet, loadcounter + ".token");
-                let v3 = getNestedValue(tempmet, loadcounter + ".image");
-                populateCard(v1, v2, v3);
-                loadcounter = loadcounter + 1;
-              }
-            }
-          }
-        });
-      });
-      /*
-      $('#autocomplete_search').autocomplete({
-      	serviceUrl: '/lookup_collections/',
-        onSelect: function (suggestion) {
-        window.location = suggestion.data;
-        }
-      });
-      */
-      $('.nfts_sidebar > span').on('click', function() {
-        $(this).toggleClass('open');
-        $('.nfts_sidebar').each(heightopenclose);
-      });
+           Array.prototype.uniqueEARRING = function() {
+             let arr = [];
+             for (let i = 0; i < this.length; i++) {
+               if (!arr.includes(this[i].EARRING)) {
+                 arr.push(this[i].EARRING);
+                 populateFilterData(this[i].EARRING, this[i].EARRING, "EARRING")
+               }
+             }
+           }
+           //meta.uniqueBG();
+           meta.uniqueFUR();
+           meta.uniqueCLOTHES();
+           meta.uniqueEYES();
+           meta.uniqueMOUTH();
+           meta.uniqueHATS();
+           meta.uniqueEARRING();
+         } else if ($win.height() + $win.scrollTop() ==
+           $(document).height()) {
+           if (loadcountertotal != 0) {
+             if (loadcounter === loadcountertotal - 1) {
+               metafiltered = null;
+               loadcounter = 0;
+               loadcountertotal = 0
+             }
+             if (loadcounter !== loadcountertotal - 1) {
+               if (metafiltered === null) {
+                 var tempmet = meta
+               } else {
+                 var tempmet = metafiltered
+               }
+               var tempcount = loadcounter + 17
+               while (loadcounter <= tempcount) {
+                 let v1 = getNestedValue(tempmet, loadcounter + ".edition");
+                 let v2 = getNestedValue(tempmet, loadcounter + ".token");
+                 let v3 = getNestedValue(tempmet, loadcounter + ".image");
+                 populateCard(v1, v2, v3);
+                 loadcounter = loadcounter + 1;
+               }
+             }
+           }
+         }
+       });
+     });
+     /*
+     $('#autocomplete_search').autocomplete({
+     	serviceUrl: '/lookup_collections/',
+       onSelect: function (suggestion) {
+       window.location = suggestion.data;
+       }
+     });
+     */
+     $('.nfts_sidebar > span').on('click', function() {
+       $(this).toggleClass('open');
+       $('.nfts_sidebar').each(heightopenclose);
+     });
 
-      $('.info_toggle').on('click', function() {
-        $('#nft_desc').each(heightopenclose);
-      });
+     $('.info_toggle').on('click', function() {
+       $('#nft_desc').each(heightopenclose);
+     });
 
-      $('#ids').on('keyup', function(o) {
-        if (o.keyCode === 13) {
-          filterByIDs();
-        }
-      });
+     $('#ids').on('keyup', function(o) {
+       if (o.keyCode === 13) {
+         filterByIDs();
+       }
+     });
 
-      $('#ranks').on('keyup', function(e) {
-        if (e.keyCode === 13) {
-          filterByRank();
-        }
-      });
-      function reloadForm() {
-	window.location.reload(true);
-      }
-      $(window).on('load', function() {
+     $('#ranks').on('keyup', function(e) {
+       if (e.keyCode === 13) {
+         filterByRank();
+       }
+     });
 
-      })
+     function reloadForm() {
+       window.location.reload(true);
+     }
+     $(window).on('load', function() {
+
+     })
     </script>
   </body>
 </html>
