@@ -164,7 +164,7 @@ function populateFilterData (var1,var2,var3) {
 	     img.append(OGStamp);
 	 
 	     let OGSpan = document.createElement("span");
-	     OGSpan.textContent = OG;
+	     OGSpan.textContent = "OG";
 	     OGStamp.append(OGSpan);
 	     }
 		     
