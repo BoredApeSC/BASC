@@ -290,12 +290,12 @@
                }
 	     	var s = document.getElementsByClassName("results_count")[1]
 		if ( loadcounter === tempmet.length) {
-			s.innerText = "Loaded " + loadcounter + " / " + tempmet.length +" Results";
+			s.innerText = loadcounter + " / " + tempmet.length +" Results";
 			loadcounter = 0;
                         loadcountertotal = 0;
 		}
 		else {
-			s.innerText = "Loaded " +loadcounter + " / " + tempmet.length +" - Scroll 🠗";
+			s.innerText = loadcounter + " / " + tempmet.length +" - Scroll 🠗";
 		}
              }
            }
