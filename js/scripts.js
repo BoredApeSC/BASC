@@ -385,9 +385,10 @@ ee.options[ee.selectedIndex].text = 'Please select';
 		loadcounter = loadcounter + 1;
 		}
 	}
-	loadcounter = 0
-	metafiltered = null
-	loadcountertotal = 0
+	document.getElementById('ranks').value = '';
+	loadcounter = 0;
+	metafiltered = null;
+	loadcountertotal = 0;
 }
 	
 function filterByID() {
@@ -442,13 +443,14 @@ ee.options[ee.selectedIndex].text = 'Please select';
 		let v1 = getNestedValue(metafiltered, loadcounter + ".edition");
 		let v2 = getNestedValue(metafiltered, loadcounter + ".token");
 		let v3 = getNestedValue(metafiltered, loadcounter + ".image");
-		populateCard(v1,v2,v3)
+		populateCard(v1,v2,v3);
 		loadcounter = loadcounter + 1;
 	}
 }
-loadcounter = 0
-metafiltered = null
-loadcountertotal = 0
+document.getElementById('ids').value = '';	
+loadcounter = 0;
+metafiltered = null;
+loadcountertotal = 0;
 }
 
 function loadStatData(){
