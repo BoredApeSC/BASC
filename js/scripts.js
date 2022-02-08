@@ -600,5 +600,5 @@ window.onload = function() {
     loadcounter = loadcounter + 1;
   }
     var s = document.getElementsByClassName("results_count")[1]
-    s.innerText = "Results: " + loadcountertotal + "/" + meta.length + " Scroll Down To view more";	
+    s.innerText = "Results: " + loadcounter + "/" + meta.length + " Scroll Down To view more";	
 }
