@@ -302,9 +302,6 @@ if (sortieval === 'id'){
     var s = document.getElementsByClassName("results_count")[1]
     s.innerText = metafiltered.length + " RESULT"
 	
-	//Sort by MINT
-	metafiltered = metafiltered.sort(function(a,b){return a.edition - b.edition});
-
     loadcounter = 0
 	loadcountertotal = metafiltered.length
     while (loadcounter <= loadcountertotal - 1) {
