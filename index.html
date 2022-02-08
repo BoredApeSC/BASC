@@ -329,6 +329,18 @@ meta.uniqueEARRING();
             $('.info_toggle').on('click', function(){
                 $('#nft_desc').each(heightopenclose);
             });
+	      
+$('#ids').on('keyup', function(e) {
+    if (e.keyCode === 13) {
+        filterById()
+    }
+});
+	      
+$('#ranks').on('keyup', function(e) {
+    if (e.keyCode === 13) {
+        filterByRank();
+    }
+});	      
          
 $(window).on('load', function() {
         
