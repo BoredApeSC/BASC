@@ -103,7 +103,7 @@ color: var(--opacity80);
 }
 * {position:relative; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; /*-webkit-transition: all 0.3s ease-out; transition: all 0.3s ease-out;*/}
 
-body {margin:0; background:#212121; color:var(--opacity80); font-family: 'Inter', sans-serif; font-size:20px; max-width: 100%; overflow-x:hidden; padding-top:96px;}
+body {margin:0; background:#212121; color:var(--opacity80); font-family: 'Inter', sans-serif; font-size:20px; max-width: 100%; overflow-x:hidden; padding-top:0px;}
 
 a {color:#1998DB;}
 
