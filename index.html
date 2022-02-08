@@ -273,8 +273,6 @@
            if (loadcountertotal != 0) {
              if (loadcounter === loadcountertotal - 1) {
                metafiltered = null;
-               loadcounter = 0;
-               loadcountertotal = 0
              }
              if (loadcounter !== loadcountertotal - 1) {
                if (metafiltered === null) {
@@ -293,6 +291,8 @@
 	     	var s = document.getElementsByClassName("results_count")[1]
 		if ( loadcounter >  tempmet.length ) {
 			s.innerText = "Displaying:  " + loadcounter + " / " + tempmet.length +" Results";
+			loadcounter = 0;
+                        loadcountertotal = 0;
 		}
 		else {
 			s.innerText = "Displaying:  " + loadcounter + " / " + tempmet.length +" Results - " + "       Scroll Down To load";
