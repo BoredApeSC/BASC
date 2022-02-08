@@ -281,7 +281,7 @@
                  var tempmet = metafiltered
                }
                var tempcount = loadcounter + 17
-               while (loadcounter <= tempcount) {
+               while (loadcounter <= tempcount && loadcounter <= loadcountertotal - 1)
                  let v1 = getNestedValue(tempmet, loadcounter + ".edition");
                  let v2 = getNestedValue(tempmet, loadcounter + ".token");
                  let v3 = getNestedValue(tempmet, loadcounter + ".image");
@@ -289,7 +289,7 @@
                  loadcounter = loadcounter + 1;
                }
 	     	var s = document.getElementsByClassName("results_count")[1]
-		if ( loadcounter ===  tempmet.length - 1 ) {
+		if ( loadcounter === tempmet.length - 1 ) {
 			s.innerText = "Displaying:  " + loadcounter + " / " + tempmet.length +" Results";
 			loadcounter = 0;
                         loadcountertotal = 0;
