@@ -290,7 +290,7 @@
                }
 	     	var s = document.getElementsByClassName("results_count")[1]
 		alert(loadcounter + " / " + tempmet.length);
-		if ( loadcounter >  tempmet.length ) {
+		if ( loadcounter ===  tempmet.length ) {
 			s.innerText = "Displaying:  " + loadcounter + " / " + tempmet.length +" Results";
 			loadcounter = 0;
                         loadcountertotal = 0;
