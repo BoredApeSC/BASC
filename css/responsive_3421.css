@@ -107,7 +107,7 @@
 	.nfts_detail .nft_title_holder, 
 	.nfts_list .nft_title_holder {margin: 0 0 30px 0; } 
 	
-	.nft_title {width: calc(100% - 72px); float: right; margin-bottom: 32px;}
+	.nft_title {width: calc(100% - 72px); float: right; margin-bottom: 20px;}
 	
 	.nft_title_holder .back {position: absolute; left: 0; top: 50%; transform: translateY(-50%);}
 	
