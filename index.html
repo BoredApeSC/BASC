@@ -27,21 +27,22 @@
     <link href="css/styles_3421.css" rel="stylesheet" type="text/css">
     <link href="css/responsive_3421.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/light_mode_3422.css" disabled class="daynight" />
-    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
-    <script type="text/javascript" src="js/jquery.autocompletem.js"></script>
-    <script type="text/javascript" src="js/scripts.js"></script>
     <script>
       var meta;
       fetch("data/BASC_Final_Rank.json")
         .then(Response => Response.json())
         .then(data => meta = data)
     </script>
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="js/jquery.autocompletem.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>  
   </head>
 
   <body>
     <div class="wrap content nft_list">
       <div class="nft_title_holder" style="margin-bottom: 4px;">
-        <div class="nft_title">
+	      <a href="javascript:backClick();" class="back"></a>
+         <div class="nft_title">
           <a href="" class="nft_img"><img src="https://testlaunchmynft.mypinata.cloud/ipfs/QmR4KDfrwvUyVcpxASCrNReEZmqXq4VpzwhJ1Tzy2K17b9/1.png" alt="img" width="128"></a>
           <div>
             <a href="">
@@ -171,9 +172,7 @@
         &copy; 2022 Bored Ape Solana Club
       </div>
     </div>
-    <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="js/jquery.autocompletem.js"></script>
-    <script src="js/scripts.js"></script>
+
     <script>
      $(function() {
        var $win = $(window);
@@ -330,7 +329,10 @@
          filterByRank();
        }
      });
-
+	
+	function backClick() {
+		window.location.reload(true);
+	}
      function reloadForm() {
        window.location.reload(true);
      }
