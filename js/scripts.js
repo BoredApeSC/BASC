@@ -157,7 +157,17 @@ function populateFilterData (var1,var2,var3) {
              let img = document.createElement('div');
              img.className = "featured_item_img";
              vDiv.append(img);
-             
+	     
+	     if(mint <= 3000){
+	     let OGStamp = document.createElement('div');
+	     OGStamp.className = "featured_item_img_ribbon";
+	     img.append(OGStamp);
+	 
+	     let OGSpan = document.createElement("span");
+	     OGSpan.textContent = OG;
+	     OGStamp.append(OGSpan);
+	     }
+		     
              let elem = document.createElement("img");
              elem.src = pic;
              img.append(elem);
