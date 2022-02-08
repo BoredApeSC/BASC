@@ -1,350 +1,332 @@
 <!doctype html>
 <html>
-   <head>
-      <meta charset="utf-8">
-      <title> Bored Ape Solana Club</title>
-      <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png">
-      <link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-icon-60x60.png">
-      <link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-icon-72x72.png">
-      <link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-icon-76x76.png">
-      <link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-icon-114x114.png">
-      <link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-icon-120x120.png">
-      <link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-icon-144x144.png">
-      <link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-icon-152x152.png">
-      <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-icon-180x180.png">
-      <link rel="icon" type="image/png" sizes="196x196" href="favicons/android-icon-196x196.png">
-      <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
-      <link rel="icon" type="image/png" sizes="96x96" href="favicons/favicon-96x96.png">
-      <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
-      <meta name="msapplication-TileImage" content="favicons/ms-icon-144x144.png">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="description" content="Bored Ape Solana Club - A whole new existence of 6000 Bored Apes on the Solana Blockchain. All trait combinations are new &amp; BASC is not affiliated with Yuga Labs.">
-      <meta name="keywords" content="NFT, Rarity,  Bored Ape Solana Club">
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-      <link href="css/styles_3421.css" rel="stylesheet" type="text/css">
-      <link href="css/responsive_3421.css" rel="stylesheet" type="text/css">
-      <link rel="stylesheet" href="css/light_mode_3422.css"  disabled  class="daynight" />
-      <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
-      <script type="text/javascript" src="js/jquery.autocompletem.js"></script>
-      <script type="text/javascript" src="js/scripts.js"></script>
-      <script>
-         var meta;
-         fetch("data/BASC_Final_Rank.json")
-         .then(Response => Response.json())
-         .then(data => meta = data)
-      </script>
-<script>
-	           //Sort by MINT
-  	//meta = meta.sort(function(a,b){return a.edition - b.edition});
-	   </script>
-      <script src="js/scripts.js"></script>
-      <script type="text/javascript"> 
 
-      </script>
-   </head>
-   <body>
-      <div class="wrap content nft_list">
-         <div class="nft_title_holder" style="margin-bottom: 4px;">
-            <div class="nft_title">
-               <a href="" class="nft_img"><img src="https://testlaunchmynft.mypinata.cloud/ipfs/QmR4KDfrwvUyVcpxASCrNReEZmqXq4VpzwhJ1Tzy2K17b9/1.png" alt="img" width="128"></a>
-               <div>
-                  <a href="">
-                     <h1>Bored Ape Solana Club</h1>
-                  </a>
-                  <div class="title_links">
-                     <a href="https://boredapesolana.club/" target="_blank"><img src="img/link.svg" alt="img"></a>
-                     <a href="https://twitter.com/BoredApeSolClub" target="_blank"><img src="img/twitter.svg" alt="img"></a>
-                     <a href="https://discord.gg/NEhZFR7PKd" target="_blank"><img src="img/discord.svg" alt="img"></a>
-                     <a href="https://www.instagram.com/boredapesolclub/" target="_blank"><img src="img/instagram.svg" alt="img"></a>
-                     <a href="https://solradar.io/collection/bored_ape_solana_club" target="_blank"><img src="img/properties.svg" alt="img"></a>
-                     <span class="info_toggle">Info</span>
-                  </div>
-                  <div id="nft_desc">
-                     <p>A whole new existence of 6000 Bored Apes on the Solana Blockchain. All trait combinations are new &amp; BASC is not affiliated with Yuga Labs.</p>
-                  </div>
-               </div>
-            </div>
-            <div class="stats">
-               <div class="stat">
-                  <span>0</span>items
-               </div>
-               <div class="stat">
-                  <a href="https://magiceden.io/marketplace/bored_ape_solana_club"><span>◎0</span>Floor</a>
-               </div>
-               <div class="stat">
-                  <a href="https://magiceden.io/marketplace/bored_ape_solana_club"><span>◎0</span>VOLUME(24H)</a>
-               </div>
-            </div>
-         </div>
-         <div class="nfts_holder" style="margin-top: 14px;">
-            <div class="nfts_sidebar">
-               <span><img src="img/attribute.svg" alt="att"/> Item filters</span>
-               <form id="filters_form">
+  <head>
+    <meta charset="utf-8">
+    <title> Bored Ape Solana Club</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="196x196" href="favicons/android-icon-196x196.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+    <meta name="msapplication-TileImage" content="favicons/ms-icon-144x144.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Bored Ape Solana Club - A whole new existence of 6000 Bored Apes on the Solana Blockchain. All trait combinations are new &amp; BASC is not affiliated with Yuga Labs.">
+    <meta name="keywords" content="NFT, Rarity,  Bored Ape Solana Club">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="css/styles_3421.css" rel="stylesheet" type="text/css">
+    <link href="css/responsive_3421.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/light_mode_3422.css" disabled class="daynight" />
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="js/jquery.autocompletem.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+    <script>
+      var meta;
+      fetch("data/BASC_Final_Rank.json")
+        .then(Response => Response.json())
+        .then(data => meta = data)
+    </script>
+  </head>
 
-                  <label>ID</label>
-                  <input type="text" name="ids" id="ids" value=""  placeholder="ID" onblur="filterByID()">
-		  <label>Rank</label>
-                  <input type="text" name="ranks" id="ranks" value=""  placeholder="Rank" onblur="filterByRank()">     
-		  <hr>
-                  <div id="form_filters">
-		  <!--	  
+  <body>
+    <div class="wrap content nft_list">
+      <div class="nft_title_holder" style="margin-bottom: 4px;">
+        <div class="nft_title">
+          <a href="" class="nft_img"><img src="https://testlaunchmynft.mypinata.cloud/ipfs/QmR4KDfrwvUyVcpxASCrNReEZmqXq4VpzwhJ1Tzy2K17b9/1.png" alt="img" width="128"></a>
+          <div>
+            <a href="">
+              <h1>Bored Ape Solana Club</h1>
+            </a>
+            <div class="title_links">
+              <a href="https://boredapesolana.club/" target="_blank"><img src="img/link.svg" alt="img"></a>
+              <a href="https://twitter.com/BoredApeSolClub" target="_blank"><img src="img/twitter.svg" alt="img"></a>
+              <a href="https://discord.gg/NEhZFR7PKd" target="_blank"><img src="img/discord.svg" alt="img"></a>
+              <a href="https://www.instagram.com/boredapesolclub/" target="_blank"><img src="img/instagram.svg" alt="img"></a>
+              <a href="https://solradar.io/collection/bored_ape_solana_club" target="_blank"><img src="img/properties.svg" alt="img"></a>
+              <span class="info_toggle">Info</span>
+            </div>
+            <div id="nft_desc">
+              <p>A whole new existence of 6000 Bored Apes on the Solana Blockchain. All trait combinations are new &amp; BASC is not affiliated with Yuga Labs.</p>
+            </div>
+          </div>
+        </div>
+        <div class="stats">
+          <div class="stat">
+            <span>0</span>items
+          </div>
+          <div class="stat">
+            <a href="https://magiceden.io/marketplace/bored_ape_solana_club"><span>◎0</span>Floor</a>
+          </div>
+          <div class="stat">
+            <a href="https://magiceden.io/marketplace/bored_ape_solana_club"><span>◎0</span>VOLUME(24H)</a>
+          </div>
+        </div>
+      </div>
+      <div class="nfts_holder" style="margin-top: 14px;">
+        <div class="nfts_sidebar">
+          <span><img src="img/attribute.svg" alt="att" /> Item filters</span>
+          <form id="filters_form">
+
+            <label>ID</label>
+            <input type="text" name="ids" id="ids" value="" placeholder="ID" onblur="filterByID()">
+            <label>Rank</label>
+            <input type="text" name="ranks" id="ranks" value="" placeholder="Rank" onblur="filterByRank()">
+            <hr>
+            <div id="form_filters">
+              <!--	  
                   <label for="BACKGROUND">Background</label>
 		  <div class="custom-selectx">
                         <select name="BACKGROUND" id="BACKGROUND" onchange="filterChange()">
                            <option value="">Please select</option>
                         </select>
                      </div>
-		-->	  
-                     <label for="FUR">Fur</label>
-                     <div class="custom-selectx">
-                        <select name="FUR" id="FUR" onchange="filterChange()">
-                           <option value="">Please select</option>
-                        </select>
-                     </div>
-                     <label for="CLOTHES">Clothes</label>
-                     <div class="custom-selectx">
-                        <select name="CLOTHES" id="CLOTHES" onchange="filterChange()">
-                           <option value="">Please select</option>
-                        </select>
-                     </div>
-                     <label for="EYES">Eyes</label>
-                     <div class="custom-selectx">
-                        <select name="EYES" id="EYES" onchange="filterChange()">
-                           <option value="">Please select</option>
-                        </select>
-                     </div>
-                     <label for="MOUTH">Mouth</label>
-                     <div class="custom-selectx">
-                        <select name="MOUTH" id="MOUTH" onchange="filterChange()">
-                           <option value="">Please select</option>
-                        </select>
-                     </div>
-                     <label for="HATS">Hats</label>
-                     <div class="custom-selectx">
-                        <select name="HATS" id="HATS" onchange="filterChange()">
-                           <option value="">Please select</option>
-                        </select>
-                     </div>
-                     <label for="EARRING">Earring</label>
-                     <div class="custom-selectx">
-                        <select name="EARRING" id="EARRING" onchange="filterChange()">
-                           <option value="">Please select</option>
-                        </select>
-                     </div>
-                  </div>
-               </form>
-               <script>
-		      function reloadForm() {
-
-                  window.location.reload(true);
-                  }
-                  
-    loadStatData();
-                  
-                  
-               </script>
+		-->
+              <label for="FUR">Fur</label>
+              <div class="custom-selectx">
+                <select name="FUR" id="FUR" onchange="filterChange()">
+                  <option value="">Please select</option>
+                </select>
+              </div>
+              <label for="CLOTHES">Clothes</label>
+              <div class="custom-selectx">
+                <select name="CLOTHES" id="CLOTHES" onchange="filterChange()">
+                  <option value="">Please select</option>
+                </select>
+              </div>
+              <label for="EYES">Eyes</label>
+              <div class="custom-selectx">
+                <select name="EYES" id="EYES" onchange="filterChange()">
+                  <option value="">Please select</option>
+                </select>
+              </div>
+              <label for="MOUTH">Mouth</label>
+              <div class="custom-selectx">
+                <select name="MOUTH" id="MOUTH" onchange="filterChange()">
+                  <option value="">Please select</option>
+                </select>
+              </div>
+              <label for="HATS">Hats</label>
+              <div class="custom-selectx">
+                <select name="HATS" id="HATS" onchange="filterChange()">
+                  <option value="">Please select</option>
+                </select>
+              </div>
+              <label for="EARRING">Earring</label>
+              <div class="custom-selectx">
+                <select name="EARRING" id="EARRING" onchange="filterChange()">
+                  <option value="">Please select</option>
+                </select>
+              </div>
             </div>
-            <div class="nfts_content" id="nfts_content">
-               <div class="nfts_top pager-only">
-                  <!-- <div class="nfts_top_right"> -->
-                  <!-- </div> -->
-                  <div class="pager" style="border: none; margin: 0;">
-                     <span class="results_count">6000 results</span>
-                     <div class="goto" style="top: 3px; right: 55px; width: 220px; height: 72px;">
-                        <div class="sorting custom-selectx">
-                           <select name="sort_by" id="sort_by" onchange="changeSort()">
-			        <option value="id" >Sort by ID</option>
-			   	<option value="rank">Sort by Rank</option>
-                           </select>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="nfts">
-               </div>
-               <div class="nfts_top mt pager-only" style="margin-top: 0;">
-                  <div class="pager">
-                     <span class="results_count">6000 results</span>
-                  </div>
-               </div>
+          </form>
+          <script>
+            loadStatData();
+          </script>
+        </div>
+        <div class="nfts_content" id="nfts_content">
+          <div class="nfts_top pager-only">
+            <!-- <div class="nfts_top_right"> -->
+            <!-- </div> -->
+            <div class="pager" style="border: none; margin: 0;">
+              <span class="results_count">6000 results</span>
+              <div class="goto" style="top: 3px; right: 55px; width: 220px; height: 72px;">
+                <div class="sorting custom-selectx">
+                  <select name="sort_by" id="sort_by" onchange="changeSort()">
+                    <option value="id">Sort by ID</option>
+                    <option value="rank">Sort by Rank</option>
+                  </select>
+                </div>
+              </div>
             </div>
-         </div>
+          </div>
+          <div class="nfts">
+          </div>
+          <div class="nfts_top mt pager-only" style="margin-top: 0;">
+            <div class="pager">
+              <span class="results_count">6000 results</span>
+            </div>
+          </div>
+        </div>
       </div>
-      <script>
-	      
-      </script>
-      <div class="wrap footer">
-         <div class="footer_links">
-             <a href="https://github.com/Blackla6el/BASC/blob/main/data/RAW_Traits_Stats.csv" class="reg"><img src="img/FAQ.svg" alt="img"> FAQ</a> 
-            <a href="https://twitter.com/BoredApeSolClub" class="reg" target="_blank"><img src="img/twitter.svg" alt="img"> Twitter</a>
-            <a href="https://discord.gg/NEhZFR7PKd" class="reg" target="_blank"><img src="img/discord.svg" alt="img"> Discord</a>
-         </div>
-         <div class="copyright">
-            &copy; 2022 Bored Ape Solana Club
-         </div>
+    </div>
+    <script>
+    </script>
+    <div class="wrap footer">
+      <div class="footer_links">
+        <a href="https://github.com/Blackla6el/BASC/blob/main/data/RAW_Traits_Stats.csv" class="reg"><img src="img/FAQ.svg" alt="img"> FAQ</a>
+        <a href="https://twitter.com/BoredApeSolClub" class="reg" target="_blank"><img src="img/twitter.svg" alt="img"> Twitter</a>
+        <a href="https://discord.gg/NEhZFR7PKd" class="reg" target="_blank"><img src="img/discord.svg" alt="img"> Discord</a>
       </div>
-      <script src="js/jquery-3.6.0.min.js"></script>
-      <script src="js/jquery.autocompletem.js"></script>
-      <script src="js/scripts.js"></script>
-      <script>
-//window.location.reload(true);
-      
-$(function () {
-  var $win = $(window);
+      <div class="copyright">
+        &copy; 2022 Bored Ape Solana Club
+      </div>
+    </div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery.autocompletem.js"></script>
+    <script src="js/scripts.js"></script>
+    <script>
+      $(function() {
+        var $win = $(window);
 
-  $win.scroll(function () {
-    if ($win.scrollTop() == 0)
-      console.log("");
-	  
-var checktraits = document.getElementById("CLOTHES");
-if (checktraits.length !== 45) {	  
-function populateFilterData (var1,var2,var3) {
-    var opt = document.createElement("option");
-    opt.value = var1;
-    opt.textContent = var2;
-    
-    let look2 = document.getElementById(var3);
-    look2.appendChild(opt);
-}
+        $win.scroll(function() {
+          if ($win.scrollTop() == 0)
+            console.log("");
 
-Array.prototype.uniqueBG = function() {
-    let arr = [];
-    for(let i = 0; i < this.length; i++) {
-        if(!arr.includes(this[i].BACKGROUND)) {
-            arr.push(this[i].BACKGROUND);
-            populateFilterData(this[i].BACKGROUND,this[i].BACKGROUND,"BACKGROUND")
-        }
-    }
-    //return arr; 
-  }
+          var checktraits = document.getElementById("CLOTHES");
+          if (checktraits.length !== 45) {
+            function populateFilterData(var1, var2, var3) {
+              var opt = document.createElement("option");
+              opt.value = var1;
+              opt.textContent = var2;
+              let look2 = document.getElementById(var3);
+              look2.appendChild(opt);
+            }
 
-Array.prototype.uniqueFUR = function() {
-    let arr = [];
-    for(let i = 0; i < this.length; i++) {
-        if(!arr.includes(this[i].FUR)) {
-            arr.push(this[i].FUR);
-            populateFilterData(this[i].FUR,this[i].FUR,"FUR")
-        }
-    }
-    //return arr; 
-}
-
-Array.prototype.uniqueCLOTHES = function() {
-  let arr = [];
-  for(let i = 0; i < this.length; i++) {
-    if(!arr.includes(this[i].CLOTHES)) {
-      arr.push(this[i].CLOTHES);
-      populateFilterData(this[i].CLOTHES,this[i].CLOTHES,"CLOTHES")
-    }
-  }
-  //return arr; 
-}
-
-Array.prototype.uniqueEYES = function() {
-  let arr = [];
-  for(let i = 0; i < this.length; i++) {
-    if(!arr.includes(this[i].EYES)) {
-      arr.push(this[i].EYES);
-      populateFilterData(this[i].EYES,this[i].EYES,"EYES")
-    }
-  }
-  //return arr; 
-}
-
-Array.prototype.uniqueMOUTH = function() {
-  let arr = [];
-  for(let i = 0; i < this.length; i++) {
-    if(!arr.includes(this[i].MOUTH)) {
-      arr.push(this[i].MOUTH);
-      populateFilterData(this[i].MOUTH,this[i].MOUTH,"MOUTH")
-    }
-  }
-  //return arr; 
-}
-
-Array.prototype.uniqueHATS = function() {
-  let arr = [];
-  for(let i = 0; i < this.length; i++) {
-    if(!arr.includes(this[i].HATS)) {
-      arr.push(this[i].HATS);
-      populateFilterData(this[i].HATS,this[i].HATS,"HATS")
-    }
-  }
-  //return arr; 
-}
-
-Array.prototype.uniqueEARRING = function() {
-  let arr = [];
-  for(let i = 0; i < this.length; i++) {
-    if(!arr.includes(this[i].EARRING)) {
-      arr.push(this[i].EARRING);
-      populateFilterData(this[i].EARRING,this[i].EARRING,"EARRING")
-    }
-  }
-  //return arr; 
-}
-    
-//meta.uniqueBG();
-meta.uniqueFUR();
-meta.uniqueCLOTHES();
-meta.uniqueEYES();
-meta.uniqueMOUTH();
-meta.uniqueHATS();
-meta.uniqueEARRING();
-  }
-	  
-    else if ($win.height() + $win.scrollTop()
-             == $(document).height()) {
- if (loadcounter === loadcountertotal - 1) {metafiltered = null;loadcounter = 0; loadcountertotal = 0}	
- if (loadcounter !== loadcountertotal - 1) {
-	if ( metafiltered === null){var tempmet = meta} else {var tempmet = metafiltered}
- 	var tempcount = loadcounter + 17
-    while (loadcounter <= tempcount) {
-      let v1 = getNestedValue(tempmet, loadcounter + ".edition");
-      let v2 = getNestedValue(tempmet, loadcounter + ".token");
-      let v3 = getNestedValue(tempmet, loadcounter + ".image");
-      populateCard(v1,v2,v3);
-      loadcounter = loadcounter + 1;
-    }  	      
-   }   
-    }
-  });
-});	      
-
-         /*
-                   $('#autocomplete_search').autocomplete({
-                serviceUrl: '/lookup_collections/',
-                onSelect: function (suggestion) {
-                    window.location = suggestion.data;
+            Array.prototype.uniqueBG = function() {
+              let arr = [];
+              for (let i = 0; i < this.length; i++) {
+                if (!arr.includes(this[i].BACKGROUND)) {
+                  arr.push(this[i].BACKGROUND);
+                  populateFilterData(this[i].BACKGROUND, this[i].BACKGROUND, "BACKGROUND")
                 }
-            });
-         */
-            $('.nfts_sidebar > span').on('click', function(){
-                $(this).toggleClass('open');
-                $('.nfts_sidebar').each(heightopenclose);
-            });
-         
-            $('.info_toggle').on('click', function(){
-                $('#nft_desc').each(heightopenclose);
-            });
-	      
-$('#ids').on('keyup', function(e) {
-    if (e.keyCode === 13) {
-        filterById();
-    }
-});
-	      
-$('#ranks').on('keyup', function(e) {
-    if (e.keyCode === 13) {
-        filterByRank();
-    }
-});	      
-         
-$(window).on('load', function() {
-        
-})
-      </script>
-   </body>
+              }
+            }
+
+            Array.prototype.uniqueFUR = function() {
+              let arr = [];
+              for (let i = 0; i < this.length; i++) {
+                if (!arr.includes(this[i].FUR)) {
+                  arr.push(this[i].FUR);
+                  populateFilterData(this[i].FUR, this[i].FUR, "FUR")
+                }
+              }
+            }
+
+            Array.prototype.uniqueCLOTHES = function() {
+              let arr = [];
+              for (let i = 0; i < this.length; i++) {
+                if (!arr.includes(this[i].CLOTHES)) {
+                  arr.push(this[i].CLOTHES);
+                  populateFilterData(this[i].CLOTHES, this[i].CLOTHES, "CLOTHES")
+                }
+              }
+            }
+
+            Array.prototype.uniqueEYES = function() {
+              let arr = [];
+              for (let i = 0; i < this.length; i++) {
+                if (!arr.includes(this[i].EYES)) {
+                  arr.push(this[i].EYES);
+                  populateFilterData(this[i].EYES, this[i].EYES, "EYES")
+                }
+              }
+            }
+
+            Array.prototype.uniqueMOUTH = function() {
+              let arr = [];
+              for (let i = 0; i < this.length; i++) {
+                if (!arr.includes(this[i].MOUTH)) {
+                  arr.push(this[i].MOUTH);
+                  populateFilterData(this[i].MOUTH, this[i].MOUTH, "MOUTH")
+                }
+              }
+            }
+
+            Array.prototype.uniqueHATS = function() {
+              let arr = [];
+              for (let i = 0; i < this.length; i++) {
+                if (!arr.includes(this[i].HATS)) {
+                  arr.push(this[i].HATS);
+                  populateFilterData(this[i].HATS, this[i].HATS, "HATS")
+                }
+              }
+            }
+
+            Array.prototype.uniqueEARRING = function() {
+              let arr = [];
+              for (let i = 0; i < this.length; i++) {
+                if (!arr.includes(this[i].EARRING)) {
+                  arr.push(this[i].EARRING);
+                  populateFilterData(this[i].EARRING, this[i].EARRING, "EARRING")
+                }
+              }
+            }
+            //meta.uniqueBG();
+            meta.uniqueFUR();
+            meta.uniqueCLOTHES();
+            meta.uniqueEYES();
+            meta.uniqueMOUTH();
+            meta.uniqueHATS();
+            meta.uniqueEARRING();
+          } else if ($win.height() + $win.scrollTop() ==
+            $(document).height()) {
+            if (loadcounter === loadcountertotal - 1) {
+              metafiltered = null;
+              loadcounter = 0;
+              loadcountertotal = 0
+            }
+            if (loadcounter !== loadcountertotal - 1) {
+              if (metafiltered === null) {
+                var tempmet = meta
+              } else {
+                var tempmet = metafiltered
+              }
+              var tempcount = loadcounter + 17
+              while (loadcounter <= tempcount) {
+                let v1 = getNestedValue(tempmet, loadcounter + ".edition");
+                let v2 = getNestedValue(tempmet, loadcounter + ".token");
+                let v3 = getNestedValue(tempmet, loadcounter + ".image");
+                populateCard(v1, v2, v3);
+                loadcounter = loadcounter + 1;
+              }
+            }
+          }
+        });
+      });
+      /*
+      $('#autocomplete_search').autocomplete({
+      	serviceUrl: '/lookup_collections/',
+        onSelect: function (suggestion) {
+        window.location = suggestion.data;
+        }
+      });
+      */
+      $('.nfts_sidebar > span').on('click', function() {
+        $(this).toggleClass('open');
+        $('.nfts_sidebar').each(heightopenclose);
+      });
+
+      $('.info_toggle').on('click', function() {
+        $('#nft_desc').each(heightopenclose);
+      });
+
+      $('#ids').on('keyup', function(o) {
+        if (o.keyCode === 13) {
+          filterById();
+        }
+      });
+
+      $('#ranks').on('keyup', function(e) {
+        if (e.keyCode === 13) {
+          filterByRank();
+        }
+      });
+      function reloadForm() {
+					window.location.reload(true);
+      }
+      $(window).on('load', function() {
+
+      })
+    </script>
+  </body>
 </html>
