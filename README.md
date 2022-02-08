@@ -1,2 +1,2 @@
 # BASC
-https://blackla6el.github.io/BASC/
+https://boredapesc.github.io/BASC/
