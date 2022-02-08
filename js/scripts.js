@@ -323,12 +323,12 @@ function filterChange() {
   }
     var s = document.getElementsByClassName("results_count")[1]
 	if ( loadcounter === metafiltered.length) {
-		s.innerText = "Loaded " +loadcounter + " / " + metafiltered.length +" Results";
+		s.innerText = loadcounter + " / " + metafiltered.length +" Results";
 		loadcounter = 0;
 		loadcountertotal = 0;
 	}
 	else {
-		s.innerText = "Loaded " +loadcounter + " / " + metafiltered.length +" - Scroll 🠗";
+		s.innerText = loadcounter + " / " + metafiltered.length +" - Scroll 🠗";
 	}
 }
   
@@ -389,7 +389,7 @@ function filterByRank() {
       loadcounter = loadcounter + 1;
     }
       var s = document.getElementsByClassName("results_count")[1]
-      s.innerText = "Loaded " +loadcounter + " / " + metafiltered.length +" Result";
+      s.innerText = loadcounter + " / " + metafiltered.length +" Result";
   }
   document.getElementById('ranks').value = '';
   loadcounter = 0;
@@ -454,7 +454,7 @@ function filterByIDs() {
       loadcounter = loadcounter + 1;
     }
     var s = document.getElementsByClassName("results_count")[1]
-    s.innerText = "Loaded " +loadcounter + " / " + metafiltered.length +" Result";
+    s.innerText = loadcounter + " / " + metafiltered.length +" Result";
   }
   document.getElementById('ids').value = '';
   loadcounter = 0;
@@ -609,5 +609,5 @@ window.onload = function() {
     loadcounter = loadcounter + 1;
   }
     var s = document.getElementsByClassName("results_count")[1]
-    s.innerText = "Loaded " +loadcounter + " / " + meta.length +" - Scroll 🠗";
+    s.innerText = loadcounter + " / " + meta.length +" - Scroll 🠗";
 }
