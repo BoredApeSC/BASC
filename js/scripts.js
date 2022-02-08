@@ -326,48 +326,49 @@ if (sortieval === 'id'){
   
 function filterByRank() {
 
-metafiltered = meta
-var h = document.getElementById('ranks').value;
-
-
-if (h  != '') {
-	function filterByID(obj) {
-		if (obj.token == h) 
-		{
-		return true;
-		} 
-		return false;
+	metafiltered = meta
+	var h = document.getElementById('ranks').value;
+	
+	
+	if (h  != '') {
+		function filterByID(obj) {
+			if (obj.token == h) 
+			{
+			return true;
+			} 
+			return false;
+			}
+			if (metafiltered === metafiltered.filter(filterByID)) {metafiltered = null}
+			metafiltered = metafiltered.filter(filterByID);
+	
+	
+		function clearCards() {
+			const myNode = document.querySelector(".nfts");
+			myNode.innerHTML = '';
 		}
-		if (metafiltered === metafiltered.filter(filterByID)) {metafiltered = null}
-		metafiltered = metafiltered.filter(filterByID);
+		clearCards();
+		
+		var s = document.getElementsByClassName("results_count")[0]
+		s.innerText = metafiltered.length + " RESULT"
+		var s = document.getElementsByClassName("results_count")[1]
+		s.innerText = metafiltered.length + " RESULT"
+		
+		loadcounter = 0
+		loadcountertotal = metafiltered.length        
+		while (loadcounter <= loadcountertotal - 1) {
+		let v1 = getNestedValue(metafiltered, loadcounter + ".edition");
+		let v2 = getNestedValue(metafiltered, loadcounter + ".token");
+		let v3 = getNestedValue(metafiltered, loadcounter + ".image");
+		populateCard(v1,v2,v3)
+		loadcounter = loadcounter + 1;
+		}
+	}
+	document.getElementById('ranks').value = ''
+	loadcounter = 0
+	metafiltered = null
+	loadcountertotal = 0
 }
-
-function clearCards() {
-	const myNode = document.querySelector(".nfts");
-	myNode.innerHTML = '';
-      }
-clearCards();
-
-var s = document.getElementsByClassName("results_count")[0]
-s.innerText = metafiltered.length + " RESULT"
-var s = document.getElementsByClassName("results_count")[1]
-s.innerText = metafiltered.length + " RESULT"
-
-loadcounter = 0
-loadcountertotal = metafiltered.length        
-while (loadcounter <= loadcountertotal - 1) {
-    let v1 = getNestedValue(metafiltered, loadcounter + ".edition");
-    let v2 = getNestedValue(metafiltered, loadcounter + ".token");
-    let v3 = getNestedValue(metafiltered, loadcounter + ".image");
-    populateCard(v1,v2,v3)
-    loadcounter = loadcounter + 1;
-}
-document.getElementById('ranks').value = ''
-loadcounter = 0
-metafiltered = null
-loadcountertotal = 0
-}
-
+	
 function filterByID() {
 
 metafiltered = meta
@@ -384,27 +385,28 @@ if (g  != '') {
 		}
 		if (metafiltered === metafiltered.filter(filterByID)) {metafiltered = null}
 		metafiltered = metafiltered.filter(filterByID);
-}
 
-function clearCards() {
-	const myNode = document.querySelector(".nfts");
-	myNode.innerHTML = '';
-      }
-clearCards();
 
-var s = document.getElementsByClassName("results_count")[0]
-s.innerText = metafiltered.length + " RESULT"
-var s = document.getElementsByClassName("results_count")[1]
-s.innerText = metafiltered.length + " RESULT"
+	function clearCards() {
+		const myNode = document.querySelector(".nfts");
+		myNode.innerHTML = '';
+		}
+	clearCards();
 
-loadcounter = 0
-loadcountertotal = metafiltered.length        
-while (loadcounter <= loadcountertotal - 1) {
-    let v1 = getNestedValue(metafiltered, loadcounter + ".edition");
-    let v2 = getNestedValue(metafiltered, loadcounter + ".token");
-    let v3 = getNestedValue(metafiltered, loadcounter + ".image");
-    populateCard(v1,v2,v3)
-    loadcounter = loadcounter + 1;
+	var s = document.getElementsByClassName("results_count")[0]
+	s.innerText = metafiltered.length + " RESULT"
+	var s = document.getElementsByClassName("results_count")[1]
+	s.innerText = metafiltered.length + " RESULT"
+
+	loadcounter = 0
+	loadcountertotal = metafiltered.length        
+	while (loadcounter <= loadcountertotal - 1) {
+		let v1 = getNestedValue(metafiltered, loadcounter + ".edition");
+		let v2 = getNestedValue(metafiltered, loadcounter + ".token");
+		let v3 = getNestedValue(metafiltered, loadcounter + ".image");
+		populateCard(v1,v2,v3)
+		loadcounter = loadcounter + 1;
+	}
 }
 document.getElementById('ids').value = ''
 loadcounter = 0
