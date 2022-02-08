@@ -488,6 +488,8 @@ function changeSort() {
     });
     if (metafiltered !== null) {
       filterChange();
+    } else {
+    	filterChange();
     }
   }
   if (sortieval === 'id') {
@@ -496,6 +498,8 @@ function changeSort() {
     });
     if (metafiltered !== null) {
       filterChange();
+    } else {
+    	filterChange();
     }
   }
 }
