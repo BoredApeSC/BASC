@@ -83,8 +83,6 @@ function closeAllSelect(elmnt) {
 then close all select boxes: */
 document.addEventListener("click", closeAllSelect);
 
-
-
 // animate toggles
 // open
 function heightopen() {
@@ -112,17 +110,14 @@ $('#toggle_stats').on('click', function(){
     $(this).toggleClass('close');
     $('.stats_full_holder').each(heightopenclose);
 });
-
 $('#toggle_sales').on('click', function(){
     $(this).toggleClass('close');
     $('.sales_history').each(heightopenclose);
 });
-
 $('.checkbox_holder div').on('click', function(){
     $(this).toggleClass('close');
     $('.checkbox_holder').each(heightopenclose);
 });
-
 $('.trigger').on('click', function(){
 	$(this).toggleClass('open');
     $('.header').each(heightopenclose);
@@ -228,14 +223,12 @@ function filterChange() {
 	var e = document.getElementById("BACKGROUND");
     if (e.options[e.selectedIndex].text != 'Please select') {
         let countEntries = 0
-
         function filterByBG(obj) {
             if (obj.BACKGROUND === e.options[e.selectedIndex].text) {
                 return true;
             }
             return false;
         }
-
         metafiltered = metafiltered.filter(filterByBG);
     }
     */
@@ -395,7 +388,7 @@ function filterByRank() {
   loadcountertotal = 0;
 }
 
-function filterByID() {
+function filterByIDs() {
 
   metafiltered = meta
   var g = document.getElementById('ids').value;
@@ -473,6 +466,27 @@ function loadStatData() {
   }
 
   getapi(api_url);
+}
+
+function changeSort() {
+  let sortie = document.getElementById('sort_by');
+  let sortieval = sortie.options[sortie.selectedIndex].value
+  if (sortieval === 'rank') {
+    meta = meta.sort(function(a, b) {
+      return a.token - b.token
+    });
+    if (metafiltered !== null) {
+      filterChange();
+    }
+  }
+  if (sortieval === 'id') {
+    meta = meta.sort(function(a, b) {
+      return a.edition - b.edition
+    });
+    if (metafiltered !== null) {
+      filterChange();
+    }
+  }
 }
 
 window.onload = function() {
@@ -582,26 +596,5 @@ window.onload = function() {
     let v3 = getNestedValue(meta, loadcounter + ".image");
     populateCard(v1, v2, v3);
     loadcounter = loadcounter + 1;
-  }
-}
-
-function changeSort() {
-  let sortie = document.getElementById('sort_by');
-  let sortieval = sortie.options[sortie.selectedIndex].value
-  if (sortieval === 'rank') {
-    meta = meta.sort(function(a, b) {
-      return a.token - b.token
-    });
-    if (metafiltered !== null) {
-      filterChange();
-    }
-  }
-  if (sortieval === 'id') {
-    meta = meta.sort(function(a, b) {
-      return a.edition - b.edition
-    });
-    if (metafiltered !== null) {
-      filterChange();
-    }
   }
 }
