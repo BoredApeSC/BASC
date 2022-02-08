@@ -313,9 +313,11 @@ function filterChange() {
   var s = document.getElementsByClassName("results_count")[1]
   s.innerText = metafiltered.length + " RESULTS"
 
+  var filteredloadcounter = 0	
   loadcounter = 0
   loadcountertotal = metafiltered.length
-  while (loadcounter <= loadcountertotal - 1) {
+  if (loadcountertotal >= 18) {filteredloadcounter = 18 - 1 } else {filteredloadcounter = loadcountertotal - 1}
+  while (loadcounter <= filteredloadcounter) {
     let v1 = getNestedValue(metafiltered, loadcounter + ".edition");
     let v2 = getNestedValue(metafiltered, loadcounter + ".token");
     let v3 = getNestedValue(metafiltered, loadcounter + ".image");
@@ -372,11 +374,9 @@ function filterByRank() {
     var s = document.getElementsByClassName("results_count")[1]
     s.innerText = metafiltered.length + " RESULT"
     
-    var filteredloadcounter = 0	   
     loadcounter = 0
     loadcountertotal = metafiltered.length
-	  if (loadcountertotal >= 18) {filteredloadcounter = 18 - 1 } else {filteredloadcounter = loadcountertotal - 1}
-    while (loadcounter <= filteredloadcounter) {
+    while (loadcounter <= loadcountertotal - 1) {
       let v1 = getNestedValue(metafiltered, loadcounter + ".edition");
       let v2 = getNestedValue(metafiltered, loadcounter + ".token");
       let v3 = getNestedValue(metafiltered, loadcounter + ".image");
