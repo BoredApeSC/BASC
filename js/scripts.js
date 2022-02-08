@@ -363,7 +363,6 @@ function filterByRank() {
 		loadcounter = loadcounter + 1;
 		}
 	}
-	document.getElementById('ranks').value = ''
 	loadcounter = 0
 	metafiltered = null
 	loadcountertotal = 0
@@ -408,7 +407,6 @@ if (g  != '') {
 		loadcounter = loadcounter + 1;
 	}
 }
-document.getElementById('ids').value = ''
 loadcounter = 0
 metafiltered = null
 loadcountertotal = 0
