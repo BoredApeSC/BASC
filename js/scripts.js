@@ -324,7 +324,8 @@ function filterChange() {
     populateCard(v1, v2, v3)
     loadcounter = loadcounter + 1;
   }
-
+    var s = document.getElementsByClassName("results_count")[1]
+    s.innerText = "Displaying:  " + loadcounter + " / " + metafiltered.length +" Results - " + "       Scroll Down To load";
 }
   
 function filterByRank() {
@@ -383,6 +384,8 @@ function filterByRank() {
       populateCard(v1, v2, v3)
       loadcounter = loadcounter + 1;
     }
+      var s = document.getElementsByClassName("results_count")[1]
+      s.innerText = "Displaying:  " + loadcounter + " / " + metafiltered.length +" Result";
   }
   document.getElementById('ranks').value = '';
   loadcounter = 0;
@@ -446,6 +449,8 @@ function filterByIDs() {
       populateCard(v1, v2, v3);
       loadcounter = loadcounter + 1;
     }
+    var s = document.getElementsByClassName("results_count")[1]
+    s.innerText = "Displaying:  " + loadcounter + " / " + metafiltered.length +" Result";	  
   }
   document.getElementById('ids').value = '';
   loadcounter = 0;
@@ -600,5 +605,5 @@ window.onload = function() {
     loadcounter = loadcounter + 1;
   }
     var s = document.getElementsByClassName("results_count")[1]
-    s.innerText = "Displaying:  " + loadcounter + " / " + meta.length +"Results - " + "       Scroll Down To load";	
+    s.innerText = "Displaying:  " + loadcounter + " / " + meta.length +" Results - " + "       Scroll Down To load";	
 }
