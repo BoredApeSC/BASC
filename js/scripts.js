@@ -599,4 +599,6 @@ window.onload = function() {
     populateCard(v1, v2, v3);
     loadcounter = loadcounter + 1;
   }
+    var s = document.getElementsByClassName("results_count")[1]
+    s.innerText = "Results: " loadcountertotal + "/" + metafiltered.length + " Scroll Down To view more"	
 }
