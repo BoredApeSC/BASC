@@ -362,6 +362,7 @@ while (loadcounter <= loadcountertotal - 1) {
     populateCard(v1,v2,v3)
     loadcounter = loadcounter + 1;
 }
+document.getElementById('ranks').value = ''
 loadcounter = 0
 metafiltered = null
 loadcountertotal = 0
@@ -405,6 +406,7 @@ while (loadcounter <= loadcountertotal - 1) {
     populateCard(v1,v2,v3)
     loadcounter = loadcounter + 1;
 }
+document.getElementById('ids').value = ''
 loadcounter = 0
 metafiltered = null
 loadcountertotal = 0
