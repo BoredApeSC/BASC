@@ -37,7 +37,7 @@
       </script>
 <script>
 	           //Sort by MINT
-  	meta = meta.sort(function(a,b){return a.edition - b.edition});
+  	//meta = meta.sort(function(a,b){return a.edition - b.edition});
 	   </script>
       <script src="js/scripts.js"></script>
       <script type="text/javascript"> 
@@ -331,7 +331,7 @@ meta.uniqueEARRING();
             });
          
 $(window).on('load', function() {
-          
+meta = meta.sort(function(a,b){return a.edition - b.edition});          
 })
       </script>
    </body>
