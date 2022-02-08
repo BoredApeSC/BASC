@@ -328,7 +328,7 @@ function filterChange() {
 		loadcountertotal = 0;
 	}
 	else {
-		s.innerText = loadcounter + " / " + metafiltered.length +" - Scroll 🠗";
+		s.innerText = loadcounter + " / " + metafiltered.length +" - Scroll Down";
 	}
 }
   
@@ -609,5 +609,5 @@ window.onload = function() {
     loadcounter = loadcounter + 1;
   }
     var s = document.getElementsByClassName("results_count")[1]
-    s.innerText = loadcounter + " / " + meta.length +" - Scroll 🠗";
+    s.innerText = loadcounter + " / " + meta.length +" - Scroll Down";
 }
