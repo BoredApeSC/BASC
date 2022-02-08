@@ -322,7 +322,7 @@ var h = document.getElementById('ranks').value;
 
 if (h  != '') {
 	function filterByID(obj) {
-		if (obj.edition == h) 
+		if (obj.token == h) 
 		{
 		return true;
 		} 
