@@ -313,9 +313,9 @@ if (sortieval === 'id'){
     clearCards();
 
     var s = document.getElementsByClassName("results_count")[0]
-    s.innerText = metafiltered.length + " RESULT"
+    s.innerText = metafiltered.length + " RESULTS"
     var s = document.getElementsByClassName("results_count")[1]
-    s.innerText = metafiltered.length + " RESULT"
+    s.innerText = metafiltered.length + " RESULTS"
 	
     loadcounter = 0
 	loadcountertotal = metafiltered.length
