@@ -289,8 +289,7 @@
                  loadcounter = loadcounter + 1;
                }
 	     	var s = document.getElementsByClassName("results_count")[1]
-		alert(loadcounter + " / " + tempmet.length);
-		if ( loadcounter ===  tempmet.length ) {
+		if ( loadcounter ===  tempmet.length - 1 ) {
 			s.innerText = "Displaying:  " + loadcounter + " / " + tempmet.length +" Results";
 			loadcounter = 0;
                         loadcountertotal = 0;
