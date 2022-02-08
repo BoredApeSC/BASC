@@ -299,9 +299,6 @@ function filterChange() {
     metafiltered = metafiltered.filter(filterByEARRING);
   }
 
-  console.log(metafiltered);
-  console.log(metafiltered.length);
-
   function clearCards() {
     const myNode = document.querySelector(".nfts");
     myNode.innerHTML = '';
