@@ -221,6 +221,32 @@ a.butt img {margin: -2px 3px 2px 0; }
 
 .featured_item_img:hover img {opacity: 0.8; filter: alpha(opacity=80);}
 
+/* card with ribbon */
+.featured_item_img_ribbon {
+  position: absolute;
+  right: 0; top: 0px;
+  z-index: 1;
+  overflow: hidden;
+  width: 100px; 
+  height: 100px;
+  text-align: right;
+}
+
+/* card with ribbon */
+.featured_item_img_ribbon span {
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 25px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  width: 115px;
+  display: block;
+  background: #f5431a;
+  box-shadow: 0 0 10px 3px #ff6e4e;
+  position: absolute;
+  top: 20px; right: -25px;
+}
+
 .featured_image_desc {text-align: center; padding:12px;}
 
 .featured_image_desc h3 {font-weight:600; font-size:14px; margin: 0 0 10px;}
