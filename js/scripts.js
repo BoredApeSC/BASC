@@ -545,9 +545,9 @@ let sortie = document.getElementById('sort_by');
 let sortieval = sortie.options[sortie.selectedIndex].value
 if (sortieval === 'rank'){
 	meta = meta.sort(function(a,b){return a.token - b.token}); 
-	if ( metafiltered !== null){
+
 		filterChange();
-	}
+
 }
 if (sortieval === 'id'){
 	meta = meta.sort(function(a,b){return a.edition - b.edition});
