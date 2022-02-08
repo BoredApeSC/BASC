@@ -200,7 +200,7 @@ metafiltered = meta
 let sortie = document.getElementById('sort_by');
 let sortieval = sortie.options[sortie.selectedIndex].value
 if (sortieval === 'rank'){
-	metafiltered = metafiltered.sort(function(a,b){return a.rank - b.rank}); 
+	metafiltered = metafiltered.sort(function(a,b){return a.token - b.token}); 
 }
 if (sortieval === 'id'){
 	metafiltered = metafiltered.sort(function(a,b){return a.edition - b.edition});
@@ -309,7 +309,7 @@ if (sortieval === 'id'){
 	loadcountertotal = metafiltered.length
     while (loadcounter <= loadcountertotal - 1) {
         let v1 = getNestedValue(metafiltered, loadcounter + ".edition");
-        let v2 = getNestedValue(metafiltered, loadcounter + ".rank");
+        let v2 = getNestedValue(metafiltered, loadcounter + ".token");
         let v3 = getNestedValue(metafiltered, loadcounter + ".image");
         populateCard(v1, v2, v3)
         loadcounter = loadcounter + 1;
@@ -350,7 +350,7 @@ loadcounter = 0
 loadcountertotal = metafiltered.length        
 while (loadcounter <= loadcountertotal - 1) {
     let v1 = getNestedValue(metafiltered, loadcounter + ".edition");
-    let v2 = getNestedValue(metafiltered, loadcounter + ".rank");
+    let v2 = getNestedValue(metafiltered, loadcounter + ".token");
     let v3 = getNestedValue(metafiltered, loadcounter + ".image");
     populateCard(v1,v2,v3)
     loadcounter = loadcounter + 1;
@@ -490,7 +490,7 @@ function getNestedValue(obj, key) {
  loadcountertotal = meta.length
   while (loadcounter <= 18 - 1) {
     let v1 = getNestedValue(meta, loadcounter + ".edition");
-    let v2 = getNestedValue(meta, loadcounter + ".rank");
+    let v2 = getNestedValue(meta, loadcounter + ".token");//hold for rank
     let v3 = getNestedValue(meta, loadcounter + ".image");
     populateCard(v1,v2,v3);
     loadcounter = loadcounter + 1;
@@ -501,7 +501,7 @@ function changeSort() {
 let sortie = document.getElementById('sort_by');
 let sortieval = sortie.options[sortie.selectedIndex].value
 if (sortieval === 'rank'){
-	meta = meta.sort(function(a,b){return a.rank - b.rank}); 
+	meta = meta.sort(function(a,b){return a.token - b.token}); 
 	if ( metafiltered !== null){
 		filterChange();
 	}
