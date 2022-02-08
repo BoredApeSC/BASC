@@ -298,9 +298,9 @@ if (sortieval === 'id'){
     clearCards();
 
     var s = document.getElementsByClassName("results_count")[0]
-    s.innerText = metafiltered.length + " RESULTS"
+    s.innerText = metafiltered.length + " RESULT"
     var s = document.getElementsByClassName("results_count")[1]
-    s.innerText = metafiltered.length + " RESULTS"
+    s.innerText = metafiltered.length + " RESULT"
 	
 	//Sort by MINT
 	metafiltered = metafiltered.sort(function(a,b){return a.edition - b.edition});
@@ -317,6 +317,49 @@ if (sortieval === 'id'){
 
 }
   
+function filterByRank() {
+
+metafiltered = meta
+var h = document.getElementById('ranks').value;
+
+
+if (h  != '') {
+	function filterByID(obj) {
+		if (obj.edition == h) 
+		{
+		return true;
+		} 
+		return false;
+		}
+		if (metafiltered === metafiltered.filter(filterByID)) {metafiltered = null}
+		metafiltered = metafiltered.filter(filterByID);
+}
+
+function clearCards() {
+	const myNode = document.querySelector(".nfts");
+	myNode.innerHTML = '';
+      }
+clearCards();
+
+var s = document.getElementsByClassName("results_count")[0]
+s.innerText = metafiltered.length + " RESULT"
+var s = document.getElementsByClassName("results_count")[1]
+s.innerText = metafiltered.length + " RESULT"
+
+loadcounter = 0
+loadcountertotal = metafiltered.length        
+while (loadcounter <= loadcountertotal - 1) {
+    let v1 = getNestedValue(metafiltered, loadcounter + ".edition");
+    let v2 = getNestedValue(metafiltered, loadcounter + ".token");
+    let v3 = getNestedValue(metafiltered, loadcounter + ".image");
+    populateCard(v1,v2,v3)
+    loadcounter = loadcounter + 1;
+}
+loadcounter = 0
+metafiltered = null
+loadcountertotal = 0
+}
+
 function filterByID() {
 
 metafiltered = meta
@@ -342,9 +385,9 @@ function clearCards() {
 clearCards();
 
 var s = document.getElementsByClassName("results_count")[0]
-s.innerText = metafiltered.length + " RESULTS"
+s.innerText = metafiltered.length + " RESULT"
 var s = document.getElementsByClassName("results_count")[1]
-s.innerText = metafiltered.length + " RESULTS"
+s.innerText = metafiltered.length + " RESULT"
 
 loadcounter = 0
 loadcountertotal = metafiltered.length        
@@ -355,7 +398,7 @@ while (loadcounter <= loadcountertotal - 1) {
     populateCard(v1,v2,v3)
     loadcounter = loadcounter + 1;
 }
-loadcounter1 = 0
+loadcounter = 0
 metafiltered = null
 loadcountertotal = 0
 }
