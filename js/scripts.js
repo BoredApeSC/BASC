@@ -529,7 +529,7 @@ function getNestedValue(obj, key) {
        return result[key] 
     }, obj);
 }
-	
+ meta = meta.sort(function(a,b){return a.edition - b.edition});  	
  loadcountertotal = meta.length
   while (loadcounter <= 18 - 1) {
     let v1 = getNestedValue(meta, loadcounter + ".edition");
