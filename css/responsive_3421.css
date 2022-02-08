@@ -344,7 +344,7 @@
 	
 	.nft_title a.nft_img {top:0; transform: none; }
 	
-	.nft_title img {width:64px; height:auto; top:0; transform:none; }
+	.nft_title img {width:75px; height:auto; top:0; transform:none; } /*64*/
 	
 	.nft_title, 
 	.nfts_detail .nft_title {padding: 0 0 0 90px; width: calc(100% - 62px); min-height: 64px;}
