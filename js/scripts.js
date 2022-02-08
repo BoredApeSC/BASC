@@ -325,7 +325,14 @@ function filterChange() {
     loadcounter = loadcounter + 1;
   }
     var s = document.getElementsByClassName("results_count")[1]
-    s.innerText = "Displaying:  " + loadcounter + " / " + metafiltered.length +" Results - " + "       Scroll Down To load";
+	if ( loadcounter === metafiltered.length) {
+		s.innerText = "Displaying:  " + loadcounter + " / " + metafiltered.length +" Results";
+		loadcounter = 0;
+		loadcountertotal = 0;
+	}
+	else {
+		s.innerText = "Displaying:  " + loadcounter + " / " + metafiltered.length +" Results - " + "       Scroll Down To load";
+	}
 }
   
 function filterByRank() {
