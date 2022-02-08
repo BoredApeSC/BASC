@@ -336,6 +336,23 @@ function filterByRank() {
 	
 	
 	if (h  != '') {
+var ee = document.getElementById("FUR");
+ee.options[ee.selectedIndex].text = 'Please select';
+
+var ee = document.getElementById("CLOTHES");
+ee.options[ee.selectedIndex].text != 'Please select';
+
+var ee = document.getElementById("EYES");
+ee.options[ee.selectedIndex].text = 'Please select';
+
+var ee = document.getElementById("MOUTH");
+ee.options[ee.selectedIndex].text = 'Please select';
+
+var ee = document.getElementById("HATS");
+ee.options[ee.selectedIndex].text = 'Please select';
+
+var ee = document.getElementById("EARRING");
+ee.options[ee.selectedIndex].text = 'Please select';
 		function filterByID(obj) {
 			if (obj.token == h) 
 			{
@@ -380,6 +397,23 @@ var g = document.getElementById('ids').value;
 
 
 if (g  != '') {
+var ee = document.getElementById("FUR");
+ee.options[ee.selectedIndex].text = 'Please select';
+
+var ee = document.getElementById("CLOTHES");
+ee.options[ee.selectedIndex].text != 'Please select';
+
+var ee = document.getElementById("EYES");
+ee.options[ee.selectedIndex].text = 'Please select';
+
+var ee = document.getElementById("MOUTH");
+ee.options[ee.selectedIndex].text = 'Please select';
+
+var ee = document.getElementById("HATS");
+ee.options[ee.selectedIndex].text = 'Please select';
+
+var ee = document.getElementById("EARRING");
+ee.options[ee.selectedIndex].text = 'Please select';
 	function filterByID(obj) {
 		if (obj.edition == g) 
 		{
