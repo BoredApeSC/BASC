@@ -236,14 +236,17 @@ a.butt img {margin: -2px 3px 2px 0; }
 .featured_item_img_ribbon span {
   text-transform: uppercase;
   text-align: center;
-  line-height: 25px;
+  line-height: 15px;
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
   width: 115px;
   display: block;
-  background: #f5431a;
-  box-shadow: 0 0 10px 3px #ff6e4e;
+  background: #f0ad30;
+  box-shadow: 0 0 3px 1px #ffcd4e;
   position: absolute;
+  font-size: 16px;
+  font-weight: bold;
+  color: #000000;
   top: 20px; right: -25px;
 }
 
