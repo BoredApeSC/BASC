@@ -163,58 +163,58 @@ function populateCard(mint, rank, pic) {
   }
 	
   if (rank <= 60) {
-    let OGStamp = document.createElement('div');
-    OGStamp.className = "featured_item_img_ribbon_rank_mythic";
-    img.append(OGStamp);
+    let rank1 = document.createElement('div');
+    rank1.className = "featured_item_img_ribbon_rank_mythic";
+    img.append(rank1);
 
-    let OGSpan = document.createElement("span");
-    OGSpan.textContent = "MYTHIC";
-    OGStamp.append(OGSpan);
+    let rank1Span = document.createElement("span");
+    rank1Span.textContent = "MYTHIC";
+    rank1.append(rank1Span);
   }
   if (rank >= 61 && x <= 300) {
-    let OGStamp = document.createElement('div');
-    OGStamp.className = "featured_item_img_ribbon_rank_legendary";
-    img.append(OGStamp);
+    let rank2 = document.createElement('div');
+    rank2.className = "featured_item_img_ribbon_rank_legendary";
+    img.append(rank2);
 
-    let OGSpan = document.createElement("span");
-    OGSpan.textContent = "LEDGENDARY";
-    OGStamp.append(OGSpan);
+    let rank2Span = document.createElement("span");
+    rank2Span.textContent = "LEDGENDARY";
+    rank2.append(rank2Span);
   }
     if (rank >= 301 && x <= 900) {
-    let OGStamp = document.createElement('div');
-    OGStamp.className = "featured_item_img_ribbon_rank_epic";
-    img.append(OGStamp);
+    let rank3 = document.createElement('div');
+    rank3.className = "featured_item_img_ribbon_rank_epic";
+    img.append(rank3);
 
-    let OGSpan = document.createElement("span");
-    OGSpan.textContent = "EPIC";
-    OGStamp.append(OGSpan);
+    let rank3Span = document.createElement("span");
+    rank3Span.textContent = "EPIC";
+    rank3.append(rank3Span);
   }
     if (rank >= 901 && x <= 2100) {
-    let OGStamp = document.createElement('div');
-    OGStamp.className = "featured_item_img_ribbon_rank_rare";
-    img.append(OGStamp);
+    let rank4 = document.createElement('div');
+    rank4.className = "featured_item_img_ribbon_rank_rare";
+    img.append(rank4);
 
-    let OGSpan = document.createElement("span");
-    OGSpan.textContent = "RARE";
-    OGStamp.append(OGSpan);
+    let rank4Span = document.createElement("span");
+    rank4Span.textContent = "RARE";
+    rank4.append(rank4);
   }
     if (rank >= 2101 && x <= 3600) {
-    let OGStamp = document.createElement('div');
-    OGStamp.className = "featured_item_img_ribbon_rank_uncommon";
-    img.append(OGStamp);
+    let rank5 = document.createElement('div');
+    rank5.className = "featured_item_img_ribbon_rank_uncommon";
+    img.append(rank5);
 
-    let OGSpan = document.createElement("span");
-    OGSpan.textContent = "UNCOMMON";
-    OGStamp.append(OGSpan);
+    let rank5Span = document.createElement("span");
+    rank5Span.textContent = "UNCOMMON";
+    rank5.append(rank5Span);
   }	
     if (rank >= 3601 && x <= 6000) {
-    let OGStamp = document.createElement('div');
-    OGStamp.className = "featured_item_img_ribbon_rank_common";
-    img.append(OGStamp);
+    let rank6 = document.createElement('div');
+    rank6.className = "featured_item_img_ribbon_rank_common";
+    img.append(rank6);
 
-    let OGSpan = document.createElement("span");
-    OGSpan.textContent = "COMMON";
-    OGStamp.append(OGSpan);
+    let rank6Span = document.createElement("span");
+    rank6Span.textContent = "COMMON";
+    rank6.append(rank6);
   }	
 
   let elem = document.createElement("img");
