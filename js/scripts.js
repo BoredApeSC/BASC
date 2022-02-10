@@ -161,6 +161,61 @@ function populateCard(mint, rank, pic) {
     OGSpan.textContent = "OG";
     OGStamp.append(OGSpan);
   }
+	
+  if (rank <= 60) {
+    let OGStamp = document.createElement('div');
+    OGStamp.className = "featured_item_img_ribbon_mythic";
+    img.append(OGStamp);
+
+    let OGSpan = document.createElement("span");
+    OGSpan.textContent = "MYTHIC";
+    OGStamp.append(OGSpan);
+  }
+  if (rank >= 61 && x <= 300) {
+    let OGStamp = document.createElement('div');
+    OGStamp.className = "featured_item_img_ribbon_legendary";
+    img.append(OGStamp);
+
+    let OGSpan = document.createElement("span");
+    OGSpan.textContent = "LEDGENDARY";
+    OGStamp.append(OGSpan);
+  }
+    if (rank >= 301 && x <= 900) {
+    let OGStamp = document.createElement('div');
+    OGStamp.className = "featured_item_img_ribbon_epic";
+    img.append(OGStamp);
+
+    let OGSpan = document.createElement("span");
+    OGSpan.textContent = "EPIC";
+    OGStamp.append(OGSpan);
+  }
+    if (rank >= 901 && x <= 2100) {
+    let OGStamp = document.createElement('div');
+    OGStamp.className = "featured_item_img_ribbon_rare";
+    img.append(OGStamp);
+
+    let OGSpan = document.createElement("span");
+    OGSpan.textContent = "RARE";
+    OGStamp.append(OGSpan);
+  }
+    if (rank >= 2101 && x <= 3600) {
+    let OGStamp = document.createElement('div');
+    OGStamp.className = "featured_item_img_ribbon_uncommon";
+    img.append(OGStamp);
+
+    let OGSpan = document.createElement("span");
+    OGSpan.textContent = "UNCOMMON";
+    OGStamp.append(OGSpan);
+  }	
+    if (rank >= 3601 && x <= 6000) {
+    let OGStamp = document.createElement('div');
+    OGStamp.className = "featured_item_img_ribbon_common";
+    img.append(OGStamp);
+
+    let OGSpan = document.createElement("span");
+    OGSpan.textContent = "COMMON";
+    OGStamp.append(OGSpan);
+  }	
 
   let elem = document.createElement("img");
   elem.src = pic;
