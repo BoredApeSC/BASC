@@ -196,7 +196,7 @@ function populateCard(mint, rank, pic) {
 
     let rank4Span = document.createElement("span");
     rank4Span.textContent = "RARE";
-    rank4.append(rank4);
+    rank4.append(rank4Span);
   }
     if (rank >= 2101 && rank <= 3600) {
     let rank5 = document.createElement('div');
@@ -214,7 +214,7 @@ function populateCard(mint, rank, pic) {
 
     let rank6Span = document.createElement("span");
     rank6Span.textContent = "COMMON";
-    rank6.append(rank6);
+    rank6.append(rank6Span);
   }	
 
   let elem = document.createElement("img");
