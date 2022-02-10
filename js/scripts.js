@@ -177,7 +177,7 @@ function populateCard(mint, rank, pic) {
     img.append(rank2);
 
     let rank2Span = document.createElement("span");
-    rank2Span.textContent = "LEDGENDARY";
+    rank2Span.textContent = "LEGENDARY";
     rank2.append(rank2Span);
   }
     if (rank >= 301 && rank <= 900) {
