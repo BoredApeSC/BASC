@@ -171,7 +171,7 @@ function populateCard(mint, rank, pic) {
     rank1Span.textContent = "MYTHIC";
     rank1.append(rank1Span);
   }
-  if (rank >= 61 && x <= 300) {
+  if (rank >= 61 && rank <= 300) {
     let rank2 = document.createElement('div');
     rank2.className = "featured_item_img_ribbon_rank_legendary";
     img.append(rank2);
@@ -180,7 +180,7 @@ function populateCard(mint, rank, pic) {
     rank2Span.textContent = "LEDGENDARY";
     rank2.append(rank2Span);
   }
-    if (rank >= 301 && x <= 900) {
+    if (rank >= 301 && rank <= 900) {
     let rank3 = document.createElement('div');
     rank3.className = "featured_item_img_ribbon_rank_epic";
     img.append(rank3);
@@ -189,7 +189,7 @@ function populateCard(mint, rank, pic) {
     rank3Span.textContent = "EPIC";
     rank3.append(rank3Span);
   }
-    if (rank >= 901 && x <= 2100) {
+    if (rank >= 901 && rank <= 2100) {
     let rank4 = document.createElement('div');
     rank4.className = "featured_item_img_ribbon_rank_rare";
     img.append(rank4);
@@ -198,7 +198,7 @@ function populateCard(mint, rank, pic) {
     rank4Span.textContent = "RARE";
     rank4.append(rank4);
   }
-    if (rank >= 2101 && x <= 3600) {
+    if (rank >= 2101 && rank <= 3600) {
     let rank5 = document.createElement('div');
     rank5.className = "featured_item_img_ribbon_rank_uncommon";
     img.append(rank5);
@@ -207,7 +207,7 @@ function populateCard(mint, rank, pic) {
     rank5Span.textContent = "UNCOMMON";
     rank5.append(rank5Span);
   }	
-    if (rank >= 3601 && x <= 6000) {
+    if (rank >= 3601 && rank <= 6000) {
     let rank6 = document.createElement('div');
     rank6.className = "featured_item_img_ribbon_rank_common";
     img.append(rank6);
