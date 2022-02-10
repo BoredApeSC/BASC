@@ -164,7 +164,7 @@ function populateCard(mint, rank, pic) {
 	
   if (rank <= 60) {
     let OGStamp = document.createElement('div');
-    OGStamp.className = "featured_item_img_ribbon_mythic";
+    OGStamp.className = "featured_item_img_ribbon_rank_mythic";
     img.append(OGStamp);
 
     let OGSpan = document.createElement("span");
@@ -173,7 +173,7 @@ function populateCard(mint, rank, pic) {
   }
   if (rank >= 61 && x <= 300) {
     let OGStamp = document.createElement('div');
-    OGStamp.className = "featured_item_img_ribbon_legendary";
+    OGStamp.className = "featured_item_img_ribbon_rank_legendary";
     img.append(OGStamp);
 
     let OGSpan = document.createElement("span");
@@ -182,7 +182,7 @@ function populateCard(mint, rank, pic) {
   }
     if (rank >= 301 && x <= 900) {
     let OGStamp = document.createElement('div');
-    OGStamp.className = "featured_item_img_ribbon_epic";
+    OGStamp.className = "featured_item_img_ribbon_rank_epic";
     img.append(OGStamp);
 
     let OGSpan = document.createElement("span");
@@ -191,7 +191,7 @@ function populateCard(mint, rank, pic) {
   }
     if (rank >= 901 && x <= 2100) {
     let OGStamp = document.createElement('div');
-    OGStamp.className = "featured_item_img_ribbon_rare";
+    OGStamp.className = "featured_item_img_ribbon_rank_rare";
     img.append(OGStamp);
 
     let OGSpan = document.createElement("span");
@@ -200,7 +200,7 @@ function populateCard(mint, rank, pic) {
   }
     if (rank >= 2101 && x <= 3600) {
     let OGStamp = document.createElement('div');
-    OGStamp.className = "featured_item_img_ribbon_uncommon";
+    OGStamp.className = "featured_item_img_ribbon_rank_uncommon";
     img.append(OGStamp);
 
     let OGSpan = document.createElement("span");
@@ -209,7 +209,7 @@ function populateCard(mint, rank, pic) {
   }	
     if (rank >= 3601 && x <= 6000) {
     let OGStamp = document.createElement('div');
-    OGStamp.className = "featured_item_img_ribbon_common";
+    OGStamp.className = "featured_item_img_ribbon_rank_common";
     img.append(OGStamp);
 
     let OGSpan = document.createElement("span");
