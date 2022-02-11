@@ -261,6 +261,15 @@
                }
              }
            }
+	 function delay(time) {
+	  return new Promise(resolve => setTimeout(resolve, time));
+	}
+
+	async function test() {
+	  await delay(1000);
+	}
+
+	test();
            //meta.uniqueBG();
            meta.uniqueFUR();
            meta.uniqueCLOTHES();
