@@ -477,7 +477,7 @@ function filterByIDs() {
     ee.options[ee.selectedIndex].text = 'Please select';
 
     function filterByID(obj) {
-      if (obj.edition == g) {
+      if (obj.edition == g || obj.token == g) {
         return true;
       }
       return false;
