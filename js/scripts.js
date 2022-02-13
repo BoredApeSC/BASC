@@ -265,7 +265,7 @@ function filterChange() {
   let sortieval = sortie.options[sortie.selectedIndex].value
   if (sortieval === 'rank') {
     metafiltered = metafiltered.sort(function(a, b) {
-      return a.token - b.token
+      return a.rank - b.rank
     });
   }
   if (sortieval === 'id') {
@@ -371,7 +371,7 @@ function filterChange() {
   if (loadcountertotal >= 18) {filteredloadcounter = 18 - 1 } else {filteredloadcounter = loadcountertotal - 1}
   while (loadcounter <= filteredloadcounter) {
     let v1 = getNestedValue(metafiltered, loadcounter + ".edition");
-    let v2 = getNestedValue(metafiltered, loadcounter + ".token");
+    let v2 = getNestedValue(metafiltered, loadcounter + ".rank");
     let v3 = getNestedValue(metafiltered, loadcounter + ".image");
     populateCard(v1, v2, v3)
     loadcounter = loadcounter + 1;
@@ -412,7 +412,7 @@ function filterByRank() {
     ee.options[ee.selectedIndex].text = 'Please select';
 
     function filterByID(obj) {
-      if (obj.token == h) {
+      if (obj.rank == h) {
         return true;
       }
       return false;
@@ -438,7 +438,7 @@ function filterByRank() {
     loadcountertotal = metafiltered.length
     while (loadcounter <= loadcountertotal - 1) {
       let v1 = getNestedValue(metafiltered, loadcounter + ".edition");
-      let v2 = getNestedValue(metafiltered, loadcounter + ".token");
+      let v2 = getNestedValue(metafiltered, loadcounter + ".rank");
       let v3 = getNestedValue(metafiltered, loadcounter + ".image");
       populateCard(v1, v2, v3)
       loadcounter = loadcounter + 1;
@@ -503,7 +503,7 @@ function filterByIDs() {
     loadcountertotal = metafiltered.length
     while (loadcounter <= loadcountertotal - 1) {
       let v1 = getNestedValue(metafiltered, loadcounter + ".edition");
-      let v2 = getNestedValue(metafiltered, loadcounter + ".token");
+      let v2 = getNestedValue(metafiltered, loadcounter + ".rank");
       let v3 = getNestedValue(metafiltered, loadcounter + ".image");
       populateCard(v1, v2, v3);
       loadcounter = loadcounter + 1;
@@ -539,7 +539,7 @@ function changeSort() {
   let sortieval = sortie.options[sortie.selectedIndex].value
   if (sortieval === 'rank') {
     meta = meta.sort(function(a, b) {
-      return a.token - b.token
+      return a.rank - b.rank
     });
     if (metafiltered !== null) {
       filterChange();
@@ -662,7 +662,7 @@ window.onload = function() {
   loadcountertotal = meta.length
   while (loadcounter <= 18 - 1) {
     let v1 = getNestedValue(meta, loadcounter + ".edition");
-    let v2 = getNestedValue(meta, loadcounter + ".token"); //hold for rank
+    let v2 = getNestedValue(meta, loadcounter + ".rank"); //hold for rank
     let v3 = getNestedValue(meta, loadcounter + ".image");
     populateCard(v1, v2, v3);
     loadcounter = loadcounter + 1;
