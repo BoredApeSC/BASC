@@ -252,6 +252,10 @@ function dataTable() {
 			table.appendChild(tr);
 			holdercount = holdercount + 1;
 		    }
+		    var h2parent = document.getElementsByTagName('h2');
+		    var h2 = document.createElement("h2");
+		    h2.innerHTML = totalholdercount + " Unique Holders";
+		    h2parent[0].appendChild(h2);  
 	    }
 	    
 	    generateHolderWallets();
