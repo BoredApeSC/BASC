@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang='en' prefix='og: http://ogp.me/ns#'>
+<head>
+<title> Daily Snapshot</title>
+<link rel="apple-touch-icon" sizes="57x57" href="../favicons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../favicons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../favicons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../favicons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../favicons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../favicons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../favicons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../favicons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../favicons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="196x196" href="../favicons/android-icon-196x196.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../favicons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../favicons/favicon-16x16.png">
+<meta name="msapplication-TileImage" content="../favicons/ms-icon-144x144.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Daily Holder Snapshot">
+<meta property='og:title' content='Snapshot' />
+<meta property='og:description' content='Daily Holder Snapshot' />
+<link rel='shortcut icon' type='image/x-icon' href='https://raw.githubusercontent.com/BoredApeSC/BASC/main/img/wallet.png' />
+<meta property='og:site_name' content='https://www.basc.app/snapshot' />
+<meta property='og:url' content='https://www.basc.app/snapshot/' />
+<meta property='og:type' content='website' />
+<meta property='og:image' content='https://raw.githubusercontent.com/BoredApeSC/BASC/main/img/wallet.png' />	
+	
+<style>
+* {
+  box-sizing: border-box;
+}
+	
+#myInput {
+  background-image: url('../img/search.svg');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 14px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 13px;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 12px;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #303030;
+}
+</style>
+<link href="../css/styles_3421.css" rel="stylesheet" type="text/css">
+<link href="../css/responsive_3421.css" rel="stylesheet" type="text/css">
+</head>
+<!--<script type="text/javascript" src="../js/hscripts.js"></script> -->
+<script>
+var holders;
+fetch("../data/HkzqBHcEsppZ4QstJQT1VzRFmLARuVsCc4PZ6wau4ec3_holders.json")
+    .then(Response => Response.json())
+    .then(data => holders = data)
+</script> 
+    <script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.autocompletem.js"></script>
+<body>
+
+<h2 style="text-align: center;">Daily Snapshot</h2>
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for wallet.." title="Type in a wallet">
+
+<table id="myTable">
+<!-- <tr class="header">
+    <th style="width:60%;">Wallet</th>
+    <th style="width:40%;">Count</th>
+  </tr>
+-->
+</table>
+
+<script>
+	
+	
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+
+function dataTable() {
+	    function filteroutMints(obj) {
+		if (obj.mint_account !== "2RoBwLbLJ23Fw2HfYUHj4wKngHG3mu5H3yatyZbdUYpB" &&
+		    obj.mint_account !== "BWs7xGDmuE9qXKziMfxJNfV2BNQ89KRZy3mbdR1j7HNW" &&
+		    obj.mint_account !== "2sTYoLKEW292gP6WUHfxWBac2LeyHnnCnwA3WiNS8jp8" &&
+		    obj.mint_account !== "39uXNEg6SC3Yngvaj6aQGxmvWEP3qH8EqTWTSTUayBrk" &&
+		    obj.mint_account !== "3CL8TioQMjdiEuqo2kQ8mJWfh6kZV7KeZoxsgZ3rLQ3W" &&
+		    obj.mint_account !== "3iGZvZffYGqUwbnv3QoVNqGPRKMpE6uZYkUvcKewYfEn" &&
+		    obj.mint_account !== "3jExbXGp7pxQW7Yx549dvQBf59p6pQZycUNUKhQDH3Bv" &&
+		    obj.mint_account !== "3KBRp7M4u396qAeYhoxxjkGwmiTejxbn4hkJM561JdSu" &&
+		    obj.mint_account !== "3Ln2snTx22Ubayx68pjRa9f5dELm9v8YCsSZUx2hey9Y" &&
+		    obj.mint_account !== "3uLxTSqFtoPyH5gySRdFpfvX29H1qYvEng2CZjomiADe" &&
+		    obj.mint_account !== "4FyE2s6RupveKdJq15HeucF7nc67Xgq4vJ5PmCuVwDoi" &&
+		    obj.mint_account !== "4mV4B2Xwxubt5p96eDDceCNc1MRdLaKgp54BQiUmZKTT" &&
+		    obj.mint_account !== "4ynkiKT6irR7p6ER18bJvexA7cFRB6Bzvhrp7mT8vYEw" &&
+		    obj.mint_account !== "532bEL9jRg3ckH6xfFSYcVihNTpXRZA8c18EoKssuvZu" &&
+		    obj.mint_account !== "5rY2TNEqas4iPH7deqN74DBtqXqRu2kSSw1H5XMH7ES8" &&
+		    obj.mint_account !== "5Z2vGouYMeEQ1yzXpb12JPNdrfacmBT3i5qZj6vB6MMW" &&
+		    obj.mint_account !== "6eatcTF56vLCeJKTTLCreDAmy4wxj7hkej7oENCoJujD" &&
+		    obj.mint_account !== "6fW6tyaEtNLSuGNiRsMZaEnQvcGLWiCG63TDmy3bpDR6" &&
+		    obj.mint_account !== "6xzz956NcMxxww8GQAAyLYEBKiERHWbVjnC7wAT5wgSX" &&
+		    obj.mint_account !== "6YHUN5xft2mSZhjsnnkwxXpVsYcDpJyb6VRWjmqTs9RZ" &&
+		    obj.mint_account !== "7FM1G4s2B9sBG8JgNoKZrvjewhY8dujiygrTJAF8KD3A" &&
+		    obj.mint_account !== "7hdZpzQnJpJr6fMirkiTat6LyNg1tfH33Gm8PyY35B24" &&
+		    obj.mint_account !== "7jSn7Bsk8ZFHci6eEwfKUk7qFXn5GNuVvJZEJzSuUAw" &&
+		    obj.mint_account !== "7QDsD43AcLRs9pw7cQrwkY5FoM4RPsWXEBZPysYCyRaZ" &&
+		    obj.mint_account !== "88xsvRZZZTzY7cr2eCeK3cWqaTF9hsGBZLWygfGFU4sQ" &&
+		    obj.mint_account !== "8Bw15PdRCSeut6aPDdYavrDEzGUP6eRT1if8owt33v65" &&
+		    obj.mint_account !== "8ngGFrrTZ5nD8fvA4swTQLBdtSayyMvAhqmd3ZikzENa" &&
+		    obj.mint_account !== "8odX5fjW6CnYBihhkLZsRNyjQatKZTzhupK7BXiVtykW" &&
+		    obj.mint_account !== "8rQdRfQXp3Vk5Xf51vfXdfYKjrU69fxUtKxzFZ48suBg" &&
+		    obj.mint_account !== "9E8XAKk1L98avVULstNPTBmVJ3z9pKdL1123JTyvZWP7" &&
+		    obj.mint_account !== "9H4SkaJLDYhTYebV361MZuKieJM9H9gqbGugL9qpcAUZ" &&
+		    obj.mint_account !== "9Y9NV2Um6ZqaPdw4yHVvmnTyhRGcjfoMLMM9EaipEEnU" &&
+		    obj.mint_account !== "AhmZnf8Z9BcNcn1kACMUv2GcUYLEUCimWy1Z31aZuC3D" &&
+		    obj.mint_account !== "AVziapHR4hQF4DVd1Btgvx1EoqGZMY4TuUXi63CT57An" &&
+		    obj.mint_account !== "B3gSxhowoB1CmMdAPEUv1eVX2QrGG4Qoj2Tq2yYYF3uJ" &&
+		    obj.mint_account !== "BS6TBLxgxvgeJ4nNw9xgaXsWHcV36zY23b9Be7JDeNTM" &&
+		    obj.mint_account !== "CEZX7bjE163jUo4C5jwtqiN2Z252d4fyjyn5a9AMUHMQ" &&
+		    obj.mint_account !== "CijRZMKf5q3DbayzxC2dKJ9f8Y6A23M3eErUfxWyw9gG" &&
+		    obj.mint_account !== "CUjbEMJ8pMsGPXnKyHY3Bw52wWCphKSQVJJs2sik6igJ" &&
+		    obj.mint_account !== "Cx4a9B4BZv5otbwKL9HJ9jYx3X96qPQ3xSLTJyQmsTXV" &&
+		    obj.mint_account !== "DNARmP1jnVda61vkHWAMYcRwtTKZkahGscJz1UQKKPzv" &&
+		    obj.mint_account !== "DniwwntcJ77xHsnFsiTq17h4RYKXM7zfUARqvLWhH1y4" &&
+		    obj.mint_account !== "FcWkPBhpQk1mDkjMuQ3phu9LQSDGJThMgrSXFAP5afBq" &&
+		    obj.mint_account !== "FRwPpoGKjpsh8CqkfzCwDa3vycKeFCaN7A9CM2YM26yk" &&
+		    obj.mint_account !== "GrNTVVTgDwcYy5VPVb9HE8bLzN44HoPPvrmVvhZxuqQA" &&
+		    obj.mint_account !== "GuYhAfLixYKSeSZ3hpf3hMkGbnBzGWHEnXzmxMkMfyjd" &&
+		    obj.mint_account !== "GzdGyWsEJMvsnVcjZgNdH7Hp4GGs4HAXxMeiZCGvu9sj" &&
+		    obj.mint_account !== "H5o9mCRTKeJR2QShvgTir6nN4YaHvVYKNRyZCY11c5GJ" &&
+		    obj.mint_account !== "HG64fEQGiHsWDsnzpnCFCRUpfQnd7a9etfSUL1pAc4B2" &&
+		    obj.mint_account !== "HSQCF4nS63CM4mBUfyQC61QqT5NqM4JG1SJYxUCyxQyD" &&
+		    obj.mint_account !== "J23QYEGz3EqQYwwasm9AD9w7nwhCB4dj5feExdE36DUZ" &&
+		    obj.mint_account !== "rEP7au6ubvJrt37SoAdbwvEVtSaucDx2T9KN17BcWLA" &&
+		    obj.mint_account !== "RrD2JZiW8Zc4X5QR2KWLSmjgF6WAaNbpMB51ZT8QzhC" &&
+		    obj.mint_account !== "USipFDnvHv3taH98F7gVVvxmF1PAadNDfX8BKLR2hSr") {
+		    return true;
+		}
+		return false;
+	    }
+	      
+		     function delay(time) {
+		      return new Promise(resolve => setTimeout(resolve, time));
+		    }
+	    
+		    async function test() {
+		      await delay(2000);
+		    }  
+	    
+	    var filteredHolders = holders.filter(filteroutMints)
+	    
+	    function filteroutMEWallet(obj) {
+		if (obj.owner_wallet !== "GUfCR9mK6azb9vcpsxgXyj7XRPAKJd4KMHTTVvtncGgp") {
+		    return true;
+		}
+		return false;
+	    }
+	    
+	    filteredHolders = filteredHolders.filter(filteroutMEWallet)
+	    
+	    
+	    
+	    
+	    function getNestedValue(obj, key) {
+		return key.split(".").reduce(function(result, key) {
+		    return result[key]
+		}, obj);
+	    }
+	    
+	    
+	    
+	    function groupByKey(array, key) {
+		return array
+		    .reduce((hash, obj) => {
+			if (obj[key] === undefined) return hash;
+			return Object.assign(hash, {
+			    [obj[key]]: (hash[obj[key]] || []).concat(obj)
+			})
+		    }, {})
+	    }
+	    
+	    var pole = groupByKey(filteredHolders, 'owner_wallet')
+	    
+	    var outside = [];
+	    var polecounter = Object.keys(pole).length;
+	    for (var propName in pole) {
+		var inside = {};
+		inside.wallet = propName;
+	    
+		var ze = [];
+		var lo = pole[propName].length
+		var le = 0
+		while (le <= lo - 1) {
+		    var zze = {};
+		    zze.mint = getNestedValue(pole[propName], [le] + ".mint_account");
+		    ze.push(zze);
+		    le = le + 1
+		}
+		inside.mints = ze;
+		outside.push(inside);
+	    
+	    }
+	    
+	    var sortoutside = outside.sort(function(a, b) {
+		return b.mints.length - a.mints.length
+	    });
+	    
+	    function generateHolderWallets() {
+		    var totalholdercount = sortoutside.length
+		    var holdercount = 0
+		    while (holdercount <= totalholdercount - 1) {
+			var table = document.getElementById("myTable");
+			var tr = document.createElement("tr");
+			var td = document.createElement('td');
+			var td2 = document.createElement('td');
+			td.appendChild(document.createTextNode(getNestedValue(sortoutside,holdercount + ".wallet")));
+			td2.appendChild(document.createTextNode(getNestedValue(sortoutside,holdercount + ".mints").length));
+		     	tr.appendChild(td);
+			tr.appendChild(td2);
+			table.appendChild(tr);
+			holdercount = holdercount + 1;
+		    }
+	    }
+	    
+	    generateHolderWallets();
+}
+$(window).on('load', function() {
+	function delay(time) {
+	  return new Promise(resolve => setTimeout(resolve, time));
+	}
+
+	async function test() {
+	  await delay(2000);
+      dataTable();  
+	}
+      test();
+})	
+</script>
+</body>
+</html>
