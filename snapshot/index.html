@@ -182,7 +182,8 @@ function dataTable() {
 	    var filteredHolders = holders.filter(filteroutMints)
 	    
 	    function filteroutMEWallet(obj) {
-		if (obj.owner_wallet !== "GUfCR9mK6azb9vcpsxgXyj7XRPAKJd4KMHTTVvtncGgp") {
+		if (obj.owner_wallet !== "GUfCR9mK6azb9vcpsxgXyj7XRPAKJd4KMHTTVvtncGgp" &&
+		    obj.owner_wallet !== "1BWutmTvYPwDtmw9abTkS4Ssr8no61spGAvW1X6NDix") {
 		    return true;
 		}
 		return false;
