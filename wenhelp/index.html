@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang='en' prefix='og: http://ogp.me/ns#'>
+<head>
+<title> Air Drop Help</title>
+<link rel="apple-touch-icon" sizes="57x57" href="../favicons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../favicons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../favicons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../favicons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../favicons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../favicons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../favicons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../favicons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../favicons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="196x196" href="../favicons/android-icon-196x196.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../favicons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../favicons/favicon-16x16.png">
+<meta name="msapplication-TileImage" content="../favicons/ms-icon-144x144.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Air Drop Snapshot Help">
+<meta property='og:title' content='Air Drop Help' />
+<meta property='og:description' content='Air Drop Help Snapshot' />
+<meta property='og:site_name' content='https://www.basc.app' />
+<meta property='og:url' content='https://www.basc.app/wenhelp/' />
+<meta property='og:type' content='website' />
+<meta property='og:image' content='https://raw.githubusercontent.com/BoredApeSC/BASC/main/img/wenhelp.png' />	
+	
+<style>
+* {
+  box-sizing: border-box;
+}
+	
+#myInput {
+  background-image: url('../img/search.svg');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 14px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 13px;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 12px;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #303030;
+}
+</style>
+<link href="../css/styles_3421.css" rel="stylesheet" type="text/css">
+<link href="../css/responsive_3421.css" rel="stylesheet" type="text/css">
+</head>
+<!--<script type="text/javascript" src="../js/hscripts.js"></script> -->
+<script>
+var holders;
+fetch("../data/AIRDROPHELP.json")
+    .then(Response => Response.json())
+    .then(data => holders = data)
+</script> 
+    <script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.autocompletem.js"></script>
+<body>
+
+<h2 style="text-align: center;">Air Drop 22 Feb Snapshot Help</h2>
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for wallet.." title="Type in a wallet">
+
+<table id="myTable">
+
+</table>
+
+<script>
+	
+	
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 1; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+
+function dataTable() {
+
+
+	    function getNestedValue(obj, key) {
+		return key.split(".").reduce(function(result, key) {
+		    return result[key]
+		}, obj);
+	    }
+	    
+	    
+	    
+            var sortoutside = holders
+	    
+	    function generateHeaders() {
+			var table1 = document.getElementById("myTable");
+			var tr1 = document.createElement("tr");
+			var td1 = document.createElement('td');
+			var td21 = document.createElement('td');
+		        var td31 = document.createElement('td');
+		        var td41 = document.createElement('td');
+
+			td1.appendChild(document.createTextNode("WALLET"));
+			td21.appendChild(document.createTextNode("Exx Snapshot Count"));
+		        td31.appendChild(document.createTextNode("GRAPE OG Count"));
+		        td41.appendChild(document.createTextNode("GRAPE REG Count"));
+			tr1.appendChild(td1);
+			tr1.appendChild(td21);
+		        tr1.appendChild(td31);
+		        tr1.appendChild(td41);
+			table1.appendChild(tr1);
+	    }
+	    function generateHolderWallets() {
+		    var totalholdercount = sortoutside.length
+		    var holdercount = 0
+		    while (holdercount <= totalholdercount - 1) {
+			var table = document.getElementById("myTable");
+			var tr = document.createElement("tr");
+			var td = document.createElement('td');
+			var td2 = document.createElement('td');
+			var td3 = document.createElement('td');
+			var td4 = document.createElement('td');
+			td.appendChild(document.createTextNode(getNestedValue(sortoutside,holdercount + ".owner_wallet")));
+			td2.appendChild(document.createTextNode(getNestedValue(sortoutside,holdercount + ".mint_count")));
+			td3.appendChild(document.createTextNode(getNestedValue(sortoutside,holdercount + ".GrapeOG")));
+			td4.appendChild(document.createTextNode(getNestedValue(sortoutside,holdercount + ".GrapeNonOG")));
+		     	tr.appendChild(td);
+			tr.appendChild(td2);
+			tr.appendChild(td3);
+			tr.appendChild(td4);    
+			table.appendChild(tr);
+			holdercount = holdercount + 1;
+		    }
+	    }
+	    generateHeaders();
+	    generateHolderWallets();
+}
+$(window).on('load', function() {
+	function delay(time) {
+	  return new Promise(resolve => setTimeout(resolve, time));
+	}
+
+	async function test() {
+	  await delay(2000);
+      dataTable();  
+	}
+      test();
+})	
+</script>
+</body>
+</html>
