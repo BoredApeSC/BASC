@@ -1,0 +1,57 @@
+{
+  "name": "Bored Ape Solana Club #1282",
+  "symbol": "BASC",
+  "description": "A community-driven NFT project consisting of 6001 Bored Apes on the Solana Blockchain. Giving power back to the people. BASC is not affiliated with Yuga Labs.",
+  "seller_fee_basis_points": 700,
+  "image": "https://raw.githubusercontent.com/BoredApeSC/BASC/main/meta/img/1282.png",
+  "external_url": "https://www.bascdao.net",
+  "edition": 1282,
+  "attributes": [
+    {
+      "trait_type": "BACKGROUND",
+      "value": "Solana"
+    },
+    {
+      "trait_type": "FUR",
+      "value": "Dark Brown"
+    },
+    {
+      "trait_type": "CLOTHES",
+      "value": "Lab Coat"
+    },
+    {
+      "trait_type": "EYES",
+      "value": "Bloodshot"
+    },
+    {
+      "trait_type": "MOUTH",
+      "value": "Bored"
+    },
+    {
+      "trait_type": "HATS",
+      "value": "Irish Boho"
+    },
+    {
+      "trait_type": "EARRING",
+      "value": "EMPTY"
+    }
+  ],
+  "properties": {
+    "creators": [
+      {
+        "address": "BasC5At2AGkUi2ApemqAgmfPUUSRP76VjWi9Jek8uLrZ",
+        "share": 100
+      }
+    ],
+    "files": [
+      {
+        "uri": "https://raw.githubusercontent.com/BoredApeSC/BASC/main/meta/img/1282.png",
+        "type": "image/png"
+      }
+    ]
+  },
+  "collection": {
+    "name": "Bored Ape Solana Club",
+    "family": "BASC"
+  }
+}
