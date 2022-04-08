@@ -68,7 +68,7 @@
 <!--<script type="text/javascript" src="../js/hscripts.js"></script> -->
 <script>
 var holders;
-fetch("../data/HkzqBHcEsppZ4QstJQT1VzRFmLARuVsCc4PZ6wau4ec3_holders.json")
+fetch("../data/3imuGagcaxe4hxLULy6Framn1pwSpaM7trF6tSo7aUGQ_holders.json")
     .then(Response => Response.json())
     .then(data => holders = data)
 </script> 
@@ -183,7 +183,8 @@ function dataTable() {
 	    
 	    function filteroutMEWallet(obj) {
 		if (obj.owner_wallet !== "GUfCR9mK6azb9vcpsxgXyj7XRPAKJd4KMHTTVvtncGgp" &&
-		    obj.owner_wallet !== "1BWutmTvYPwDtmw9abTkS4Ssr8no61spGAvW1X6NDix") {
+		    obj.owner_wallet !== "1BWutmTvYPwDtmw9abTkS4Ssr8no61spGAvW1X6NDix" &&
+		    obj.owner_wallet !== "BasC5At2AGkUi2ApemqAgmfPUUSRP76VjWi9Jek8uLrZ") {
 		    return true;
 		}
 		return false;
