@@ -151,7 +151,7 @@ function populateCard(mint, rank, pic) {
   let img = document.createElement('div');
   img.className = "featured_item_img";
   vDiv.append(img);
-
+/*
   if (mint <= 3000) {
     let OGStamp = document.createElement('div');
     OGStamp.className = "featured_item_img_ribbon";
@@ -161,7 +161,7 @@ function populateCard(mint, rank, pic) {
     OGSpan.textContent = "OG";
     OGStamp.append(OGSpan);
   }
-	
+*/	
   if (rank <= 60) {
     let rank1 = document.createElement('div');
     rank1.className = "featured_item_img_ribbon_rank_mythic";
