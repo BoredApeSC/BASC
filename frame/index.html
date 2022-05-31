@@ -17,12 +17,12 @@
 <link rel="icon" type="image/png" sizes="16x16" href="../favicons/favicon-16x16.png">
 <meta name="msapplication-TileImage" content="../favicons/ms-icon-144x144.png">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="BASC Frame">
-<meta property='og:title' content='BASC Frame' />
-<meta property='og:description' content='BASC Frame' />
+<meta name="description" content="BASC Frames">
+<meta property='og:title' content='BASC Frames' />
+<meta property='og:description' content='BASC Frames' />
 <link rel='shortcut icon' type='image/x-icon' href='https://raw.githubusercontent.com/BoredApeSC/BASC/main/img/frame.png' />
-<meta property='og:site_name' content='https://www.basc.app/frames' />
-<meta property='og:url' content='https://www.basc.app/frames/' />
+<meta property='og:site_name' content='https://www.basc.app/frame' />
+<meta property='og:url' content='https://www.basc.app/frame/' />
 <meta property='og:type' content='website' />
 <meta property='og:image' content='https://raw.githubusercontent.com/BoredApeSC/BASC/main/img/frame.png' />	
 	
@@ -70,7 +70,7 @@ function myFunction() {
   filter = input.value.toUpperCase();
   link = 'https://raw.githubusercontent.com/BoredApeSC/BASC/main/frames/'+ filter + '.png';
   frame = document.getElementById("Frame").src = link;
-
+  if (filter == ""){frame = document.getElementById("Frame").src ="https://raw.githubusercontent.com/BoredApeSC/BASC/main/frames/1.png"}
 }
 
 $(window).on('load', function() {
