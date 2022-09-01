@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang='en' prefix='og: http://ogp.me/ns#'>
+<head>
+<title>BASC Frame</title>
+<link rel="apple-touch-icon" sizes="57x57" href="../favicons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../favicons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../favicons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../favicons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../favicons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../favicons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../favicons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../favicons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../favicons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="196x196" href="../favicons/android-icon-196x196.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../favicons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../favicons/favicon-16x16.png">
+<meta name="msapplication-TileImage" content="../favicons/ms-icon-144x144.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="BASC Y00tified">
+<meta property='og:title' content='BASC Y00tified' />
+<meta property='og:description' content='BASC Y00tified' />
+<link rel='shortcut icon' type='image/x-icon' href='https://raw.githubusercontent.com/BoredApeSC/BASC/main/img/frame.png' />
+<meta property='og:site_name' content='https://www.basc.app/y00ts' />
+<meta property='og:url' content='https://www.basc.app/y00ts/' />
+<meta property='og:type' content='website' />
+<meta property='og:image' content='https://raw.githubusercontent.com/BoredApeSC/BASC/main/img/frame.png' />	
+	
+<style>
+* {
+  box-sizing: border-box;
+}
+	
+#myInput {
+  background-image: url('../img/search.svg');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 20%;
+  display: block;
+  margin:auto;
+  font-size: 14px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 13px;
+}
+
+</style>
+<link href="../css/styles_3421.css" rel="stylesheet" type="text/css">
+<link href="../css/responsive_3421.css" rel="stylesheet" type="text/css">
+</head>
+<!--<script type="text/javascript" src="../js/hscripts.js"></script> -->
+<script>
+
+</script> 
+    <script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.autocompletem.js"></script>
+<body>
+
+<h2 style="text-align: center;">BASC Y00tified</h2>
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Ape #" title="Type in a Ape ID" maxlength="4" width="22%" size="4">
+
+<p style="text-align:center;"><img src="https://raw.githubusercontent.com/BoredApeSC/BASC/main/y00tz/1.png" id="Frame" width="65%" height = "auto" alt="Frame"></p>
+<script>
+	
+	
+function myFunction() {
+  var input, filter, table, link, frame;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  link = 'https://raw.githubusercontent.com/BoredApeSC/BASC/main/y00tz/'+ filter + '.png';
+  frame = document.getElementById("Frame").src = link;
+  if (filter == ""){frame = document.getElementById("Frame").src ="https://raw.githubusercontent.com/BoredApeSC/BASC/main/y00tz/1.png"}
+}
+
+$(window).on('load', function() {
+	function delay(time) {
+	  return new Promise(resolve => setTimeout(resolve, time));
+	}
+
+	async function test() {
+	  await delay(2000);
+	}
+      test();
+})	
+</script>
+</body>
+</html>
